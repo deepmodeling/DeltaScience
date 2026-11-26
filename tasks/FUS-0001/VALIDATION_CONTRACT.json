@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "question_type": "optimization",
+  "require_author_oracle": false,
+  "rationale": "Published final equilibrium artifacts calibrate the numerical evaluator. Reconstructing their generation or solving the optimization is Researcher work. Trace evaluates physical-input/method provenance separately from numeric Q.",
+  "independent_grader_required": true,
+  "blind_validation_required": true,
+  "calibration": "Original archived physical baseline and diagnostic retained; score mapping recalibrated to 30 mm full score. Historical platform scores use prior mapping.",
+  "score_anchors": {
+    "zero_score_q95_m": 0.05,
+    "baseline_score": 0.2,
+    "below_baseline_mapping": "linear between (E0,0.2) and (0.05,0)",
+    "full_score_q95_m": 0.03,
+    "above_baseline_mapping": "linear between (E0,0.2) and (0.03,1), capped at 1",
+    "full_score_attainability_proven": false,
+    "scoring_version": "mastu-q95-30mm-v1"
+  },
+  "binary_overlay": {
+    "version": "binary-v1",
+    "continuous_threshold": 0.4,
+    "comparison": "unrounded score >= 0.4",
+    "fault": "no reward and nonzero exit",
+    "scope": "Binary acceptance branch"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "schema": "retro-native-reference-plan/1",
+  "task_id": "r-dan-12",
+  "target_full_inchikey": "CHGQWMNQJHOKGI-IDISGSTGSA-N",
+  "steps": [
+    {
+      "step_id": "DAN-US2019-EX395-S1",
+      "product_full_inchikey": "GRWALOGSRQFRER-HNAYVOBHSA-N",
+      "product_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(COS(C)(=O)=O)C[C@H]1C(=O)OCc1ccccc1",
+      "precursor_full_inchikeys": [
+        "PRDRUVQUUZWETQ-KBXCAEBGSA-N"
+      ],
+      "precursor_smiles": [
+        "CC(C)(C)OC(=O)N1C[C@@](F)(CO)C[C@H]1C(=O)OCc1ccccc1"
+      ],
+      "reaction_class": "as disclosed; classification pending",
+      "source": "solution/checkpoint_aligned_reference.json",
+      "source_sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0"
+    },
+    {
+      "step_id": "DAN-US2019-EX395-S2",
+      "product_full_inchikey": "PSKCCALZWHZRDI-KSSFIOAISA-N",
+      "product_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)OCc1ccccc1",
+      "precursor_full_inchikeys": [
+        "GRWALOGSRQFRER-HNAYVOBHSA-N"
+      ],
+      "precursor_smiles": [
+        "CC(C)(C)OC(=O)N1C[C@@](F)(COS(C)(=O)=O)C[C@H]1C(=O)OCc1ccccc1"
+      ],
+      "reaction_class": "as disclosed; classification pending",
+      "source": "solution/checkpoint_aligned_reference.json",
+      "source_sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0"
+    },
+    {
+      "step_id": "DAN-US2019-EX395-S3",
+      "product_full_inchikey": "QQAXDWJPUQJQHO-CPCISQLKSA-N",
+      "product_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)O",
+      "precursor_full_inchikeys": [
+        "PSKCCALZWHZRDI-KSSFIOAISA-N"
+      ],
+      "precursor_smiles": [
+        "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)OCc1ccccc1"
+      ],
+      "reaction_class": "as disclosed; classification pending",
+      "source": "solution/checkpoint_aligned_reference.json",
+      "source_sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0"
+    },
+    {
+      "step_id": "DAN-US2019-EX395-S4",
+      "product_full_inchikey": "VPYWCTCSNRDKRZ-QFYYESIMSA-N",
+      "product_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)Nc1cccc(Br)n1",
+      "precursor_full_inchikeys": [
+        "QQAXDWJPUQJQHO-CPCISQLKSA-N",
+        "BKLJUYPLUWUEOQ-UHFFFAOYSA-N"
+      ],
+      "precursor_smiles": [
+        "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)O",
+        "Nc1cccc(Br)n1"
+      ],
+      "reaction_class": "as disclosed; classification pending",
+      "source": "solution/checkpoint_aligned_reference.json",
+      "source_sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0"
+    },
+    {
+      "step_id": "DAN-US2019-EX395-S5",
+      "product_full_inchikey": "TWEPDBPTFIHSAV-WRWORJQWSA-N",
+      "product_smiles": "[N-]=[N+]=NC[C@]1(F)CN[C@H](C(=O)Nc2cccc(Br)n2)C1",
+      "precursor_full_inchikeys": [
+        "VPYWCTCSNRDKRZ-QFYYESIMSA-N"
+      ],
+      "precursor_smiles": [
+        "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)Nc1cccc(Br)n1"
+      ],
+      "reaction_class": "as disclosed; classification pending",
+      "source": "solution/checkpoint_aligned_reference.json",
+      "source_sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0"
+    },
+    {
+      "step_id": "DAN-API-001-S3",
+      "product_full_inchikey": "FKAVFCMDYVDNRL-UHFFFAOYSA-N",
+      "product_smiles": "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(Br)cc12",
+      "precursor_full_inchikeys": [
+        "HOPFEUJFXKXWNN-UHFFFAOYSA-N",
+        "BNWCETAHAJSBFG-UHFFFAOYSA-N"
+      ],
+      "precursor_smiles": [
+        "CC(=O)c1n[nH]c2ccc(Br)cc12",
+        "CC(C)(C)OC(=O)CBr"
+      ],
+      "reaction_class": "Indazole N-alkylation",
+      "source": "solution/dependencies/DAN-API-001.gold_route.json",
+      "source_sha256": "3e1505de0e5adc042de345fe063bf20a09414a36dbad4ab907f0234aeb63f9d8"
+    },
+    {
+      "step_id": "DAN-API-001-S4",
+      "product_full_inchikey": "QCDKFRBEWIFFGK-UHFFFAOYSA-N",
+      "product_smiles": "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(-c3cnc(C)nc3)cc12",
+      "precursor_full_inchikeys": [
+        "FKAVFCMDYVDNRL-UHFFFAOYSA-N",
+        "NEDJTEXNSTUKHW-UHFFFAOYSA-N"
+      ],
+      "precursor_smiles": [
+        "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(Br)cc12",
+        "Cc1ncc(Br)cn1"
+      ],
+      "reaction_class": "One-pot Miyaura borylation and Suzuki coupling",
+      "source": "solution/dependencies/DAN-API-001.gold_route.json",
+      "source_sha256": "3e1505de0e5adc042de345fe063bf20a09414a36dbad4ab907f0234aeb63f9d8"
+    },
+    {
+      "step_id": "DAN-API-001-S5",
+      "product_full_inchikey": "INDCSLFBKQSDAY-UHFFFAOYSA-N",
+      "product_smiles": "CC(=O)c1nn(CC(=O)O)c2ccc(-c3cnc(C)nc3)cc12",
+      "precursor_full_inchikeys": [
+        "QCDKFRBEWIFFGK-UHFFFAOYSA-N"
+      ],
+      "precursor_smiles": [
+        "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(-c3cnc(C)nc3)cc12"
+      ],
+      "reaction_class": "tert-Butyl ester deprotection",
+      "source": "solution/dependencies/DAN-API-001.gold_route.json",
+      "source_sha256": "3e1505de0e5adc042de345fe063bf20a09414a36dbad4ab907f0234aeb63f9d8"
+    },
+    {
+      "step_id": "DAN-US2019-EX395-S6",
+      "product_full_inchikey": "XVRDVVNQOYVQDH-IDISGSTGSA-N",
+      "product_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN=[N+]=[N-])C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+      "precursor_full_inchikeys": [
+        "TWEPDBPTFIHSAV-WRWORJQWSA-N",
+        "INDCSLFBKQSDAY-UHFFFAOYSA-N"
+      ],
+      "precursor_smiles": [
+        "[N-]=[N+]=NC[C@]1(F)CN[C@H](C(=O)Nc2cccc(Br)n2)C1",
+        "CC(=O)c1nn(CC(=O)O)c2ccc(-c3cnc(C)nc3)cc12"
+      ],
+      "reaction_class": "as disclosed; classification pending",
+      "source": "solution/checkpoint_aligned_reference.json",
+      "source_sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0"
+    },
+    {
+      "step_id": "DAN-US2019-EX395-S7",
+      "product_full_inchikey": "CHGQWMNQJHOKGI-IDISGSTGSA-N",
+      "product_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN)C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+      "precursor_full_inchikeys": [
+        "XVRDVVNQOYVQDH-IDISGSTGSA-N"
+      ],
+      "precursor_smiles": [
+        "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN=[N+]=[N-])C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12"
+      ],
+      "reaction_class": "as disclosed; classification pending",
+      "source": "solution/checkpoint_aligned_reference.json",
+      "source_sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0"
+    }
+  ],
+  "leaf_full_inchikeys": [
+    "BKLJUYPLUWUEOQ-UHFFFAOYSA-N",
+    "BNWCETAHAJSBFG-UHFFFAOYSA-N",
+    "HOPFEUJFXKXWNN-UHFFFAOYSA-N",
+    "NEDJTEXNSTUKHW-UHFFFAOYSA-N",
+    "PRDRUVQUUZWETQ-KBXCAEBGSA-N"
+  ],
+  "source_artifact": "solution/checkpoint_aligned_reference.json",
+  "source_artifact_sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+  "native_tools_only": true,
+  "scientific_score": "NOT_RUN"
+}

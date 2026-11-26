@@ -1,0 +1,61 @@
+{
+  "source_task_id": "12_DAN_DAN_US2019_EX395",
+  "source_set": "open48",
+  "source_evaluator_sha256": "a0347b318ca4a225f8d4fedc2b8dd3e750a7519e3653628f13cf99264fa5210c",
+  "adapted_evaluator_sha256": "1793276e402fae9faa806109ec94f16abde19430221c017af6e7e239952842f2",
+  "changed_functions": [
+    "require_service_runtime",
+    "main"
+  ],
+  "scientific_functions_ast_unchanged": false,
+  "reward_preserved": false,
+  "agent_timeout_sec": 28800.0,
+  "verifier_timeout_sec": 28800,
+  "shared_profile": "retro-constrained-v1-public-20261104",
+  "open_profile_reason": "Sources match newer scientific modules/stock; default old open profile does not. Use independent open profile without changing taskProfile.",
+  "extra_runtime_resources": [
+    "assets/stock/common_reagents.json"
+  ],
+  "platform_adapter_status": "NOT_REQUIRED",
+  "runtime_executed": "NATIVE_CONTROL_ONLY",
+  "previous_adapted_evaluator_sha256": "1a36c1678b77262d3ad60e5298f36a06e79a8fe08ba225987146d91191964425",
+  "source_reward_policy": "answer_score/100",
+  "current_reward_policy": "open has at least one independently scored route with final chemical score >= the designated gold route raw chemical score computed first in the same evaluation plus 10 points",
+  "reward_changed_by_explicit_user_request": true,
+  "chemical_scoring_functions_ast_unchanged": false,
+  "reward_revision": "1.0.14",
+  "chemical_formulas_preserved": true,
+  "scoring_scope_changed_to_per_route": true,
+  "functions_changed_this_revision": {
+    "gold_baseline": "add_fixed_10_after_raw_score",
+    "route_reward": "accept_adjusted_gold_threshold_10_to_110",
+    "evaluator_main": "report_raw_and_adjusted_gold_scores",
+    "runtime": "read_only_reward_overlays_and_consistent_task_binding"
+  },
+  "unchanged_formula_libraries": [
+    "aggregate_compact_result_scores.py",
+    "materialize_precomputed_scores_v4.py",
+    "bind_checkpoints_to_delivery.py",
+    "origin_review.py"
+  ],
+  "previous_revision_evaluator_sha256": "cf4c567359f975a1413897dec9dc8833ee1ed6e751dc9c13d1695a18da46af12",
+  "repair_revision": "1.0.4",
+  "previous_threshold_revision_evaluator_sha256": "2aae0b8c619b0b1d1ad30992357b30bba6de4ed27b9b4e7fdb01b222597268bc",
+  "fixed_threshold_removed": true,
+  "gold_scored_first": true,
+  "startup_fix_revision": "1.0.13",
+  "startup_changes": [
+    "strict_max_cell_format_compatibility",
+    "exact_criterion_and_program_precision_contract",
+    "origin_existing_witness_catalog",
+    "container_only_json_eof_completion",
+    "one_origin_protocol_correction",
+    "strict_no_completed_submission_detection",
+    "safe_stream_protocol_error_code"
+  ],
+  "chemistry_and_reward_changed": true,
+  "target_platform_revalidated": false,
+  "images_changed_this_revision": false,
+  "raw_chemical_formulas_preserved": true,
+  "gold_chemical_score_bonus": 10
+}

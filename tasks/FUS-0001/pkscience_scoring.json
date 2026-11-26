@@ -1,0 +1,13 @@
+{
+  "id": "FUS-0001",
+  "source_sha256": "a4b12088065e70251edc40a4a084361e70f31396cef34c1acfa564e787dd6519",
+  "raw_artifact": "result.json",
+  "raw_field": "continuous_score",
+  "raw_scale": "0–1",
+  "reward_divisor": 1,
+  "version": "pkscience-continuous-v1",
+  "reward_mode": "continuous",
+  "legacy_binary_rule": "连续分 ≥ 0.40",
+  "limitations": "核对 status / scientific_score_valid / evaluation_complete；基础设施错误或未完成时连续分可能为 null 或缺失。",
+  "validation": "scoring boundary tests and archive integrity; not a full scientific/container run"
+}

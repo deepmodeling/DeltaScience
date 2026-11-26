@@ -1,0 +1,468 @@
+{
+  "schema": "retro-private-gold-scoring-input/1",
+  "task_id": "12_DAN_DAN_US2019_EX395",
+  "target_full_inchikey": "CHGQWMNQJHOKGI-IDISGSTGSA-N",
+  "provenance": {
+    "active_reference": "solution/checkpoint_aligned_reference.json",
+    "replay_plan_sha256": "fdba0021f11bde67a7f0f0be286a6efa3746bb9f1fe2e5d500b7bb28c63ef22c",
+    "source_artifact_sha256": {
+      "solution/checkpoint_aligned_reference.json": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+      "solution/dependencies/DAN-API-001.gold_route.json": "3e1505de0e5adc042de345fe063bf20a09414a36dbad4ab907f0234aeb63f9d8"
+    },
+    "native_replay_required_for_baseline": false
+  },
+  "scoring_data": {
+    "answer.json": {
+      "routes": [
+        {
+          "route_id": "route-gold-r-dan-12",
+          "target_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN)C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+          "steps": [
+            {
+              "step_id": "DAN-US2019-EX395-S1",
+              "product_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(COS(C)(=O)=O)C[C@H]1C(=O)OCc1ccccc1",
+              "reactants_smiles": [
+                "CC(C)(C)OC(=O)N1C[C@@](F)(CO)C[C@H]1C(=O)OCc1ccccc1"
+              ],
+              "precursor_step_ids": [],
+              "reaction_class": "as disclosed; classification pending",
+              "reference_provenance": {
+                "artifact": "solution/checkpoint_aligned_reference.json",
+                "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                "source_step_id": "DAN-US2019-EX395-S1"
+              },
+              "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-4-fluoro-4-hydroxymethyl-pyrrolidine-1,2-dicarboxylic acid 2-benzyl ester 1-tert-butyl ester (950 mg, 2.7 mmol) in DCM (10 mL) was added TEA (0.75 mL, 5.4 mmol) and a solution of MsCl (371 mg, 3.2 mmol) in DCM (2 mL) at 0° C. Then the reaction was stirred at room temperature for 1 hr. The mixture was poured into ice water (30 mL) and extracted with DCM (3×20 mL). The combined organic layers were dried over anhydrous Na2SO4 and concentrated under reduced pressure to give compound S2 (1.0 g, crude), which was carried forward without further purification.",
+              "source_locator": "US20190211033A1, heading h-0447",
+              "evidence_status": "primary_patent_experimental_procedure"
+            },
+            {
+              "step_id": "DAN-US2019-EX395-S2",
+              "product_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)OCc1ccccc1",
+              "reactants_smiles": [
+                "CC(C)(C)OC(=O)N1C[C@@](F)(COS(C)(=O)=O)C[C@H]1C(=O)OCc1ccccc1"
+              ],
+              "precursor_step_ids": [
+                "DAN-US2019-EX395-S1"
+              ],
+              "reaction_class": "as disclosed; classification pending",
+              "reference_provenance": {
+                "artifact": "solution/checkpoint_aligned_reference.json",
+                "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                "source_step_id": "DAN-US2019-EX395-S2"
+              },
+              "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-4-azidomethyl-4-fluoro-pyrrolidine-1,2-dicarboxylic acid 2-benzyl ester 1-tert-butyl ester (950 mg, 2.2 mmol) in DMF (30 mL) was added NaN3 (900 mg, 13.2 mmol) and the reaction was stirred at 80° C. overnight. The mixture was poured into ice water (30 mL) and extracted with EtOAc (3×20 mL). The combined organic layers were washed with brine, dried over anhydrous Na2SO4 and concentrated under reduced pressure. The residue was purified by chromatography on silica gel (PE:EtOAc=15:1 to 5:1) to give compound S3 (690 mg, 83.0% yield) as light oil.",
+              "source_locator": "US20190211033A1, heading h-0448",
+              "evidence_status": "primary_patent_experimental_procedure"
+            },
+            {
+              "step_id": "DAN-US2019-EX395-S3",
+              "product_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)O",
+              "reactants_smiles": [
+                "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)OCc1ccccc1"
+              ],
+              "precursor_step_ids": [
+                "DAN-US2019-EX395-S2"
+              ],
+              "reaction_class": "as disclosed; classification pending",
+              "reference_provenance": {
+                "artifact": "solution/checkpoint_aligned_reference.json",
+                "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                "source_step_id": "DAN-US2019-EX395-S3"
+              },
+              "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-2-benzyl 1-tert-butyl 4-(azidomethyl)-4-fluoropyrrolidine-1,2-dicarboxylate (690 mg, 1.8 mmol) in MeOH (8 mL) was added a 1 M aq. NaOH solution (3.6 mL, 3.6 mmol) at 0° C. and the reaction mixture was stirred at room temperature for 1 hr. The mixture was diluted with water (15 mL) and the volatiles were removed under reduced pressure. The residue was washed with Et2O (2×10 mL) and acidified with 2 N HCl to pH ˜3. The resulting mixture was extracted with EtOAc (2×15 mL) and the combined organic layers were dried over anhydrous Na2SO4 and concentrated under reduced pressure to give compound S4 (480 mg, 92.5% yield) as light oil.",
+              "source_locator": "US20190211033A1, heading h-0449",
+              "evidence_status": "primary_patent_experimental_procedure"
+            },
+            {
+              "step_id": "DAN-US2019-EX395-S4",
+              "product_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)Nc1cccc(Br)n1",
+              "reactants_smiles": [
+                "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)O",
+                "Nc1cccc(Br)n1"
+              ],
+              "precursor_step_ids": [
+                "DAN-US2019-EX395-S3"
+              ],
+              "reaction_class": "as disclosed; classification pending",
+              "reference_provenance": {
+                "artifact": "solution/checkpoint_aligned_reference.json",
+                "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                "source_step_id": "DAN-US2019-EX395-S4"
+              },
+              "conditions_and_workup_verbatim_paraphrase": "A mixture of (2S,4R)-4-(azidomethyl)-1-(tert-butoxycarbonyl)-4-fluoropyrrolidine-2-carboxylic acid (480 mg, 1.67 mmol), 6-bromopyridin-2-amine (316 mg, 1.84 mmol), DIPEA (539 mg, 4.18 mmol) and EEDQ (825 mg, 3.34 mmol) in DCE (10 mL) was stirred at 90° C. overnight. The mixture was evaporated under reduced pressure and the residue was purified by chromatography on silica gel (PE:EtOAC=20:1 to 4:1) to give compound S5 (510 mg, 69.1% yield) as light oil.",
+              "source_locator": "US20190211033A1, heading h-0450",
+              "evidence_status": "primary_patent_experimental_procedure"
+            },
+            {
+              "step_id": "DAN-US2019-EX395-S5",
+              "product_smiles": "[N-]=[N+]=NC[C@]1(F)CN[C@H](C(=O)Nc2cccc(Br)n2)C1",
+              "reactants_smiles": [
+                "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)Nc1cccc(Br)n1"
+              ],
+              "precursor_step_ids": [
+                "DAN-US2019-EX395-S4"
+              ],
+              "reaction_class": "as disclosed; classification pending",
+              "reference_provenance": {
+                "artifact": "solution/checkpoint_aligned_reference.json",
+                "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                "source_step_id": "DAN-US2019-EX395-S5"
+              },
+              "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-tert-butyl 4-(azidomethyl)-2-((6-bromopyridin-2-yl) carbamoyl)-4-fluoropyrrolidine-1-carboxylate (200 mg) in DCM (3.0 mL) was added TFA (1 mL) at 0° C. and the reaction mixture was stirred at room temperature for 1 hr. The mixture was evaporated under reduced pressure to give compound S6 (180 mg, 100% yield), which was directly used to the next reaction without further purification.",
+              "source_locator": "US20190211033A1, heading h-0451",
+              "evidence_status": "primary_patent_experimental_procedure"
+            },
+            {
+              "step_id": "DAN-API-001-S3",
+              "product_smiles": "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(Br)cc12",
+              "reactants_smiles": [
+                "CC(=O)c1n[nH]c2ccc(Br)cc12",
+                "CC(C)(C)OC(=O)CBr"
+              ],
+              "precursor_step_ids": [],
+              "reaction_class": "Indazole N-alkylation",
+              "reference_provenance": {
+                "artifact": "solution/dependencies/DAN-API-001.gold_route.json",
+                "sha256": "3e1505de0e5adc042de345fe063bf20a09414a36dbad4ab907f0234aeb63f9d8",
+                "source_step_id": "DAN-API-001-S3"
+              },
+              "source_locator": "US11814363B2, Scheme 1 and paragraph [0413] (p-0342), Step 3.",
+              "conditions": "Potassium carbonate in DMF under nitrogen; 30±10 °C addition, then 50±5 °C for 1 h; water precipitation and filtration.",
+              "isolated_yield": "97.13% (43.13 kg)",
+              "evidence_status": "primary_patent_experimental_procedure"
+            },
+            {
+              "step_id": "DAN-API-001-S4",
+              "product_smiles": "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(-c3cnc(C)nc3)cc12",
+              "reactants_smiles": [
+                "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(Br)cc12",
+                "Cc1ncc(Br)cn1"
+              ],
+              "precursor_step_ids": [
+                "DAN-API-001-S3"
+              ],
+              "reaction_class": "One-pot Miyaura borylation and Suzuki coupling",
+              "reference_provenance": {
+                "artifact": "solution/dependencies/DAN-API-001.gold_route.json",
+                "sha256": "3e1505de0e5adc042de345fe063bf20a09414a36dbad4ab907f0234aeb63f9d8",
+                "source_step_id": "DAN-API-001-S4"
+              },
+              "source_locator": "US11814363B2, Scheme 1, paragraph [0408] (p-0337), and paragraph [0414] (p-0343), Step 4.",
+              "conditions": "Bis(pinacolato)diboron, potassium acetate and Pd(dppf)Cl2 in dioxane at 90±5 °C; add intermediate 6, potassium carbonate and water, then heat again at 90±5 °C; charcoal/celite treatment, cysteine wash, and MTBE/heptane isolation.",
+              "isolated_yield": "56% (11.8 kg)",
+              "evidence_status": "primary_patent_experimental_procedure"
+            },
+            {
+              "step_id": "DAN-API-001-S5",
+              "product_smiles": "CC(=O)c1nn(CC(=O)O)c2ccc(-c3cnc(C)nc3)cc12",
+              "reactants_smiles": [
+                "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(-c3cnc(C)nc3)cc12"
+              ],
+              "precursor_step_ids": [
+                "DAN-API-001-S4"
+              ],
+              "reaction_class": "tert-Butyl ester deprotection",
+              "reference_provenance": {
+                "artifact": "solution/dependencies/DAN-API-001.gold_route.json",
+                "sha256": "3e1505de0e5adc042de345fe063bf20a09414a36dbad4ab907f0234aeb63f9d8",
+                "source_step_id": "DAN-API-001-S5"
+              },
+              "source_locator": "US11814363B2, Scheme 1 and paragraph [0415] (p-0344), Step 5.",
+              "conditions": "TFA in DCM; 15±5 °C addition, then 35±5 °C to completion; remove volatiles, bicarbonate treatment, acidify to pH 2–3, filter and dry.",
+              "isolated_yield": "Quantitative (42.4 kg)",
+              "evidence_status": "primary_patent_experimental_procedure"
+            },
+            {
+              "step_id": "DAN-US2019-EX395-S6",
+              "product_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN=[N+]=[N-])C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+              "reactants_smiles": [
+                "[N-]=[N+]=NC[C@]1(F)CN[C@H](C(=O)Nc2cccc(Br)n2)C1",
+                "CC(=O)c1nn(CC(=O)O)c2ccc(-c3cnc(C)nc3)cc12"
+              ],
+              "precursor_step_ids": [
+                "DAN-US2019-EX395-S5",
+                "DAN-API-001-S5"
+              ],
+              "reaction_class": "as disclosed; classification pending",
+              "reference_provenance": {
+                "artifact": "solution/checkpoint_aligned_reference.json",
+                "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                "source_step_id": "DAN-US2019-EX395-S6"
+              },
+              "conditions_and_workup_verbatim_paraphrase": "A mixture of (2S,4R)-4-(azidomethyl)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide (180 mg, 0.47 mmol), 2-(3-acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetic acid (161 mg, 0.52 mmol), HATU (270 mg, 0.71 mmol) and DIPEA (0.24 mL, 1.41 mmol) in DMF (4 mL) was stirred at room temperature overnight. The mixture was partitioned with EtOAc and water. The organic layer was washed with brine, dried over anhydrous Na2SO4 and concentrated under reduced pressure. The residue was purified by chromatography on silica gel (DCM:MeOH=80:1 to 60:1) to give aS (200 mg, yield 67.1% yield) as white solid. 1H NMR (400 MHz, DMSO-d6) δ 11.02 (s, 1H), 9.03 (s, 2H), 8.42 (d, J=1.0 Hz, 1H), 8.02 (d, J=8.2 Hz, 1H), 7.85 (dd, J=7.3, 5.2 Hz, 2H), 7.71 (t, J=8.0 Hz, 1H), 7.33 (d, J=7.3 Hz, 1H), 5.87 (d, J=17.3 Hz, 1H), 5.64 (d, J=17.2 Hz, 1H), 4.71 (t, J=8.6 Hz, 1H), 4.32 (m, 1H), 4.07-3.92 (m, 2H), 3.90-3.79 (m, 1H), 2.66 (d, J=15.0 Hz, 6H), 2.62-2.55 (m, 1H), 2.17 (m, 1H). LC/MS (ESI) m/z: 635 (M+H)+.",
+              "source_locator": "US20190211033A1, heading h-0452",
+              "evidence_status": "primary_patent_experimental_procedure"
+            },
+            {
+              "step_id": "DAN-US2019-EX395-S7",
+              "product_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN)C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+              "reactants_smiles": [
+                "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN=[N+]=[N-])C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12"
+              ],
+              "precursor_step_ids": [
+                "DAN-US2019-EX395-S6"
+              ],
+              "reaction_class": "as disclosed; classification pending",
+              "reference_provenance": {
+                "artifact": "solution/checkpoint_aligned_reference.json",
+                "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                "source_step_id": "DAN-US2019-EX395-S7"
+              },
+              "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-1-(2-(3-acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetyl)-4-(azidomethyl)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide (100 mg, 0.16 mmol) in THF (3 mL) was added PPh3 (50 mg, 0.19 mmol) and water (0.3 mL) at 0° C. Then the reaction mixture was stirred at 30° C. overnight. The mixture was partitioned with EtOAc and water, the combined organic layer was washed with brine, dried over anhydrous Na2SO4 and concentrated under reduced pressure. The residue was purified by prep-HPLC to give S9 (10 mg, 10.2% yield) as white solid. 1H NMR (400 MHz, DMSO-d6) δ 11.01 (s, 1H), 9.03 (s, 2H), 8.42 (s, 1H), 8.22 (s, 1H), 8.03 (d, J=8.2 Hz, 1H), 7.86 (s, 2H), 7.71 (t, J=8.0 Hz, 1H), 7.32 (d, J=7.6 Hz, 1H), 5.82 (d, J=17.3 Hz, 1H), 5.59 (d, J=17.2 Hz, 1H), 4.69 (t, J=8.5 Hz, 1H), 4.12 (m, 3H), 3.07 (d, J=18.6 Hz, 2H), 2.68 (s, 3H), 2.63 (s, 3H), 2.58-2.52 (m, 1H), 2.50-2.44 (m, 1H), 2.18 (m, 1H). LC/MS (ESI) m/z: 609 (M+H)+.",
+              "source_locator": "US20190211033A1, heading h-0453",
+              "evidence_status": "primary_patent_experimental_procedure"
+            }
+          ]
+        }
+      ],
+      "ranking": {
+        "selected_route_id": "route-gold-r-dan-12",
+        "ranked_route_ids": [
+          "route-gold-r-dan-12"
+        ],
+        "ranking_summary": "Designated gold structure import; no native tool execution or receipts are claimed."
+      }
+    },
+    "scientific_trace.json": {
+      "task_context": {
+        "task_id": "12_DAN_DAN_US2019_EX395",
+        "target_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN)C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12"
+      },
+      "reference_import": {
+        "source_plan_sha256": "fdba0021f11bde67a7f0f0be286a6efa3746bb9f1fe2e5d500b7bb28c63ef22c",
+        "native_session": false,
+        "native_tool_receipts": false
+      },
+      "final_result": {
+        "answer": {
+          "routes": [
+            {
+              "route_id": "route-gold-r-dan-12",
+              "target_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN)C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+              "steps": [
+                {
+                  "step_id": "DAN-US2019-EX395-S1",
+                  "product_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(COS(C)(=O)=O)C[C@H]1C(=O)OCc1ccccc1",
+                  "reactants_smiles": [
+                    "CC(C)(C)OC(=O)N1C[C@@](F)(CO)C[C@H]1C(=O)OCc1ccccc1"
+                  ],
+                  "precursor_step_ids": [],
+                  "reaction_class": "as disclosed; classification pending",
+                  "reference_provenance": {
+                    "artifact": "solution/checkpoint_aligned_reference.json",
+                    "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                    "source_step_id": "DAN-US2019-EX395-S1"
+                  },
+                  "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-4-fluoro-4-hydroxymethyl-pyrrolidine-1,2-dicarboxylic acid 2-benzyl ester 1-tert-butyl ester (950 mg, 2.7 mmol) in DCM (10 mL) was added TEA (0.75 mL, 5.4 mmol) and a solution of MsCl (371 mg, 3.2 mmol) in DCM (2 mL) at 0° C. Then the reaction was stirred at room temperature for 1 hr. The mixture was poured into ice water (30 mL) and extracted with DCM (3×20 mL). The combined organic layers were dried over anhydrous Na2SO4 and concentrated under reduced pressure to give compound S2 (1.0 g, crude), which was carried forward without further purification.",
+                  "source_locator": "US20190211033A1, heading h-0447",
+                  "evidence_status": "primary_patent_experimental_procedure"
+                },
+                {
+                  "step_id": "DAN-US2019-EX395-S2",
+                  "product_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)OCc1ccccc1",
+                  "reactants_smiles": [
+                    "CC(C)(C)OC(=O)N1C[C@@](F)(COS(C)(=O)=O)C[C@H]1C(=O)OCc1ccccc1"
+                  ],
+                  "precursor_step_ids": [
+                    "DAN-US2019-EX395-S1"
+                  ],
+                  "reaction_class": "as disclosed; classification pending",
+                  "reference_provenance": {
+                    "artifact": "solution/checkpoint_aligned_reference.json",
+                    "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                    "source_step_id": "DAN-US2019-EX395-S2"
+                  },
+                  "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-4-azidomethyl-4-fluoro-pyrrolidine-1,2-dicarboxylic acid 2-benzyl ester 1-tert-butyl ester (950 mg, 2.2 mmol) in DMF (30 mL) was added NaN3 (900 mg, 13.2 mmol) and the reaction was stirred at 80° C. overnight. The mixture was poured into ice water (30 mL) and extracted with EtOAc (3×20 mL). The combined organic layers were washed with brine, dried over anhydrous Na2SO4 and concentrated under reduced pressure. The residue was purified by chromatography on silica gel (PE:EtOAc=15:1 to 5:1) to give compound S3 (690 mg, 83.0% yield) as light oil.",
+                  "source_locator": "US20190211033A1, heading h-0448",
+                  "evidence_status": "primary_patent_experimental_procedure"
+                },
+                {
+                  "step_id": "DAN-US2019-EX395-S3",
+                  "product_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)O",
+                  "reactants_smiles": [
+                    "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)OCc1ccccc1"
+                  ],
+                  "precursor_step_ids": [
+                    "DAN-US2019-EX395-S2"
+                  ],
+                  "reaction_class": "as disclosed; classification pending",
+                  "reference_provenance": {
+                    "artifact": "solution/checkpoint_aligned_reference.json",
+                    "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                    "source_step_id": "DAN-US2019-EX395-S3"
+                  },
+                  "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-2-benzyl 1-tert-butyl 4-(azidomethyl)-4-fluoropyrrolidine-1,2-dicarboxylate (690 mg, 1.8 mmol) in MeOH (8 mL) was added a 1 M aq. NaOH solution (3.6 mL, 3.6 mmol) at 0° C. and the reaction mixture was stirred at room temperature for 1 hr. The mixture was diluted with water (15 mL) and the volatiles were removed under reduced pressure. The residue was washed with Et2O (2×10 mL) and acidified with 2 N HCl to pH ˜3. The resulting mixture was extracted with EtOAc (2×15 mL) and the combined organic layers were dried over anhydrous Na2SO4 and concentrated under reduced pressure to give compound S4 (480 mg, 92.5% yield) as light oil.",
+                  "source_locator": "US20190211033A1, heading h-0449",
+                  "evidence_status": "primary_patent_experimental_procedure"
+                },
+                {
+                  "step_id": "DAN-US2019-EX395-S4",
+                  "product_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)Nc1cccc(Br)n1",
+                  "reactants_smiles": [
+                    "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)O",
+                    "Nc1cccc(Br)n1"
+                  ],
+                  "precursor_step_ids": [
+                    "DAN-US2019-EX395-S3"
+                  ],
+                  "reaction_class": "as disclosed; classification pending",
+                  "reference_provenance": {
+                    "artifact": "solution/checkpoint_aligned_reference.json",
+                    "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                    "source_step_id": "DAN-US2019-EX395-S4"
+                  },
+                  "conditions_and_workup_verbatim_paraphrase": "A mixture of (2S,4R)-4-(azidomethyl)-1-(tert-butoxycarbonyl)-4-fluoropyrrolidine-2-carboxylic acid (480 mg, 1.67 mmol), 6-bromopyridin-2-amine (316 mg, 1.84 mmol), DIPEA (539 mg, 4.18 mmol) and EEDQ (825 mg, 3.34 mmol) in DCE (10 mL) was stirred at 90° C. overnight. The mixture was evaporated under reduced pressure and the residue was purified by chromatography on silica gel (PE:EtOAC=20:1 to 4:1) to give compound S5 (510 mg, 69.1% yield) as light oil.",
+                  "source_locator": "US20190211033A1, heading h-0450",
+                  "evidence_status": "primary_patent_experimental_procedure"
+                },
+                {
+                  "step_id": "DAN-US2019-EX395-S5",
+                  "product_smiles": "[N-]=[N+]=NC[C@]1(F)CN[C@H](C(=O)Nc2cccc(Br)n2)C1",
+                  "reactants_smiles": [
+                    "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)Nc1cccc(Br)n1"
+                  ],
+                  "precursor_step_ids": [
+                    "DAN-US2019-EX395-S4"
+                  ],
+                  "reaction_class": "as disclosed; classification pending",
+                  "reference_provenance": {
+                    "artifact": "solution/checkpoint_aligned_reference.json",
+                    "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                    "source_step_id": "DAN-US2019-EX395-S5"
+                  },
+                  "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-tert-butyl 4-(azidomethyl)-2-((6-bromopyridin-2-yl) carbamoyl)-4-fluoropyrrolidine-1-carboxylate (200 mg) in DCM (3.0 mL) was added TFA (1 mL) at 0° C. and the reaction mixture was stirred at room temperature for 1 hr. The mixture was evaporated under reduced pressure to give compound S6 (180 mg, 100% yield), which was directly used to the next reaction without further purification.",
+                  "source_locator": "US20190211033A1, heading h-0451",
+                  "evidence_status": "primary_patent_experimental_procedure"
+                },
+                {
+                  "step_id": "DAN-API-001-S3",
+                  "product_smiles": "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(Br)cc12",
+                  "reactants_smiles": [
+                    "CC(=O)c1n[nH]c2ccc(Br)cc12",
+                    "CC(C)(C)OC(=O)CBr"
+                  ],
+                  "precursor_step_ids": [],
+                  "reaction_class": "Indazole N-alkylation",
+                  "reference_provenance": {
+                    "artifact": "solution/dependencies/DAN-API-001.gold_route.json",
+                    "sha256": "3e1505de0e5adc042de345fe063bf20a09414a36dbad4ab907f0234aeb63f9d8",
+                    "source_step_id": "DAN-API-001-S3"
+                  },
+                  "source_locator": "US11814363B2, Scheme 1 and paragraph [0413] (p-0342), Step 3.",
+                  "conditions": "Potassium carbonate in DMF under nitrogen; 30±10 °C addition, then 50±5 °C for 1 h; water precipitation and filtration.",
+                  "isolated_yield": "97.13% (43.13 kg)",
+                  "evidence_status": "primary_patent_experimental_procedure"
+                },
+                {
+                  "step_id": "DAN-API-001-S4",
+                  "product_smiles": "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(-c3cnc(C)nc3)cc12",
+                  "reactants_smiles": [
+                    "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(Br)cc12",
+                    "Cc1ncc(Br)cn1"
+                  ],
+                  "precursor_step_ids": [
+                    "DAN-API-001-S3"
+                  ],
+                  "reaction_class": "One-pot Miyaura borylation and Suzuki coupling",
+                  "reference_provenance": {
+                    "artifact": "solution/dependencies/DAN-API-001.gold_route.json",
+                    "sha256": "3e1505de0e5adc042de345fe063bf20a09414a36dbad4ab907f0234aeb63f9d8",
+                    "source_step_id": "DAN-API-001-S4"
+                  },
+                  "source_locator": "US11814363B2, Scheme 1, paragraph [0408] (p-0337), and paragraph [0414] (p-0343), Step 4.",
+                  "conditions": "Bis(pinacolato)diboron, potassium acetate and Pd(dppf)Cl2 in dioxane at 90±5 °C; add intermediate 6, potassium carbonate and water, then heat again at 90±5 °C; charcoal/celite treatment, cysteine wash, and MTBE/heptane isolation.",
+                  "isolated_yield": "56% (11.8 kg)",
+                  "evidence_status": "primary_patent_experimental_procedure"
+                },
+                {
+                  "step_id": "DAN-API-001-S5",
+                  "product_smiles": "CC(=O)c1nn(CC(=O)O)c2ccc(-c3cnc(C)nc3)cc12",
+                  "reactants_smiles": [
+                    "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(-c3cnc(C)nc3)cc12"
+                  ],
+                  "precursor_step_ids": [
+                    "DAN-API-001-S4"
+                  ],
+                  "reaction_class": "tert-Butyl ester deprotection",
+                  "reference_provenance": {
+                    "artifact": "solution/dependencies/DAN-API-001.gold_route.json",
+                    "sha256": "3e1505de0e5adc042de345fe063bf20a09414a36dbad4ab907f0234aeb63f9d8",
+                    "source_step_id": "DAN-API-001-S5"
+                  },
+                  "source_locator": "US11814363B2, Scheme 1 and paragraph [0415] (p-0344), Step 5.",
+                  "conditions": "TFA in DCM; 15±5 °C addition, then 35±5 °C to completion; remove volatiles, bicarbonate treatment, acidify to pH 2–3, filter and dry.",
+                  "isolated_yield": "Quantitative (42.4 kg)",
+                  "evidence_status": "primary_patent_experimental_procedure"
+                },
+                {
+                  "step_id": "DAN-US2019-EX395-S6",
+                  "product_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN=[N+]=[N-])C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+                  "reactants_smiles": [
+                    "[N-]=[N+]=NC[C@]1(F)CN[C@H](C(=O)Nc2cccc(Br)n2)C1",
+                    "CC(=O)c1nn(CC(=O)O)c2ccc(-c3cnc(C)nc3)cc12"
+                  ],
+                  "precursor_step_ids": [
+                    "DAN-US2019-EX395-S5",
+                    "DAN-API-001-S5"
+                  ],
+                  "reaction_class": "as disclosed; classification pending",
+                  "reference_provenance": {
+                    "artifact": "solution/checkpoint_aligned_reference.json",
+                    "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                    "source_step_id": "DAN-US2019-EX395-S6"
+                  },
+                  "conditions_and_workup_verbatim_paraphrase": "A mixture of (2S,4R)-4-(azidomethyl)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide (180 mg, 0.47 mmol), 2-(3-acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetic acid (161 mg, 0.52 mmol), HATU (270 mg, 0.71 mmol) and DIPEA (0.24 mL, 1.41 mmol) in DMF (4 mL) was stirred at room temperature overnight. The mixture was partitioned with EtOAc and water. The organic layer was washed with brine, dried over anhydrous Na2SO4 and concentrated under reduced pressure. The residue was purified by chromatography on silica gel (DCM:MeOH=80:1 to 60:1) to give aS (200 mg, yield 67.1% yield) as white solid. 1H NMR (400 MHz, DMSO-d6) δ 11.02 (s, 1H), 9.03 (s, 2H), 8.42 (d, J=1.0 Hz, 1H), 8.02 (d, J=8.2 Hz, 1H), 7.85 (dd, J=7.3, 5.2 Hz, 2H), 7.71 (t, J=8.0 Hz, 1H), 7.33 (d, J=7.3 Hz, 1H), 5.87 (d, J=17.3 Hz, 1H), 5.64 (d, J=17.2 Hz, 1H), 4.71 (t, J=8.6 Hz, 1H), 4.32 (m, 1H), 4.07-3.92 (m, 2H), 3.90-3.79 (m, 1H), 2.66 (d, J=15.0 Hz, 6H), 2.62-2.55 (m, 1H), 2.17 (m, 1H). LC/MS (ESI) m/z: 635 (M+H)+.",
+                  "source_locator": "US20190211033A1, heading h-0452",
+                  "evidence_status": "primary_patent_experimental_procedure"
+                },
+                {
+                  "step_id": "DAN-US2019-EX395-S7",
+                  "product_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN)C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+                  "reactants_smiles": [
+                    "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN=[N+]=[N-])C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12"
+                  ],
+                  "precursor_step_ids": [
+                    "DAN-US2019-EX395-S6"
+                  ],
+                  "reaction_class": "as disclosed; classification pending",
+                  "reference_provenance": {
+                    "artifact": "solution/checkpoint_aligned_reference.json",
+                    "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+                    "source_step_id": "DAN-US2019-EX395-S7"
+                  },
+                  "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-1-(2-(3-acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetyl)-4-(azidomethyl)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide (100 mg, 0.16 mmol) in THF (3 mL) was added PPh3 (50 mg, 0.19 mmol) and water (0.3 mL) at 0° C. Then the reaction mixture was stirred at 30° C. overnight. The mixture was partitioned with EtOAc and water, the combined organic layer was washed with brine, dried over anhydrous Na2SO4 and concentrated under reduced pressure. The residue was purified by prep-HPLC to give S9 (10 mg, 10.2% yield) as white solid. 1H NMR (400 MHz, DMSO-d6) δ 11.01 (s, 1H), 9.03 (s, 2H), 8.42 (s, 1H), 8.22 (s, 1H), 8.03 (d, J=8.2 Hz, 1H), 7.86 (s, 2H), 7.71 (t, J=8.0 Hz, 1H), 7.32 (d, J=7.6 Hz, 1H), 5.82 (d, J=17.3 Hz, 1H), 5.59 (d, J=17.2 Hz, 1H), 4.69 (t, J=8.5 Hz, 1H), 4.12 (m, 3H), 3.07 (d, J=18.6 Hz, 2H), 2.68 (s, 3H), 2.63 (s, 3H), 2.58-2.52 (m, 1H), 2.50-2.44 (m, 1H), 2.18 (m, 1H). LC/MS (ESI) m/z: 609 (M+H)+.",
+                  "source_locator": "US20190211033A1, heading h-0453",
+                  "evidence_status": "primary_patent_experimental_procedure"
+                }
+              ]
+            }
+          ],
+          "ranking": {
+            "selected_route_id": "route-gold-r-dan-12",
+            "ranked_route_ids": [
+              "route-gold-r-dan-12"
+            ],
+            "ranking_summary": "Designated gold structure import; no native tool execution or receipts are claimed."
+          }
+        }
+      }
+    },
+    "run_meta.json": {
+      "mode": "INDEPENDENT_REFERENCE_SCORING_NOT_NATIVE_TRIAL",
+      "validation": {
+        "source_validation_receipt": "results/validation_receipt.json"
+      },
+      "submission": {
+        "model_submit_attempts": []
+      }
+    },
+    "validation_receipt.json": {
+      "kind": "reference_import_not_native_validation",
+      "native_session_created": false,
+      "final_stock_valid": false,
+      "route_collection_valid": false,
+      "boundary": "No stock/native collection/submit claims; missing evidence receives existing rubric treatment."
+    },
+    "p_trace.jsonl": []
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "schema_version": "compound-family-gold-route-v2",
+  "language": "English",
+  "generated_on": "2026-09-08",
+  "compound_id": "DAN-US2019-EX395",
+  "family": "Danicopan",
+  "target": {
+    "name": "(2S,4S)-1-(2-(3-Acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetyl)-4-(aminomethyl)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide",
+    "isomeric_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN)C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+    "full_inchikey": "CHGQWMNQJHOKGI-IDISGSTGSA-N",
+    "molecular_formula": "C27H26BrFN8O3",
+    "exact_mass": 608.129527,
+    "structure_basis": "OPSIN name resolution followed by RDKit full-InChIKey match to workbook identity"
+  },
+  "route_status": "template_expanded_primary",
+  "confidence_grade": "A_primary_experimental",
+  "identity_verification": {
+    "method": "Patent names -> OPSIN -> RDKit Full InChIKey, cross-checked against selected scheme OCSR",
+    "terminal_product_matches_target": true,
+    "source_scheme_product_match_count": 5,
+    "source_scheme_step_count": 7,
+    "no_tanimoto_used": true
+  },
+  "source": {
+    "type": "primary_patent",
+    "publication": "US20190211033A1",
+    "url": "https://patents.google.com/patent/US20190211033A1/en",
+    "source_location": "Example 6; terminal heading h-0446; compound 395"
+  },
+  "route_class": "explicit local patent experiment with recursive/shared branches allowed",
+  "covalent_operation_count": 7,
+  "longest_synthetic_depth": 7,
+  "shared_branch_policy": "Referenced upstream branches may be shared, but this record remains B-grade until every referenced intermediate and major reactant is structurally resolved.",
+  "shared_branch_references": [
+    {
+      "absolute_json_path": "/Users/mochi/Desktop/DPtech_intern/codex_for_intern/outputs/compound_family_gold_route_audit_20260824_v2/gold_routes/danicopan/DAN-API-001.gold_route.json",
+      "use_boundary": "Potentially reusable, explicitly disclosed Danicopan core/amine branches; exact applicability must be verified per target before A-grade promotion."
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "DAN-US2019-EX395-S1",
+      "is_covalent_operation": true,
+      "reaction_class": "as disclosed; classification pending",
+      "major_reactants": [
+        {
+          "full_inchikey": "PRDRUVQUUZWETQ-KBXCAEBGSA-N",
+          "isomeric_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CO)C[C@H]1C(=O)OCc1ccccc1",
+          "name": "Patent scheme molecule 1"
+        }
+      ],
+      "product": {
+        "full_inchikey": "GRWALOGSRQFRER-HNAYVOBHSA-N",
+        "isomeric_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(COS(C)(=O)=O)C[C@H]1C(=O)OCc1ccccc1",
+        "name": "Patent scheme molecule 2"
+      },
+      "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-4-fluoro-4-hydroxymethyl-pyrrolidine-1,2-dicarboxylic acid 2-benzyl ester 1-tert-butyl ester (950 mg, 2.7 mmol) in DCM (10 mL) was added TEA (0.75 mL, 5.4 mmol) and a solution of MsCl (371 mg, 3.2 mmol) in DCM (2 mL) at 0° C. Then the reaction was stirred at room temperature for 1 hr. The mixture was poured into ice water (30 mL) and extracted with DCM (3×20 mL). The combined organic layers were dried over anhydrous Na2SO4 and concentrated under reduced pressure to give compound S2 (1.0 g, crude), which was carried forward without further purification.",
+      "source_locator": "US20190211033A1, heading h-0447",
+      "evidence_status": "primary_patent_experimental_procedure",
+      "structure_resolution_status": "resolved_exact_full_inchikey"
+    },
+    {
+      "step_id": "DAN-US2019-EX395-S2",
+      "is_covalent_operation": true,
+      "reaction_class": "as disclosed; classification pending",
+      "major_reactants": [
+        {
+          "full_inchikey": "GRWALOGSRQFRER-HNAYVOBHSA-N",
+          "isomeric_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(COS(C)(=O)=O)C[C@H]1C(=O)OCc1ccccc1",
+          "name": "Patent scheme molecule 2"
+        }
+      ],
+      "product": {
+        "full_inchikey": "PSKCCALZWHZRDI-KSSFIOAISA-N",
+        "isomeric_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)OCc1ccccc1",
+        "name": "(2S,4R)-4-Azidomethyl-4-fluoro-pyrrolidine-1,2-dicarboxylic acid 2-benzyl ester 1-tert-butyl ester (S2)"
+      },
+      "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-4-azidomethyl-4-fluoro-pyrrolidine-1,2-dicarboxylic acid 2-benzyl ester 1-tert-butyl ester (950 mg, 2.2 mmol) in DMF (30 mL) was added NaN3 (900 mg, 13.2 mmol) and the reaction was stirred at 80° C. overnight. The mixture was poured into ice water (30 mL) and extracted with EtOAc (3×20 mL). The combined organic layers were washed with brine, dried over anhydrous Na2SO4 and concentrated under reduced pressure. The residue was purified by chromatography on silica gel (PE:EtOAc=15:1 to 5:1) to give compound S3 (690 mg, 83.0% yield) as light oil.",
+      "source_locator": "US20190211033A1, heading h-0448",
+      "evidence_status": "primary_patent_experimental_procedure",
+      "structure_resolution_status": "resolved_exact_full_inchikey"
+    },
+    {
+      "step_id": "DAN-US2019-EX395-S3",
+      "is_covalent_operation": true,
+      "reaction_class": "as disclosed; classification pending",
+      "major_reactants": [
+        {
+          "full_inchikey": "PSKCCALZWHZRDI-KSSFIOAISA-N",
+          "isomeric_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)OCc1ccccc1",
+          "name": "(2S,4R)-2-Benzyl 1-tert-butyl 4-(azidomethyl)-4-fluoropyrrolidine-1,2-dicarboxylate (S3)"
+        }
+      ],
+      "product": {
+        "full_inchikey": "QQAXDWJPUQJQHO-CPCISQLKSA-N",
+        "isomeric_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)O",
+        "name": "(2S,4R)-4-(Azidomethyl)-1-(tert-butoxycarbonyl)-4-fluoropyrrolidine-2-carboxylic acid (S4)"
+      },
+      "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-2-benzyl 1-tert-butyl 4-(azidomethyl)-4-fluoropyrrolidine-1,2-dicarboxylate (690 mg, 1.8 mmol) in MeOH (8 mL) was added a 1 M aq. NaOH solution (3.6 mL, 3.6 mmol) at 0° C. and the reaction mixture was stirred at room temperature for 1 hr. The mixture was diluted with water (15 mL) and the volatiles were removed under reduced pressure. The residue was washed with Et2O (2×10 mL) and acidified with 2 N HCl to pH ˜3. The resulting mixture was extracted with EtOAc (2×15 mL) and the combined organic layers were dried over anhydrous Na2SO4 and concentrated under reduced pressure to give compound S4 (480 mg, 92.5% yield) as light oil.",
+      "source_locator": "US20190211033A1, heading h-0449",
+      "evidence_status": "primary_patent_experimental_procedure",
+      "structure_resolution_status": "resolved_exact_full_inchikey"
+    },
+    {
+      "step_id": "DAN-US2019-EX395-S4",
+      "is_covalent_operation": true,
+      "reaction_class": "as disclosed; classification pending",
+      "major_reactants": [
+        {
+          "full_inchikey": "QQAXDWJPUQJQHO-CPCISQLKSA-N",
+          "isomeric_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)O",
+          "name": "(2S,4R)-4-(Azidomethyl)-1-(tert-butoxycarbonyl)-4-fluoropyrrolidine-2-carboxylic acid (S4)"
+        },
+        {
+          "full_inchikey": "BKLJUYPLUWUEOQ-UHFFFAOYSA-N",
+          "isomeric_smiles": "Nc1cccc(Br)n1",
+          "name": "Patent scheme molecule 5"
+        }
+      ],
+      "product": {
+        "full_inchikey": "VPYWCTCSNRDKRZ-QFYYESIMSA-N",
+        "isomeric_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)Nc1cccc(Br)n1",
+        "name": "(2S,4R)-tert-Butyl 4-(azidomethyl)-2-((6-bromopyridin-2-yl)carbamoyl)-4-fluoropyrrolidine-1-carboxylate (S5)"
+      },
+      "conditions_and_workup_verbatim_paraphrase": "A mixture of (2S,4R)-4-(azidomethyl)-1-(tert-butoxycarbonyl)-4-fluoropyrrolidine-2-carboxylic acid (480 mg, 1.67 mmol), 6-bromopyridin-2-amine (316 mg, 1.84 mmol), DIPEA (539 mg, 4.18 mmol) and EEDQ (825 mg, 3.34 mmol) in DCE (10 mL) was stirred at 90° C. overnight. The mixture was evaporated under reduced pressure and the residue was purified by chromatography on silica gel (PE:EtOAC=20:1 to 4:1) to give compound S5 (510 mg, 69.1% yield) as light oil.",
+      "source_locator": "US20190211033A1, heading h-0450",
+      "evidence_status": "primary_patent_experimental_procedure",
+      "structure_resolution_status": "resolved_exact_full_inchikey"
+    },
+    {
+      "step_id": "DAN-US2019-EX395-S5",
+      "is_covalent_operation": true,
+      "reaction_class": "as disclosed; classification pending",
+      "major_reactants": [
+        {
+          "full_inchikey": "VPYWCTCSNRDKRZ-QFYYESIMSA-N",
+          "isomeric_smiles": "CC(C)(C)OC(=O)N1C[C@@](F)(CN=[N+]=[N-])C[C@H]1C(=O)Nc1cccc(Br)n1",
+          "name": "(2S,4R)-tert-Butyl 4-(azidomethyl)-2-((6-bromopyridin-2-yl)carbamoyl)-4-fluoropyrrolidine-1-carboxylate (S5)"
+        }
+      ],
+      "product": {
+        "full_inchikey": "TWEPDBPTFIHSAV-WRWORJQWSA-N",
+        "isomeric_smiles": "[N-]=[N+]=NC[C@]1(F)CN[C@H](C(=O)Nc2cccc(Br)n2)C1",
+        "name": "(2S,4R)-4-(Azidomethyl)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide (S6)"
+      },
+      "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-tert-butyl 4-(azidomethyl)-2-((6-bromopyridin-2-yl) carbamoyl)-4-fluoropyrrolidine-1-carboxylate (200 mg) in DCM (3.0 mL) was added TFA (1 mL) at 0° C. and the reaction mixture was stirred at room temperature for 1 hr. The mixture was evaporated under reduced pressure to give compound S6 (180 mg, 100% yield), which was directly used to the next reaction without further purification.",
+      "source_locator": "US20190211033A1, heading h-0451",
+      "evidence_status": "primary_patent_experimental_procedure",
+      "structure_resolution_status": "resolved_exact_full_inchikey"
+    },
+    {
+      "step_id": "DAN-US2019-EX395-S6",
+      "is_covalent_operation": true,
+      "reaction_class": "as disclosed; classification pending",
+      "major_reactants": [
+        {
+          "full_inchikey": "TWEPDBPTFIHSAV-WRWORJQWSA-N",
+          "isomeric_smiles": "[N-]=[N+]=NC[C@]1(F)CN[C@H](C(=O)Nc2cccc(Br)n2)C1",
+          "name": "(2S,4R)-4-(Azidomethyl)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide (S6)"
+        },
+        {
+          "full_inchikey": "INDCSLFBKQSDAY-UHFFFAOYSA-N",
+          "isomeric_smiles": "CC(=O)c1nn(CC(=O)O)c2ccc(-c3cnc(C)nc3)cc12",
+          "name": "Patent scheme molecule 8"
+        }
+      ],
+      "product": {
+        "full_inchikey": "XVRDVVNQOYVQDH-IDISGSTGSA-N",
+        "isomeric_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN=[N+]=[N-])C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+        "name": "(2S,4R)-1-(2-(3-Acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetyl)-4-(azidomethyl)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide (S8)"
+      },
+      "conditions_and_workup_verbatim_paraphrase": "A mixture of (2S,4R)-4-(azidomethyl)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide (180 mg, 0.47 mmol), 2-(3-acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetic acid (161 mg, 0.52 mmol), HATU (270 mg, 0.71 mmol) and DIPEA (0.24 mL, 1.41 mmol) in DMF (4 mL) was stirred at room temperature overnight. The mixture was partitioned with EtOAc and water. The organic layer was washed with brine, dried over anhydrous Na2SO4 and concentrated under reduced pressure. The residue was purified by chromatography on silica gel (DCM:MeOH=80:1 to 60:1) to give aS (200 mg, yield 67.1% yield) as white solid. 1H NMR (400 MHz, DMSO-d6) δ 11.02 (s, 1H), 9.03 (s, 2H), 8.42 (d, J=1.0 Hz, 1H), 8.02 (d, J=8.2 Hz, 1H), 7.85 (dd, J=7.3, 5.2 Hz, 2H), 7.71 (t, J=8.0 Hz, 1H), 7.33 (d, J=7.3 Hz, 1H), 5.87 (d, J=17.3 Hz, 1H), 5.64 (d, J=17.2 Hz, 1H), 4.71 (t, J=8.6 Hz, 1H), 4.32 (m, 1H), 4.07-3.92 (m, 2H), 3.90-3.79 (m, 1H), 2.66 (d, J=15.0 Hz, 6H), 2.62-2.55 (m, 1H), 2.17 (m, 1H). LC/MS (ESI) m/z: 635 (M+H)+.",
+      "source_locator": "US20190211033A1, heading h-0452",
+      "evidence_status": "primary_patent_experimental_procedure",
+      "structure_resolution_status": "resolved_exact_full_inchikey"
+    },
+    {
+      "step_id": "DAN-US2019-EX395-S7",
+      "is_covalent_operation": true,
+      "reaction_class": "as disclosed; classification pending",
+      "major_reactants": [
+        {
+          "full_inchikey": "XVRDVVNQOYVQDH-IDISGSTGSA-N",
+          "isomeric_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN=[N+]=[N-])C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+          "name": "(2S,4R)-1-(2-(3-Acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetyl)-4-(azidomethyl)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide (S8)"
+        }
+      ],
+      "product": {
+        "full_inchikey": "CHGQWMNQJHOKGI-IDISGSTGSA-N",
+        "isomeric_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN)C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+        "name": "(2S,4S)-1-(2-(3-Acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetyl)-4-(aminomethyl)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide"
+      },
+      "conditions_and_workup_verbatim_paraphrase": "To a solution of (2S,4R)-1-(2-(3-acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetyl)-4-(azidomethyl)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide (100 mg, 0.16 mmol) in THF (3 mL) was added PPh3 (50 mg, 0.19 mmol) and water (0.3 mL) at 0° C. Then the reaction mixture was stirred at 30° C. overnight. The mixture was partitioned with EtOAc and water, the combined organic layer was washed with brine, dried over anhydrous Na2SO4 and concentrated under reduced pressure. The residue was purified by prep-HPLC to give S9 (10 mg, 10.2% yield) as white solid. 1H NMR (400 MHz, DMSO-d6) δ 11.01 (s, 1H), 9.03 (s, 2H), 8.42 (s, 1H), 8.22 (s, 1H), 8.03 (d, J=8.2 Hz, 1H), 7.86 (s, 2H), 7.71 (t, J=8.0 Hz, 1H), 7.32 (d, J=7.6 Hz, 1H), 5.82 (d, J=17.3 Hz, 1H), 5.59 (d, J=17.2 Hz, 1H), 4.69 (t, J=8.5 Hz, 1H), 4.12 (m, 3H), 3.07 (d, J=18.6 Hz, 2H), 2.68 (s, 3H), 2.63 (s, 3H), 2.58-2.52 (m, 1H), 2.50-2.44 (m, 1H), 2.18 (m, 1H). LC/MS (ESI) m/z: 609 (M+H)+.",
+      "source_locator": "US20190211033A1, heading h-0453",
+      "evidence_status": "primary_patent_experimental_procedure",
+      "structure_resolution_status": "resolved_exact_full_inchikey"
+    }
+  ],
+  "outer_leaves": [],
+  "evidence_boundary": "All step products and required major reactants have valid Full InChIKeys; terminal identity is exact. Reagents may be omitted under the project rule, while carbon-growing partners are retained as major reactants.",
+  "uniparser_provenance": {
+    "image_sha256": "c554ac8fa20254deb0c0b1ce404d61b56b895beaa0f6d950e29180188e3eafcb",
+    "source_image": "outputs/uniparser_patent_gold_expansion_20260908_v1/selected_structure_images/danicopan/US20190211033A1-20190711-C00184.png",
+    "result_path": "outputs/uniparser_patent_gold_expansion_20260908_v1/uniparser_runs/20260908T051048Z/036_c554ac8fa202/pages_tree.json",
+    "recognized_molecule_count": 8
+  },
+  "gold_status": "gold_ready",
+  "reference_reconstruction": {
+    "kind": "exact_frozen_checkpoint_structure_reference",
+    "checkpoint_sha256": "e79577226a31150c6870785487341bdea60547ef238ec1299a99d0884bbb5cdc",
+    "collection_gold_sha256": "71a32324fbc5eed5e49d730654fb32578da9cbd09bc2246109d70a8381d5993f",
+    "replaced_structure_step_ids": [
+      "DAN-US2019-EX395-S1",
+      "DAN-US2019-EX395-S2"
+    ],
+    "original_frozen_gold_blob_available": false,
+    "boundary": "Structures reconstructed from frozen RPF records; not the historical gold blob and not a scientifically scored result."
+  }
+}

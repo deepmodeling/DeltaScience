@@ -1,0 +1,44 @@
+{
+  "kind": "resolved_image_env_defaults",
+  "previous_task_toml_sha256": "30768a069a8074f176ca89364d798b8bb570e4d5caa2000c7d125d5f212e8eda",
+  "previous_explicit_environment": {
+    "environment": {
+      "OUTPUT_DIR": "/workspace/output"
+    },
+    "verifier": {},
+    "v_validation/verifier": {}
+  },
+  "image_configs": {
+    "agent": {
+      "image": "registry.dp.tech/public/pkscience-o03-agent@sha256:06ef897df2136dd96603990f4f74830b6e0a87cde554021e15ba2808be4bd925",
+      "image_env": {
+        "PATH": "/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "GPG_KEY": "7169605F62C751356D054A26A821E680E5FA6305",
+        "PYTHON_VERSION": "3.13.5",
+        "PYTHON_SHA256": "93e583f243454e6e9e4588ca2c2662206ad961659863277afcdb96801647d640",
+        "PIP_INDEX_URL": "https://mirrors.aliyun.com/pypi/simple",
+        "PIP_DEFAULT_TIMEOUT": "180",
+        "PIP_RETRIES": "5",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1",
+        "MPLBACKEND": "Agg",
+        "NUMBA_CACHE_DIR": "/tmp/numba-cache",
+        "XDG_CACHE_HOME": "/tmp/xdg-cache",
+        "OUTPUT_DIR": "/workspace/output"
+      },
+      "workdir": "/app",
+      "user": "root"
+    },
+    "verifier": {
+      "image": "registry.dp.tech/public/pkscience-o03-verifier@sha256:9b8ab828dbddb0955109bc5fc9095cfccbe31342a14205edd4256fc8693369f0",
+      "image_env": {
+        "PATH": "/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "GPG_KEY": "7169605F62C751356D054A26A821E680E5FA6305",
+        "PYTHON_VERSION": "3.13.5",
+        "PYTHON_SHA256": "93e583f243454e6e9e4588ca2c2662206ad961659863277afcdb96801647d640",
+        "PIP_INDEX_URL": "https://mirrors.aliyun.com/pypi/simple"
+      },
+      "workdir": "/tests",
+      "user": "root"
+    }
+  }
+}

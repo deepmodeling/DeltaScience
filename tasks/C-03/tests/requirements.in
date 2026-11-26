@@ -1,0 +1,8 @@
+rdkit==2026.9.1
+meeko==0.8.0
+scipy==1.16.2
+gemmi==0.7.3
+prody==2.6.1
+numpy==2.3.4
+pytest==8.4.1
+pytest-json-ctrf==0.3.5

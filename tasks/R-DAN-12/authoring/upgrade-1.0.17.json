@@ -1,0 +1,16 @@
+{
+  "task": "R-DAN-12",
+  "source_version": "1.0.16",
+  "version": "1.0.17",
+  "document_revision": 25,
+  "selected_sections": [
+    3,
+    4,
+    5
+  ],
+  "gold_changed": false,
+  "scientific_kernel_bytes_unchanged": true,
+  "images_unchanged": true,
+  "judge_model_changed": false,
+  "scientific_e2e_status": "NOT_RUN"
+}

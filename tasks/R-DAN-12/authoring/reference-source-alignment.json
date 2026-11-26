@@ -1,0 +1,70 @@
+{
+  "schema": "retro-reference-source-alignment/1",
+  "historical_source_gold_sha256": "56047aff8af27916babbd0ea0eba7dc5fa4d91f3335ab10c7738de91561fe120",
+  "collection_gold_sha256": "56047aff8af27916babbd0ea0eba7dc5fa4d91f3335ab10c7738de91561fe120",
+  "active_reference": {
+    "path": "solution/checkpoint_aligned_reference.json",
+    "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+    "bytes": 15524
+  },
+  "checkpoint_file": "tests/release/rubrics/Danicopan/DAN-US2019-EX395/TARGET_CHECKPOINT_PACKET.json",
+  "checkpoint_sha256": "e79577226a31150c6870785487341bdea60547ef238ec1299a99d0884bbb5cdc",
+  "alignment": [
+    {
+      "checkpoint_id": "RPF-01",
+      "source_step_id": "DAN-US2019-EX395-S1",
+      "product_identity_match": true,
+      "reactant_identity_multiset_match": true
+    },
+    {
+      "checkpoint_id": "RPF-02",
+      "source_step_id": "DAN-US2019-EX395-S2",
+      "product_identity_match": true,
+      "reactant_identity_multiset_match": true
+    },
+    {
+      "checkpoint_id": "RPF-03",
+      "source_step_id": "DAN-US2019-EX395-S3",
+      "product_identity_match": true,
+      "reactant_identity_multiset_match": true
+    },
+    {
+      "checkpoint_id": "RPF-04",
+      "source_step_id": "DAN-US2019-EX395-S4",
+      "product_identity_match": true,
+      "reactant_identity_multiset_match": true
+    },
+    {
+      "checkpoint_id": "RPF-05",
+      "source_step_id": "DAN-US2019-EX395-S5",
+      "product_identity_match": true,
+      "reactant_identity_multiset_match": true
+    },
+    {
+      "checkpoint_id": "RPF-06",
+      "source_step_id": "DAN-US2019-EX395-S6",
+      "product_identity_match": true,
+      "reactant_identity_multiset_match": true
+    },
+    {
+      "checkpoint_id": "RPF-07",
+      "source_step_id": "DAN-US2019-EX395-S7",
+      "product_identity_match": true,
+      "reactant_identity_multiset_match": true
+    }
+  ],
+  "reconstructed_structure_step_ids": [
+    "DAN-US2019-EX395-S1",
+    "DAN-US2019-EX395-S2"
+  ],
+  "identity_check_scope": "Exact recorded full InChIKeys and reactant multiplicities; runtime recomputes identities using RDKit.",
+  "scientific_equivalence_or_threshold_validation": "NOT_RUN",
+  "historical_source_gold_blob_recovered": true,
+  "collection_recovery": {
+    "source_manifest_sha256": "0a76c6ce3cd0ff706afb5b4491d8bc3c85b69ec95e26e8779d7e708fe82147ca",
+    "source_member": "golden_routes/DAN-US2019-EX395.gold_route.json",
+    "byte_matches_frozen_gold_source": true,
+    "active_reference_changed": false,
+    "grading_input_changed": false
+  }
+}

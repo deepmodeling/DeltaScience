@@ -1,0 +1,6 @@
+{
+  "family": "Danicopan",
+  "target_id": "DAN-US2019-EX395",
+  "target_smiles": "CC(=O)c1nn(CC(=O)N2C[C@@](F)(CN)C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+  "target_node_id": "M1"
+}

@@ -1,0 +1,279 @@
+{
+  "schema_version": "compound-family-gold-route-v2",
+  "language": "English",
+  "generated_on": "2026-08-25",
+  "compound_id": "DAN-API-001",
+  "family": "Danicopan",
+  "target": {
+    "name": "Danicopan; Compound 1 Form II",
+    "isomeric_smiles": "CC(=O)c1nn(CC(=O)N2C[C@H](F)C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+    "full_inchikey": "PIBARDGJJAGJAJ-NQIIRXRSSA-N",
+    "molecular_formula": "C26H23BrFN7O3",
+    "exact_mass": 579.102978,
+    "structure_basis": "patent-scheme exact target and curated API identity"
+  },
+  "gold_status": "gold_ready",
+  "confidence_grade": "A_primary_experimental",
+  "identity_verification": {
+    "method": "RDKit full InChIKey",
+    "terminal_product_matches_target": true
+  },
+  "source": {
+    "type": "primary_patent",
+    "publication": "US11814363B2",
+    "url": "https://patents.google.com/patent/US11814363B2/en",
+    "source_location": "Scheme 1; paragraphs [0408], [0411]–[0416]"
+  },
+  "route_class": "kilogram-scale process route",
+  "covalent_operation_count": 6,
+  "longest_synthetic_depth": 4,
+  "isolated_operation_count": 6,
+  "shared_branch_policy": "The two experimentally disclosed branches are embedded and converge in Step 6; the branches may be shared by future exact analog route records when explicitly supported.",
+  "stereochemistry_challenge": "The (2S,4R)-4-fluoropyrrolidine configuration is carried through activation, deprotection, and final coupling.",
+  "selectivity_challenge": "One-pot sequential Miyaura borylation/Suzuki coupling and chemoselective final amide coupling in a multifunctional scaffold.",
+  "steps": [
+    {
+      "step_id": "DAN-API-001-S1",
+      "module": "RIGHT_AMINE_BRANCH",
+      "is_covalent_operation": true,
+      "reaction_class": "Carboxamide formation",
+      "major_reactants": [
+        {
+          "name": "N-Boc-trans-4-fluoro-L-proline",
+          "isomeric_smiles": "CC(C)(C)OC(=O)N1C[C@H](F)C[C@H]1C(=O)O",
+          "full_inchikey": "YGWZXQOYEBWUTH-RQJHMYQMSA-N",
+          "molecular_formula": "C10H16FNO4",
+          "exact_mass": 233.106336,
+          "structure_basis": "name-derived and patent-scheme-verified"
+        },
+        {
+          "name": "2-amino-6-bromopyridine",
+          "isomeric_smiles": "Nc1cccc(Br)n1",
+          "full_inchikey": "BKLJUYPLUWUEOQ-UHFFFAOYSA-N",
+          "molecular_formula": "C5H5BrN2",
+          "exact_mass": 171.96361,
+          "structure_basis": "name-derived"
+        }
+      ],
+      "product": {
+        "name": "tert-Butyl (2S,4R)-2-((6-bromopyridin-2-yl)carbamoyl)-4-fluoropyrrolidine-1-carboxylate (3)",
+        "isomeric_smiles": "CC(C)(C)OC(=O)N1C[C@H](F)C[C@H]1C(=O)Nc1cccc(Br)n1",
+        "full_inchikey": "IDMGJXRJYPFZIG-ZJUUUORDSA-N",
+        "molecular_formula": "C15H19BrFN3O3",
+        "exact_mass": 387.059382,
+        "structure_basis": "name-derived and patent-scheme-verified"
+      },
+      "conditions": "N-methylimidazole and methanesulfonyl chloride in DCM under nitrogen; 0±5 °C addition, then room temperature for 12 h; aqueous acid/base/brine work-up and DCM/heptane isolation.",
+      "isolated_yield": "84.86% (71.76 kg)",
+      "source_locator": "US11814363B2, Scheme 1 and paragraph [0411] (p-0340), Step 1.",
+      "evidence_status": "primary_patent_experimental_procedure"
+    },
+    {
+      "step_id": "DAN-API-001-S2",
+      "module": "RIGHT_AMINE_BRANCH",
+      "is_covalent_operation": true,
+      "reaction_class": "Boc deprotection",
+      "major_reactants": [
+        {
+          "name": "tert-Butyl (2S,4R)-2-((6-bromopyridin-2-yl)carbamoyl)-4-fluoropyrrolidine-1-carboxylate (3)",
+          "isomeric_smiles": "CC(C)(C)OC(=O)N1C[C@H](F)C[C@H]1C(=O)Nc1cccc(Br)n1",
+          "full_inchikey": "IDMGJXRJYPFZIG-ZJUUUORDSA-N",
+          "molecular_formula": "C15H19BrFN3O3",
+          "exact_mass": 387.059382,
+          "structure_basis": "name-derived and patent-scheme-verified"
+        }
+      ],
+      "product": {
+        "name": "(2S,4R)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide (4)",
+        "isomeric_smiles": "O=C(Nc1cccc(Br)n1)[C@@H]1C[C@@H](F)CN1",
+        "full_inchikey": "GIULRSTUUMLDAP-RQJHMYQMSA-N",
+        "molecular_formula": "C10H11BrFN3O",
+        "exact_mass": 287.006952,
+        "structure_basis": "name-derived and patent-scheme-verified"
+      },
+      "conditions": "4 M HCl in dioxane at 25±5 °C under nitrogen for 1 h; dilute with DCM, wash with aqueous sodium bicarbonate, concentrate, and isolate from DCM/heptane.",
+      "isolated_yield": "87% (25.81 kg)",
+      "source_locator": "US11814363B2, Scheme 1 and paragraph [0412] (p-0341), Step 2.",
+      "evidence_status": "primary_patent_experimental_procedure"
+    },
+    {
+      "step_id": "DAN-API-001-S3",
+      "module": "LEFT_ACID_BRANCH",
+      "is_covalent_operation": true,
+      "reaction_class": "Indazole N-alkylation",
+      "major_reactants": [
+        {
+          "name": "1-(5-bromo-1H-indazol-3-yl)ethan-1-one (5)",
+          "isomeric_smiles": "CC(=O)c1n[nH]c2ccc(Br)cc12",
+          "full_inchikey": "HOPFEUJFXKXWNN-UHFFFAOYSA-N",
+          "molecular_formula": "C9H7BrN2O",
+          "exact_mass": 237.974175,
+          "structure_basis": "name-derived and patent-scheme-verified"
+        },
+        {
+          "name": "tert-Butyl bromoacetate",
+          "isomeric_smiles": "CC(C)(C)OC(=O)CBr",
+          "full_inchikey": "BNWCETAHAJSBFG-UHFFFAOYSA-N",
+          "molecular_formula": "C6H11BrO2",
+          "exact_mass": 193.994242,
+          "structure_basis": "name-derived"
+        }
+      ],
+      "product": {
+        "name": "tert-Butyl 2-(3-acetyl-5-bromo-1H-indazol-1-yl)acetate (6)",
+        "isomeric_smiles": "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(Br)cc12",
+        "full_inchikey": "FKAVFCMDYVDNRL-UHFFFAOYSA-N",
+        "molecular_formula": "C15H17BrN2O3",
+        "exact_mass": 352.042255,
+        "structure_basis": "name-derived and patent-scheme-verified"
+      },
+      "conditions": "Potassium carbonate in DMF under nitrogen; 30±10 °C addition, then 50±5 °C for 1 h; water precipitation and filtration.",
+      "isolated_yield": "97.13% (43.13 kg)",
+      "source_locator": "US11814363B2, Scheme 1 and paragraph [0413] (p-0342), Step 3.",
+      "evidence_status": "primary_patent_experimental_procedure"
+    },
+    {
+      "step_id": "DAN-API-001-S4",
+      "module": "LEFT_ACID_BRANCH",
+      "is_covalent_operation": true,
+      "reaction_class": "One-pot Miyaura borylation and Suzuki coupling",
+      "major_reactants": [
+        {
+          "name": "tert-Butyl 2-(3-acetyl-5-bromo-1H-indazol-1-yl)acetate (6)",
+          "isomeric_smiles": "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(Br)cc12",
+          "full_inchikey": "FKAVFCMDYVDNRL-UHFFFAOYSA-N",
+          "molecular_formula": "C15H17BrN2O3",
+          "exact_mass": 352.042255,
+          "structure_basis": "name-derived and patent-scheme-verified"
+        },
+        {
+          "name": "4-bromo-2-methylpyrimidine (7)",
+          "isomeric_smiles": "Cc1ncc(Br)cn1",
+          "full_inchikey": "NEDJTEXNSTUKHW-UHFFFAOYSA-N",
+          "molecular_formula": "C5H5BrN2",
+          "exact_mass": 171.96361,
+          "structure_basis": "name-derived and patent-scheme-verified"
+        }
+      ],
+      "product": {
+        "name": "tert-Butyl 2-(3-acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetate (9)",
+        "isomeric_smiles": "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(-c3cnc(C)nc3)cc12",
+        "full_inchikey": "QCDKFRBEWIFFGK-UHFFFAOYSA-N",
+        "molecular_formula": "C20H22N4O3",
+        "exact_mass": 366.169191,
+        "structure_basis": "name-derived and patent-scheme-verified"
+      },
+      "conditions": "Bis(pinacolato)diboron, potassium acetate and Pd(dppf)Cl2 in dioxane at 90±5 °C; add intermediate 6, potassium carbonate and water, then heat again at 90±5 °C; charcoal/celite treatment, cysteine wash, and MTBE/heptane isolation.",
+      "isolated_yield": "56% (11.8 kg)",
+      "source_locator": "US11814363B2, Scheme 1, paragraph [0408] (p-0337), and paragraph [0414] (p-0343), Step 4.",
+      "evidence_status": "primary_patent_experimental_procedure"
+    },
+    {
+      "step_id": "DAN-API-001-S5",
+      "module": "LEFT_ACID_BRANCH",
+      "is_covalent_operation": true,
+      "reaction_class": "tert-Butyl ester deprotection",
+      "major_reactants": [
+        {
+          "name": "tert-Butyl 2-(3-acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetate (9)",
+          "isomeric_smiles": "CC(=O)c1nn(CC(=O)OC(C)(C)C)c2ccc(-c3cnc(C)nc3)cc12",
+          "full_inchikey": "QCDKFRBEWIFFGK-UHFFFAOYSA-N",
+          "molecular_formula": "C20H22N4O3",
+          "exact_mass": 366.169191,
+          "structure_basis": "name-derived and patent-scheme-verified"
+        }
+      ],
+      "product": {
+        "name": "2-(3-acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetic acid (10)",
+        "isomeric_smiles": "CC(=O)c1nn(CC(=O)O)c2ccc(-c3cnc(C)nc3)cc12",
+        "full_inchikey": "INDCSLFBKQSDAY-UHFFFAOYSA-N",
+        "molecular_formula": "C16H14N4O3",
+        "exact_mass": 310.10659,
+        "structure_basis": "name-derived and patent-scheme-verified"
+      },
+      "conditions": "TFA in DCM; 15±5 °C addition, then 35±5 °C to completion; remove volatiles, bicarbonate treatment, acidify to pH 2–3, filter and dry.",
+      "isolated_yield": "Quantitative (42.4 kg)",
+      "source_locator": "US11814363B2, Scheme 1 and paragraph [0415] (p-0344), Step 5.",
+      "evidence_status": "primary_patent_experimental_procedure"
+    },
+    {
+      "step_id": "DAN-API-001-S6",
+      "module": "CONVERGENT_COUPLING",
+      "is_covalent_operation": true,
+      "reaction_class": "Final amide coupling",
+      "major_reactants": [
+        {
+          "name": "2-(3-acetyl-5-(2-methylpyrimidin-5-yl)-1H-indazol-1-yl)acetic acid (10)",
+          "isomeric_smiles": "CC(=O)c1nn(CC(=O)O)c2ccc(-c3cnc(C)nc3)cc12",
+          "full_inchikey": "INDCSLFBKQSDAY-UHFFFAOYSA-N",
+          "molecular_formula": "C16H14N4O3",
+          "exact_mass": 310.10659,
+          "structure_basis": "name-derived and patent-scheme-verified"
+        },
+        {
+          "name": "(2S,4R)-N-(6-bromopyridin-2-yl)-4-fluoropyrrolidine-2-carboxamide (4)",
+          "isomeric_smiles": "O=C(Nc1cccc(Br)n1)[C@@H]1C[C@@H](F)CN1",
+          "full_inchikey": "GIULRSTUUMLDAP-RQJHMYQMSA-N",
+          "molecular_formula": "C10H11BrFN3O",
+          "exact_mass": 287.006952,
+          "structure_basis": "name-derived and patent-scheme-verified"
+        }
+      ],
+      "product": {
+        "name": "Danicopan; Compound 1 Form II",
+        "isomeric_smiles": "CC(=O)c1nn(CC(=O)N2C[C@H](F)C[C@H]2C(=O)Nc2cccc(Br)n2)c2ccc(-c3cnc(C)nc3)cc12",
+        "full_inchikey": "PIBARDGJJAGJAJ-NQIIRXRSSA-N",
+        "molecular_formula": "C26H23BrFN7O3",
+        "exact_mass": 579.102978,
+        "structure_basis": "patent-scheme exact target and curated API identity"
+      },
+      "conditions": "TBTU and DIPEA in DMF; 10±5 °C additions, then 25±5 °C to completion; ethyl acetate work-up, silica/charcoal and optional thiol-resin palladium removal, IPA/heptane crystallization to Form II.",
+      "isolated_yield": "78% (60 kg)",
+      "source_locator": "US11814363B2, Scheme 1 and paragraph [0416] (p-0345), Step 6.",
+      "evidence_status": "primary_patent_experimental_procedure"
+    }
+  ],
+  "outer_leaves": [
+    {
+      "name": "2-amino-6-bromopyridine",
+      "isomeric_smiles": "Nc1cccc(Br)n1",
+      "full_inchikey": "BKLJUYPLUWUEOQ-UHFFFAOYSA-N",
+      "molecular_formula": "C5H5BrN2",
+      "exact_mass": 171.96361,
+      "structure_basis": "name-derived"
+    },
+    {
+      "name": "tert-Butyl bromoacetate",
+      "isomeric_smiles": "CC(C)(C)OC(=O)CBr",
+      "full_inchikey": "BNWCETAHAJSBFG-UHFFFAOYSA-N",
+      "molecular_formula": "C6H11BrO2",
+      "exact_mass": 193.994242,
+      "structure_basis": "name-derived"
+    },
+    {
+      "name": "1-(5-bromo-1H-indazol-3-yl)ethan-1-one (5)",
+      "isomeric_smiles": "CC(=O)c1n[nH]c2ccc(Br)cc12",
+      "full_inchikey": "HOPFEUJFXKXWNN-UHFFFAOYSA-N",
+      "molecular_formula": "C9H7BrN2O",
+      "exact_mass": 237.974175,
+      "structure_basis": "name-derived and patent-scheme-verified"
+    },
+    {
+      "name": "4-bromo-2-methylpyrimidine (7)",
+      "isomeric_smiles": "Cc1ncc(Br)cn1",
+      "full_inchikey": "NEDJTEXNSTUKHW-UHFFFAOYSA-N",
+      "molecular_formula": "C5H5BrN2",
+      "exact_mass": 171.96361,
+      "structure_basis": "name-derived and patent-scheme-verified"
+    },
+    {
+      "name": "N-Boc-trans-4-fluoro-L-proline",
+      "isomeric_smiles": "CC(C)(C)OC(=O)N1C[C@H](F)C[C@H]1C(=O)O",
+      "full_inchikey": "YGWZXQOYEBWUTH-RQJHMYQMSA-N",
+      "molecular_formula": "C10H16FNO4",
+      "exact_mass": 233.106336,
+      "structure_basis": "name-derived and patent-scheme-verified"
+    }
+  ],
+  "evidence_boundary": "The patent text in paragraph [0416] calls the acyl partner 'intermediate 9', while Scheme 1 and the immediately preceding acid-deprotection Step 5 establish intermediate 10 as the chemically competent coupling partner; this source transcription inconsistency is recorded rather than hidden."
+}

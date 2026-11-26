@@ -1,0 +1,5 @@
+{
+  "kind": "archived_equilibrium_flux_v1",
+  "submission": "submission/flux.npz",
+  "trace_separate": true
+}

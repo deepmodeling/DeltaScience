@@ -1,0 +1,1 @@
+Binary scoring: retain the original continuous score, physics model and diagnostics. Output 1 when the unrounded continuous score is at least 0.4, otherwise 0. Verifier or trusted-input failure must not produce a scientific reward and exits nonzero.

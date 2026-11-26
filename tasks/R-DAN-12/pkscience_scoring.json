@@ -1,0 +1,12 @@
+{
+  "id": "R-DAN-12",
+  "version": "author-1.0.17-role-proxy-v1",
+  "reward_mode": "continuous",
+  "raw_artifact": "score_breakdown.json",
+  "raw_field": "best_route_scores.open",
+  "raw_scale": "0–100",
+  "reward_divisor": 100,
+  "legacy_binary_field": "harbor_reward",
+  "legacy_binary_rule": "Author current-gold top-five quality-multi decision",
+  "limitations": "Unresolved continuous bounds remain unknown; original binary retained independently."
+}

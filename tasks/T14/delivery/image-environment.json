@@ -1,0 +1,31 @@
+{
+  "kind": "resolved_image_env_defaults",
+  "previous_task_toml_sha256": "286b6af8decf0a43ed3e484eb35e7f01be956b38940cd8e44785f0804aeeacf5",
+  "previous_explicit_environment": {
+    "environment": {}
+  },
+  "image_configs": {
+    "agent": {
+      "image": "registry.dp.tech/public/pkscience-t14-agent@sha256:d675022b14a70db40dedf7ef5cac49a1cea1b8f0c13e02b9df29dc5620ff505c",
+      "image_env": {
+        "PATH": "/usr/local/bin:/usr/bin:/bin",
+        "LANG": "C.UTF-8",
+        "PYTHONUNBUFFERED": "1",
+        "MPLBACKEND": "Agg"
+      },
+      "workdir": "/workspace",
+      "user": "root"
+    },
+    "verifier": {
+      "image": "registry.dp.tech/public/pkscience-t14-agent@sha256:d675022b14a70db40dedf7ef5cac49a1cea1b8f0c13e02b9df29dc5620ff505c",
+      "image_env": {
+        "PATH": "/usr/local/bin:/usr/bin:/bin",
+        "LANG": "C.UTF-8",
+        "PYTHONUNBUFFERED": "1",
+        "MPLBACKEND": "Agg"
+      },
+      "workdir": "/workspace",
+      "user": "root"
+    }
+  }
+}

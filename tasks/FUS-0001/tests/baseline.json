@@ -1,0 +1,14 @@
+{
+  "objective_q95_m": 0.035109356870013486,
+  "case_count": 212,
+  "trusted_files_sha256": {
+    "reference.npz": "8c3ca4a9438ab3271e1b4ba1cce7033aca08e296b1bfbda35de1ca94c8081ac1",
+    "paper_geometry.py": "79261e9b387f36e417c556a14133f8b7f0b083c732872ad3469c957388ddc002"
+  },
+  "diagnostic_versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.1",
+    "freegs4e": "0.15.0"
+  },
+  "critical_source_sha256": "af3aaa0b8b95c0c65455664a2897763d182fa1a25e8fa47a4f493bdf7ab7f9a3"
+}

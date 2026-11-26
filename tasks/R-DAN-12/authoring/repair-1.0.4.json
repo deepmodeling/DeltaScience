@@ -1,0 +1,17 @@
+{
+  "slug": "r-dan-12",
+  "version": "1.0.4",
+  "reference_replay_steps": 10,
+  "reference_leaf_identities": 5,
+  "checkpoint_steps": 7,
+  "structure_reconstructed_steps": [
+    "DAN-US2019-EX395-S1",
+    "DAN-US2019-EX395-S2"
+  ],
+  "baseline_scientific_agent_budget_sec": 28800,
+  "verifier_budget_old_sec": 14400,
+  "verifier_budget_new_sec": 28800,
+  "frozen_scoring_bytes_preserved": true,
+  "reward_rule_preserved": true,
+  "actual_scientific_score": "NOT_RUN"
+}

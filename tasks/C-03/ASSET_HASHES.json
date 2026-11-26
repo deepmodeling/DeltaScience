@@ -1,0 +1,312 @@
+{
+  "algorithm": "SHA-256",
+  "path_base": "task_root",
+  "scope": "Task-root-relative distributed runtime, verifier, actual reference files when supplied, and author provenance/validation status. Pending validation is not a passing claim.",
+  "files": [
+    {
+      "path": "environment/Dockerfile",
+      "bytes": 887,
+      "sha256": "ff675bc32ddeb3d7f70694e2db7dd6e57b729afb9a2e571472f1ed3078236cb5"
+    },
+    {
+      "path": "environment/build-requirements.in",
+      "bytes": 78,
+      "sha256": "e0694ec47cb067692d0a8a412885cfe8cbcc780e3712f721e28c4389d5487e4d"
+    },
+    {
+      "path": "environment/build-requirements.lock",
+      "bytes": 9088,
+      "sha256": "aac9340f76597d2929e47f0bb8d98f916bb1e843e00c79e8b1ae75ce3ffa60f1"
+    },
+    {
+      "path": "environment/completion/check.py",
+      "bytes": 12523,
+      "sha256": "b387488faed4142a9587668179e4663ea41b69dc98e45dd0a30fb42b0bea3c96"
+    },
+    {
+      "path": "environment/completion/config.json",
+      "bytes": 515,
+      "sha256": "bf4313d6a23ec1072847e7b77fd5f4434347e5b0e2c32ef0e05430ac4681284c"
+    },
+    {
+      "path": "environment/completion/scorer.py",
+      "bytes": 38137,
+      "sha256": "e9f50a03c11649d2b14211c07e236e1896ed81722c6b8d2148cb40a5598c3368"
+    },
+    {
+      "path": "environment/inputs/bcl2_6o0k_chainA.pdbqt",
+      "bytes": 114880,
+      "sha256": "7ae327a28bde66fe2f40afd3b858c03b287796c3a5b8d2f2aaa890adaf189ce4"
+    },
+    {
+      "path": "environment/inputs/bcl2_6o0k_chainA_protein.pdb",
+      "bytes": 95266,
+      "sha256": "ff08dbaaaffe084bad6927bdf55817bd23b4a05177ca4d47e1f62db443e2d0dc"
+    },
+    {
+      "path": "environment/inputs/bclxl_4qvx_chainA.pdbqt",
+      "bytes": 106880,
+      "sha256": "69ece41464cdb20a1f0e30e70c4ebad66f7b5cc5411dfa574610d7e3fde04e00"
+    },
+    {
+      "path": "environment/inputs/bclxl_4qvx_chainA_protein.pdb",
+      "bytes": 88624,
+      "sha256": "3dda9ab091438e5b938545c194c37e03270575ed4a638b4c3626a56445300fee"
+    },
+    {
+      "path": "environment/inputs/completion_contract.json",
+      "bytes": 1353,
+      "sha256": "44c3543ed3c71918c2ed0822d4b75ccca0359363c7d93cc962fe22c4de5aff47"
+    },
+    {
+      "path": "environment/inputs/completion_rules.md",
+      "bytes": 5862,
+      "sha256": "11b656d85f3c09fa41471c8c8c9e0b1189b2dfa3ba002d010932a16ec88f106b"
+    },
+    {
+      "path": "environment/inputs/literature_controls.json",
+      "bytes": 4503,
+      "sha256": "2dde258554f1b16cbf504a0a4de15ab800967659d3b1003bf0b3c3c8622ce685"
+    },
+    {
+      "path": "environment/inputs/protocol.json",
+      "bytes": 32514,
+      "sha256": "a7757e56ed0125ba92a2c7a2f3043a1a4af0aeed0b0f00d23a397160f4a744f7"
+    },
+    {
+      "path": "environment/inputs/site_reference_a1155463_4qvx_chainA.sdf",
+      "bytes": 4360,
+      "sha256": "3a50bfa23815c11ff6fd8d59bad9c1c0f570620bf03378e4209e97d85b41b255"
+    },
+    {
+      "path": "environment/inputs/site_reference_venetoclax_6o0k_chainA.sdf",
+      "bytes": 5566,
+      "sha256": "13e59af9eb1aa028ae8209597124fa8bbb2632ae10e7c4b161d1f9cce8df7615"
+    },
+    {
+      "path": "environment/inputs/structure_provenance.md",
+      "bytes": 2888,
+      "sha256": "d49c56b038fbf108ebc4afc6040c49c70d516a8bd9dc55c89ce30debb95bc07b"
+    },
+    {
+      "path": "environment/inputs/task_spec.md",
+      "bytes": 8125,
+      "sha256": "2c27b012755b772866eb50602415faea371bcc193c5451e9df5982c6d173d7f5"
+    },
+    {
+      "path": "environment/requirements.in",
+      "bytes": 82,
+      "sha256": "9a0c563f8b1cac123c9e7c3570df9e614069afa2a093d2b4aeabf8b44a1af43a"
+    },
+    {
+      "path": "environment/requirements.lock",
+      "bytes": 28010,
+      "sha256": "2470b81070bc671db13083324e5bf820a7b4fe6e08097eeac2f8b8ddad51260f"
+    },
+    {
+      "path": "environment/tool_notes.md",
+      "bytes": 957,
+      "sha256": "0cda9f91cdeb65bd09cb6c1ba09e094525aeb03dfb07e364c48f61cca2650cf1"
+    },
+    {
+      "path": "tests/Dockerfile",
+      "bytes": 809,
+      "sha256": "a486f88e11ab1e3fe0dfbbb6f7097b87595edc0cc83cfc2e722fadd077350815"
+    },
+    {
+      "path": "tests/bcl_selectivity_rubric.py",
+      "bytes": 38137,
+      "sha256": "e9f50a03c11649d2b14211c07e236e1896ed81722c6b8d2148cb40a5598c3368"
+    },
+    {
+      "path": "tests/build-requirements.in",
+      "bytes": 78,
+      "sha256": "e0694ec47cb067692d0a8a412885cfe8cbcc780e3712f721e28c4389d5487e4d"
+    },
+    {
+      "path": "tests/build-requirements.lock",
+      "bytes": 9088,
+      "sha256": "aac9340f76597d2929e47f0bb8d98f916bb1e843e00c79e8b1ae75ce3ffa60f1"
+    },
+    {
+      "path": "tests/receptor/bcl2_6o0k_chainA.pdbqt",
+      "bytes": 114880,
+      "sha256": "7ae327a28bde66fe2f40afd3b858c03b287796c3a5b8d2f2aaa890adaf189ce4"
+    },
+    {
+      "path": "tests/receptor/bcl2_6o0k_chainA_protein.pdb",
+      "bytes": 95266,
+      "sha256": "ff08dbaaaffe084bad6927bdf55817bd23b4a05177ca4d47e1f62db443e2d0dc"
+    },
+    {
+      "path": "tests/receptor/bclxl_4qvx_chainA.pdbqt",
+      "bytes": 106880,
+      "sha256": "69ece41464cdb20a1f0e30e70c4ebad66f7b5cc5411dfa574610d7e3fde04e00"
+    },
+    {
+      "path": "tests/receptor/bclxl_4qvx_chainA_protein.pdb",
+      "bytes": 88624,
+      "sha256": "3dda9ab091438e5b938545c194c37e03270575ed4a638b4c3626a56445300fee"
+    },
+    {
+      "path": "tests/receptor/literature_controls.json",
+      "bytes": 4503,
+      "sha256": "2dde258554f1b16cbf504a0a4de15ab800967659d3b1003bf0b3c3c8622ce685"
+    },
+    {
+      "path": "tests/receptor/protocol.json",
+      "bytes": 32514,
+      "sha256": "a7757e56ed0125ba92a2c7a2f3043a1a4af0aeed0b0f00d23a397160f4a744f7"
+    },
+    {
+      "path": "tests/receptor/site_reference_a1155463_4qvx_chainA.sdf",
+      "bytes": 4360,
+      "sha256": "3a50bfa23815c11ff6fd8d59bad9c1c0f570620bf03378e4209e97d85b41b255"
+    },
+    {
+      "path": "tests/receptor/site_reference_venetoclax_6o0k_chainA.sdf",
+      "bytes": 5566,
+      "sha256": "13e59af9eb1aa028ae8209597124fa8bbb2632ae10e7c4b161d1f9cce8df7615"
+    },
+    {
+      "path": "tests/receptor/structure_provenance.md",
+      "bytes": 2888,
+      "sha256": "d49c56b038fbf108ebc4afc6040c49c70d516a8bd9dc55c89ce30debb95bc07b"
+    },
+    {
+      "path": "tests/receptor/task_spec.md",
+      "bytes": 8125,
+      "sha256": "2c27b012755b772866eb50602415faea371bcc193c5451e9df5982c6d173d7f5"
+    },
+    {
+      "path": "tests/requirements.in",
+      "bytes": 120,
+      "sha256": "df415b5f352586d2a5aec86a93af71d141d92064ee7e8eab4b44fc4154aeb0a2"
+    },
+    {
+      "path": "tests/requirements.lock",
+      "bytes": 29132,
+      "sha256": "5a5acccd31fc5b0eda8f47702b7524b3a416c655b43fce5e7d90676081297be0"
+    },
+    {
+      "path": "tests/test.sh",
+      "bytes": 1668,
+      "sha256": "8ddaefd88b6fa5789695c26aff1c6f4e021d0a35e0eb3b77eeca9d0de3580628"
+    },
+    {
+      "path": "tests/test_submission.py",
+      "bytes": 1353,
+      "sha256": "155b7e5ad19ae396ec1199c21c75f15e271b85db14937e50653a3befe43f37e6"
+    },
+    {
+      "path": "authoring/provenance/README.md",
+      "bytes": 2009,
+      "sha256": "0be2ba1f265124ba276e9fd34059f0a23835fa782ee2e91b91d3cce0dd0db7cb"
+    },
+    {
+      "path": "authoring/provenance/build_assets.sh",
+      "bytes": 790,
+      "sha256": "37475729952a09c205ec19bfe8fba800fff8d22145a93db4283e68f66fa835df"
+    },
+    {
+      "path": "authoring/provenance/literature_sources.md",
+      "bytes": 4396,
+      "sha256": "07b112cf430109d81a59501d5c41a5a4808272e6e4c6167225aba64dbf18f0bf"
+    },
+    {
+      "path": "authoring/provenance/navitoclax_4lvt_chainA_experimental.sdf",
+      "bytes": 5867,
+      "sha256": "22824b23c7db726e151a883acb19bd1904d3988bb2c3586b2a478b7d85c942d8"
+    },
+    {
+      "path": "authoring/provenance/prepare_assets.py",
+      "bytes": 9680,
+      "sha256": "0bc88cedd13b22bf9cbd32d1986314cdd016203128d3722c22ba86bf51b63af0"
+    },
+    {
+      "path": "authoring/provenance/raw/1XJ.cif",
+      "bytes": 18025,
+      "sha256": "d5be5db7e5ac61805be45070e259e2a812aff6d4fdb7f98c315c256be3626704"
+    },
+    {
+      "path": "authoring/provenance/raw/1XJ_ideal.sdf",
+      "bytes": 8352,
+      "sha256": "87fd8d5b26a241522da8341f939a2cbef0ee63d537e6b02707a7bce0ac55a390"
+    },
+    {
+      "path": "authoring/provenance/raw/3CQ.cif",
+      "bytes": 12822,
+      "sha256": "8500ea2ddd3ad287201bdf36b8d1b291b2721f3234505ffdadfa2354fdbbf2b1"
+    },
+    {
+      "path": "authoring/provenance/raw/3CQ_ideal.sdf",
+      "bytes": 5545,
+      "sha256": "c6b82bc6365cbd1bfc90515caf030c97c9210228150c98e1969328a27b5a4df9"
+    },
+    {
+      "path": "authoring/provenance/raw/4LVT.pdb",
+      "bytes": 261630,
+      "sha256": "7d7e19e338ca03334b14b42c9aa63d580f3c5424f1149e4f80eafead6af3e934"
+    },
+    {
+      "path": "authoring/provenance/raw/4QVX.pdb",
+      "bytes": 245592,
+      "sha256": "b4da7dd3c6cfcca3b8c1d5f5102136193cf687345d4e3100c403db31468a7a82"
+    },
+    {
+      "path": "authoring/provenance/raw/6O0K.pdb",
+      "bytes": 268839,
+      "sha256": "5684f30360ab071a290c2ece175e96dc676515f24e01e653d8fb286fba101450"
+    },
+    {
+      "path": "authoring/provenance/raw/LBM.cif",
+      "bytes": 21002,
+      "sha256": "c2491143fb64b419764025a35e3444c072344c8a9acb04f9e775b4ab9d715e9b"
+    },
+    {
+      "path": "authoring/provenance/raw/LBM_ideal.sdf",
+      "bytes": 7795,
+      "sha256": "f17cbcce79f923c01052f3e5bf0f7156b9c50cd2cc7a39ede0fbbceb50af02e6"
+    },
+    {
+      "path": "authoring/provenance/structure_manifest.json",
+      "bytes": 18075,
+      "sha256": "7a5b75644fcc69c9cfd13e1a212b6d7c18d5f9d59ff4f668dcaf04bcf81cfe16"
+    },
+    {
+      "path": "authoring/provenance/structure_notes.md",
+      "bytes": 7876,
+      "sha256": "6856c271ba511e4dd1ae17f0f834bab6e0a4ce27383b52cc18c84e4a725162fc"
+    },
+    {
+      "path": "authoring/validation_status.json",
+      "bytes": 3507,
+      "sha256": "6c043fcdaabd6888fa8b16c4d3ab710af6619ab7ab03bc4d2e2565a85366313d"
+    },
+    {
+      "path": "environment/runtime-base.Dockerfile",
+      "bytes": 3669,
+      "sha256": "6672ce6cd6b25997ef966958d4b00517f3eadd37901f02556afed35764117131"
+    },
+    {
+      "path": "environment/runtime-requirements.lock",
+      "bytes": 29132,
+      "sha256": "5a5acccd31fc5b0eda8f47702b7524b3a416c655b43fce5e7d90676081297be0"
+    },
+    {
+      "path": "tests/runtime-base.Dockerfile",
+      "bytes": 3669,
+      "sha256": "6672ce6cd6b25997ef966958d4b00517f3eadd37901f02556afed35764117131"
+    },
+    {
+      "path": "tests/runtime-requirements.lock",
+      "bytes": 29132,
+      "sha256": "5a5acccd31fc5b0eda8f47702b7524b3a416c655b43fce5e7d90676081297be0"
+    },
+    {
+      "path": "authoring/deployment.json",
+      "bytes": 1671,
+      "sha256": "a0668dfabd0f5a33fcb1779d8476be6197ca15a6aa9f1f3f30bcf950afa8274d"
+    }
+  ]
+}

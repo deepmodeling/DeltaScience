@@ -1,0 +1,35 @@
+schema_version = "1.3"
+artifacts = ["/workspace/outputs"]
+[task]
+name = "local/retro-open-12"
+version = "1.0.0"
+[metadata]
+harbor_author_template = "retro-service-v1"
+runtime_profile = "retro-gold48stock-harbor-v1"
+conversion_status = "UNVALIDATED_CANDIDATE"
+source_set = "open48"
+[agent]
+user = "retro"
+timeout_sec = 28800.0
+[verifier]
+user = "root"
+environment_mode = "shared"
+network_mode = "public"
+timeout_sec = 14400.0
+[verifier.env]
+RETRO_JUDGE_API_KEY = "${RETRO_JUDGE_API_KEY}"
+RETRO_JUDGE_URL = "${RETRO_JUDGE_URL}"
+RETRO_JUDGE_MODEL = "${RETRO_JUDGE_MODEL}"
+RETRO_SCORE_TRACE = "${RETRO_SCORE_TRACE:-1}"
+[solution.env]
+RETRO_SOLVER_API_KEY = "${RETRO_SOLVER_API_KEY:-}"
+RETRO_SOLVER_URL = "${RETRO_SOLVER_URL:-}"
+RETRO_SOLVER_MODEL = "${RETRO_SOLVER_MODEL:-}"
+RETRO_SOLVER_PROTOCOL = "${RETRO_SOLVER_PROTOCOL:-openai_chat_completions}"
+[environment]
+network_mode = "public"
+cpus = 4
+memory_mb = 8192
+storage_mb = 32768
+gpus = 1
+build_timeout_sec = 7200.0

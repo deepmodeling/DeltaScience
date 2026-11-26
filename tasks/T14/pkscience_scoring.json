@@ -1,0 +1,13 @@
+{
+  "id": "T14",
+  "source_sha256": "d5471d4459b4c7dc09fd1c65dd0781b09b28e9fc269cb697285274ae12e87c38",
+  "raw_artifact": "grading_details.json",
+  "raw_field": "final_points",
+  "raw_scale": "0–100",
+  "reward_divisor": 100,
+  "version": "pkscience-continuous-v1",
+  "reward_mode": "continuous",
+  "legacy_binary_rule": "原连续 reward = 1，即 final_points = 100",
+  "limitations": "grading_details.json.reward 保留转换前的 0–1 分数。",
+  "validation": "scoring boundary tests and archive integrity; not a full scientific/container run"
+}

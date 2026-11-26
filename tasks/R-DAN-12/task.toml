@@ -1,0 +1,96 @@
+schema_version = "1.4"
+artifacts = [ "/workspace/outputs",]
+
+[task]
+name = "local/retro-open-12"
+description = "12_DAN_DAN_US2019_EX395: open retrosynthesis"
+version = "1.0.17"
+
+[metadata]
+retro_lifecycle_contract = "retro-native-isolated-grader/1"
+reward_mode = "top5_quality_multi_current_gold"
+reward_criterion = "At least one of the submitted top five routes has its unrounded six-item chemical score plus quality-filtered Q-MULTI greater than or equal to the designated gold score in the same evaluation; gold Q-MULTI is zero and no gold score bonus is applied."
+reference_solution_kind = "native_tool_gold_replay"
+reference_solution_status = "IMPLEMENTED_SCIENTIFIC_E2E_NOT_RUN"
+reference_solution_manifest = "solution/reference.json"
+source_task_id = "12_DAN_DAN_US2019_EX395"
+source_task_version = "1.0.0"
+runtime_profile = "retro-multicontainer-shared-images-v1"
+integration_only = false
+conversion_status = "V1_0_17_LOCAL_VALIDATION_PLATFORM_E2E_PENDING"
+source_set = "open48"
+reward_threshold_source = "current_gold_same_evaluation"
+reward_gold_chemical_score_bonus = 0
+reward_revision = "1.0.17"
+image_migration_revision = "1.0.7"
+pservice_docker_image = "registry.dp.tech/public/pkscience-retro-p-service@sha256:f5b8a643ec1f74368e86b3f957738cb624d0f1c3bf0ccd77a3c9b82daa557c1b"
+image_platform = "linux/amd64"
+image_publication_status = "PUBLISHED_RUNTIME_NOT_REVALIDATED"
+startup_fix_revision = "1.0.13"
+retro_total_gpu_requirement = 1
+retro_gpu_requirement_scope = "whole_agent_environment_including_pservice"
+retro_platform_integration_required = false
+verifier_execution = "isolated_original_verifier_image_via_root_only_unix_socket"
+verifier_docker_image = "registry.dp.tech/public/pkscience-r-dan-12-isolated-grader@sha256:f9839329213698276dc72b76f1340efdc8b3d7cfcf49b403e3ebdf10ad9d2929"
+private_verifier_gpus = 0
+grader_required_file_capability = "DAC_OVERRIDE"
+judge_transport_contract = "retro-judge-http/1"
+judge_transport = "stream_first_bounded_retry_same_frozen_judge"
+judge_protocol_contract = "quality_stability_absence_and_inline_policy_1.0.17"
+scoring_repair_revision = "1.0.17"
+agent_view_cleanup = "trusted_startup_and_public_native_receipt_projection"
+pkscience_revision = "author-1.0.17-role-proxy-v1"
+
+[agent]
+user = "retro"
+timeout_sec = 28800.0
+
+[environment]
+network_mode = "public"
+cpus = 4
+memory_mb = 8192
+storage_mb = 102400
+gpus = 1
+build_timeout_sec = 7200.0
+docker_image = "registry.dp.tech/public/pkscience-r-dan-12-agent@sha256:b78f3de7e7b679f60c657e54e46efd28efa768ea7fb8cc2e9d4115a562870868"
+workdir = "/workspace"
+
+[verifier]
+user = "root"
+environment_mode = "shared"
+network_mode = "public"
+timeout_sec = 28800.0
+
+[solution.env]
+RETRO_SOLVER_API_KEY = "${RETRO_SOLVER_API_KEY:-}"
+RETRO_SOLVER_URL = "${RETRO_SOLVER_URL:-}"
+RETRO_SOLVER_MODEL = "${RETRO_SOLVER_MODEL:-}"
+RETRO_SOLVER_PROTOCOL = "${RETRO_SOLVER_PROTOCOL:-openai_chat_completions}"
+
+[environment.env]
+PATH = "/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+LANG = "C.UTF-8"
+GPG_KEY = "A035C8C19219BA821ECEA86B64E628F8D684696D"
+PYTHON_VERSION = "3.10.22"
+PYTHON_SHA256 = "c61fe9b1a1a7ec2a0b0388e664187c378a5325a89e3606d220abf5bdfccb2543"
+PYTHONUNBUFFERED = "1"
+PYTHONDONTWRITEBYTECODE = "1"
+USE_TF = "0"
+USE_FLAX = "0"
+PYTHONPATH = "/opt/retro/main:/opt/retro/app:/opt/retro/app/outputs/pureagent_p_v0_benchmark/runtime"
+RETRO_P_ENDPOINT = "http://p-service:20765"
+RETRO_TASK_ROOT = "/workspace/task"
+RETRO_OUTPUT_ROOT = "/workspace/outputs"
+RETRO_BINDING_FILE = "/run/retro-client/service.json"
+RETRO_ROLE = "agent"
+HOME = "/home/retro"
+
+[verifier.env]
+RETRO_JUDGE_EXPECTED_MODEL_ID = "deepseek-v4.1-flash-1017"
+RETRO_JUDGE_EXPECTED_FINGERPRINT = "${RETRO_JUDGE_EXPECTED_FINGERPRINT:-}"
+RETRO_JUDGE_API_KEY = "${RETRO_JUDGE_API_KEY}"
+RETRO_JUDGE_URL = "${RETRO_JUDGE_URL}"
+RETRO_JUDGE_MODEL = "deepseek-v4.1-flash-1017"
+RETRO_SCORE_TRACE = "${RETRO_SCORE_TRACE:-1}"
+RETRO_JUDGE_HTTP_ATTEMPTS = "3"
+RETRO_JUDGE_HTTP_IDLE_TIMEOUT = "120"

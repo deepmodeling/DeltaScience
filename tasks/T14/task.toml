@@ -1,0 +1,41 @@
+schema_version = "1.4"
+[[artifacts]]
+source = "/workspace/outputs"
+destination = "outputs"
+
+[task]
+name = "synthetic-materials/trap-release-network-a"
+version = "1.0"
+description = "Nonperiodic frustrated trapping inverse design with four coupled intervention families"
+
+[agent]
+timeout_sec = 3600
+
+[verifier]
+timeout_sec = 120
+environment_mode = "shared"
+
+[environment]
+workdir = "/workspace"
+cpus = 4
+memory_mb = 8192
+gpus = 0
+network_mode = "public"
+docker_image = "registry.dp.tech/public/pkscience-t14-agent@sha256:d675022b14a70db40dedf7ef5cac49a1cea1b8f0c13e02b9df29dc5620ff505c"
+
+[metadata]
+reward_path = "/logs/verifier/reward.json"
+
+[environment.healthcheck]
+command = "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B /usr/local/bin/t14-runtime-check"
+interval_sec = 5.0
+timeout_sec = 30.0
+start_period_sec = 0.0
+start_interval_sec = 5.0
+retries = 3
+
+[environment.env]
+PATH = "/usr/local/bin:/usr/bin:/bin"
+LANG = "C.UTF-8"
+PYTHONUNBUFFERED = "1"
+MPLBACKEND = "Agg"

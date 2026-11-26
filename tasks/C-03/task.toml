@@ -1,0 +1,80 @@
+schema_version = "1.4"
+artifacts = [ "/workspace/solution.json", "/workspace/poses_bcl2.sdf",]
+
+[task]
+name = "terminal-bench-science/bcl2-selectivity-design"
+description = "Design a diverse three-molecule portfolio that retains BCL2 binding and weakens BCLXL binding relative to navitoclax under independent multi-seed docking, with explicit BCL2 poses and fixed property gates."
+keywords = [ "drug-design", "bcl2", "bclxl", "selectivity", "docking", "pose-design", "scaffold-diversity",]
+[[task.authors]]
+name = "Task authors"
+email = "see authoring/provenance/README.md"
+
+[metadata]
+completion_policy = "verified_continuous_portfolio_v1"
+completion_check = "/app/completion/check.py"
+repair_revision = "C-03.15"
+repair_date = "2026-11-08"
+author_name = "Task authors"
+author_email = "see authoring/provenance/README.md"
+author_organization = "PureAgent P benchmark"
+author_profile = ""
+research_advisor = ""
+referred_by = ""
+domain = "physical-sciences"
+field = "chemistry"
+subfield = "computational-chemistry"
+tags = [ "chemistry", "drug-discovery", "dual-target", "selectivity", "docking", "binding-pose", "scaffold-diversity",]
+expert_time_estimate_hours = 8
+relevant_experience = "Medicinal chemistry, homolog-selective ligand design, structure preparation, conformer sampling and computational evaluation of explicit binding poses."
+conflicts_of_interest = "None declared"
+validation_status = "REFERENCE_SOLUTION_MISSING"
+reference_solution_status = "MISSING"
+
+[agent]
+timeout_sec = 18000.0
+
+[environment]
+build_timeout_sec = 3600
+cpus = 8
+memory_mb = 16384
+storage_mb = 40960
+gpus = 0
+network_mode = "public"
+docker_image = "registry.dp.tech/public/pkscience-c-03-agent@sha256:914a3f51173b0481481c3971b5beb8591267b341003d4eb59132b2530361ff0e"
+workdir = "/workspace"
+
+[verifier]
+timeout_sec = 86400.0
+environment_mode = "separate"
+
+[environment.env]
+PATH = "/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+LANG = "C.UTF-8"
+GPG_KEY = "A035C8C19219BA821ECEA86B64E628F8D684696D"
+PYTHON_VERSION = "3.11.18"
+PYTHON_SHA256 = "9120e0a653868f6e3698d36cdd99e5a58903ec9469e448f21d98f7b16d8fa290"
+PYTHONDONTWRITEBYTECODE = "1"
+OMP_NUM_THREADS = "1"
+OPENBLAS_NUM_THREADS = "1"
+MKL_NUM_THREADS = "1"
+
+[verifier.environment]
+build_timeout_sec = 3600
+cpus = 8
+memory_mb = 16384
+storage_mb = 20480
+gpus = 0
+network_mode = "no-network"
+docker_image = "registry.dp.tech/public/pkscience-c-03-verifier@sha256:2fca3412a2852a442c9417b0eea8c8d55bc8659242ace08337dcdb86d1c4a330"
+workdir = "/tests"
+
+[verifier.environment.env]
+PATH = "/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+LANG = "C.UTF-8"
+GPG_KEY = "A035C8C19219BA821ECEA86B64E628F8D684696D"
+PYTHON_VERSION = "3.11.18"
+PYTHON_SHA256 = "9120e0a653868f6e3698d36cdd99e5a58903ec9469e448f21d98f7b16d8fa290"
+PYTHONDONTWRITEBYTECODE = "1"
+OMP_NUM_THREADS = "1"
+OPENBLAS_NUM_THREADS = "1"
+MKL_NUM_THREADS = "1"

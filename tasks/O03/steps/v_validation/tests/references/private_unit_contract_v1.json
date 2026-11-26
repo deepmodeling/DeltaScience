@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "modules": {
+    "A": {
+      "units": ["A_P01", "A_P02", "A_P03", "A_P04", "A_P05", "A_P06"],
+      "group_membership": {"L": ["A_P01", "A_P02", "A_P03", "A_P04", "A_P05", "A_P06"], "NL": ["A_P01", "A_P02", "A_P03", "A_P04", "A_P05", "A_P06"]},
+      "pair_id_equals_unit_id": true
+    },
+    "B": {
+      "units": ["B_P01", "B_P02", "B_P03", "B_P04", "B_P05", "B_P06"],
+      "group_membership": {"L": ["B_P01", "B_P02", "B_P03", "B_P04", "B_P05", "B_P06"], "NL": ["B_P01", "B_P02", "B_P03", "B_P04", "B_P05", "B_P06"]},
+      "pair_id_equals_unit_id": true
+    },
+    "C": {
+      "units": ["C_P01", "C_P02", "C_P03", "C_P04", "C_P05", "C_P06", "C_P07", "C_P08", "C_P09", "C_P10", "C_P11", "C_P12"],
+      "group_membership": {"AD": ["C_P01", "C_P02", "C_P03", "C_P04", "C_P05"], "PN": ["C_P06", "C_P07", "C_P08", "C_P09", "C_P10", "C_P11", "C_P12"]},
+      "unit_aliases": {"C_S01": "C_P01", "C_S02": "C_P02", "C_S03": "C_P03", "C_S04": "C_P04", "C_S05": "C_P05", "C_S06": "C_P06", "C_S07": "C_P07", "C_S08": "C_P08", "C_S09": "C_P09", "C_S10": "C_P10", "C_S11": "C_P11", "C_S12": "C_P12"},
+      "pair_id_equals_unit_id": false
+    },
+    "D": {
+      "units": ["D_LINE01", "D_LINE02", "D_LINE03", "D_LINE04", "D_LINE05", "D_LINE06", "D_LINE07", "D_LINE08"],
+      "group_membership": {"0h": ["D_LINE01", "D_LINE02", "D_LINE03", "D_LINE04", "D_LINE05", "D_LINE06", "D_LINE07", "D_LINE08"], "24h": ["D_LINE01", "D_LINE02", "D_LINE03", "D_LINE04", "D_LINE05", "D_LINE06", "D_LINE07", "D_LINE08"]},
+      "pair_id_equals_unit_id": true
+    },
+    "E": {
+      "units": ["E_AD01", "E_AD02", "E_AD03", "E_AD04", "E_AD05", "E_AD06", "E_AD07", "E_AD08", "E_PN01", "E_PN02", "E_PN03", "E_PN04", "E_PN05", "E_PN06", "E_PN07", "E_PN08"],
+      "group_membership": {"AD": ["E_AD01", "E_AD02", "E_AD03", "E_AD04", "E_AD05", "E_AD06", "E_AD07", "E_AD08"], "PN": ["E_PN01", "E_PN02", "E_PN03", "E_PN04", "E_PN05", "E_PN06", "E_PN07", "E_PN08"]},
+      "acquisition_value_map": {"E_AD01": 34, "E_AD02": 35, "E_AD03": 36, "E_AD04": 37, "E_AD05": 38, "E_AD06": 39, "E_AD07": 40, "E_AD08": 41, "E_PN01": 42, "E_PN02": 43, "E_PN03": 44, "E_PN04": 45, "E_PN05": 46, "E_PN06": 47, "E_PN07": 48, "E_PN08": 49},
+      "pair_id_equals_unit_id": false
+    },
+    "V": {
+      "units": ["V_P003", "V_P004", "V_P010", "V_P011", "V_P017", "V_P018", "V_P020", "V_P021", "V_P022", "V_P023", "V_P034", "V_P044", "V_P045", "V_P046", "V_P051", "V_P052", "V_P053", "V_P059", "V_P060", "V_P061", "V_P069", "V_P070", "V_P072", "V_P075", "V_P076", "V_P078"],
+      "group_membership": {"L": ["V_P003", "V_P004", "V_P010", "V_P011", "V_P017", "V_P018", "V_P020", "V_P021", "V_P022", "V_P023", "V_P034", "V_P044", "V_P045", "V_P046", "V_P051", "V_P052", "V_P053", "V_P059", "V_P060", "V_P061", "V_P069", "V_P070", "V_P072", "V_P075", "V_P076", "V_P078"], "NL": ["V_P003", "V_P004", "V_P010", "V_P011", "V_P017", "V_P018", "V_P020", "V_P021", "V_P022", "V_P023", "V_P034", "V_P044", "V_P045", "V_P046", "V_P051", "V_P052", "V_P053", "V_P059", "V_P060", "V_P061", "V_P069", "V_P070", "V_P072", "V_P075", "V_P076", "V_P078"]},
+      "pair_id_equals_unit_id": true
+    }
+  }
+}

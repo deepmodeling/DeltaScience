@@ -1,0 +1,370 @@
+{
+  "task_id": "trap_release_network_a",
+  "audit_verdict": "PASS",
+  "total_points": 100,
+  "allocation": {
+    "process": 20,
+    "quantitative_result": 16,
+    "relational_result": 64
+  },
+  "scientific_allocation": {
+    "basic_feasibility": 18,
+    "public_physical_fidelity": 18,
+    "joint_robust_mechanism_quality": 64
+  },
+  "allocation_rationale": "18 basic + 18 public physical (2 independent nominal bottleneck replay + 16 mean selective yield) + 64 joint robust closure. The canonical process category includes the 2 nominal replay points; no extra points or global score cap.",
+  "integrity_policy": {
+    "applicability": "REQUIRED",
+    "decision_stage": "PRE_SCORE_ELIGIBILITY",
+    "proof_standard": "DIRECT_MACHINE_VERIFIABLE_EVIDENCE",
+    "disqualifying_codes": [
+      "PROHIBITED_INPUT_ACCESS",
+      "EVALUATOR_OR_INPUT_TAMPERING",
+      "PROVEN_CROSS_ARM_COPYING",
+      "FABRICATED_EXECUTION_PROVENANCE",
+      "GUESS_ONLY_SUBMISSION"
+    ],
+    "guess_only_required_producers": [
+      "design.json"
+    ],
+    "trusted_evidence_sources": [
+      "evaluator-controlled runtime findings",
+      "checker-side required-native-state inventory"
+    ],
+    "non_disqualifying_cases": [
+      "wrong physics",
+      "malformed individual array",
+      "missing optional diagnostics",
+      "unproven similarity",
+      "missing submission"
+    ]
+  },
+  "checks": [
+    {
+      "id": "state.orientation",
+      "title": "Native binary orientation state",
+      "layer": "L3_CRITICAL_INTERMEDIATE",
+      "category": "process",
+      "points": 2,
+      "scoreability": "SCOREABLE",
+      "evidence_basis": "Task-defined synthetic cooperative trapping constitutive model; no experimental equivalence claimed",
+      "source_anchor": "paper/paper.md synthetic model record; resources/model.md constitutive equations",
+      "contract_anchor": "instruction.md Output contract: design.json orientation",
+      "artifact": "design.json",
+      "consumes": [
+        "design.json"
+      ],
+      "method": "Independent native-state reconstruction and analytical Arrhenius/memory replay from registered coefficients",
+      "expected": "504 finite binary orientations",
+      "tolerance_rationale": "Dimensionless yield and constitutive-residual scales; broad numerical tolerance independent of Gold decimal values",
+      "failure_code": "NATIVE_ORIENTATION_INVALID",
+      "depends_on": [],
+      "scientific_operator_id": "coupled_cooperative_trap_release",
+      "replay_method": "Reconstruct binary material, calibrated processing, chemical balances, sparse residuals, cooperative obstructions, and nominal kinetics as applicable to the isolated claim",
+      "rejects_identity_transform": true
+    },
+    {
+      "id": "state.processing",
+      "title": "Native processing domain",
+      "layer": "L3_CRITICAL_INTERMEDIATE",
+      "category": "process",
+      "points": 2,
+      "scoreability": "SCOREABLE",
+      "evidence_basis": "Task-defined synthetic cooperative trapping constitutive model; no experimental equivalence claimed",
+      "source_anchor": "paper/paper.md synthetic model record; resources/model.md constitutive equations",
+      "contract_anchor": "instruction.md Output contract: design.json anneal_temperature_K, dwell_hours, quench_K_per_s",
+      "artifact": "design.json",
+      "consumes": [
+        "design.json"
+      ],
+      "method": "Independent native-state reconstruction and analytical Arrhenius/memory replay from registered coefficients",
+      "expected": "72 finite calibrated processing values",
+      "tolerance_rationale": "Dimensionless yield and constitutive-residual scales; broad numerical tolerance independent of Gold decimal values",
+      "failure_code": "PROCESSING_DOMAIN_INVALID",
+      "depends_on": [],
+      "scientific_operator_id": "coupled_cooperative_trap_release",
+      "replay_method": "Reconstruct binary material, calibrated processing, chemical balances, sparse residuals, cooperative obstructions, and nominal kinetics as applicable to the isolated claim",
+      "rejects_identity_transform": true
+    },
+    {
+      "id": "state.inventory",
+      "title": "Chemical inventory conservation",
+      "layer": "L3_CRITICAL_INTERMEDIATE",
+      "category": "process",
+      "points": 4,
+      "scoreability": "SCOREABLE",
+      "evidence_basis": "Task-defined synthetic cooperative trapping constitutive model; no experimental equivalence claimed",
+      "source_anchor": "paper/paper.md synthetic model record; resources/model.md constitutive equations",
+      "contract_anchor": "instruction.md Output contract: design.json orientation",
+      "artifact": "design.json",
+      "consumes": [
+        "design.json"
+      ],
+      "method": "Independent native-state reconstruction and analytical Arrhenius/memory replay from registered coefficients",
+      "expected": "84 positive sites per chemistry",
+      "tolerance_rationale": "Dimensionless yield and constitutive-residual scales; broad numerical tolerance independent of Gold decimal values",
+      "failure_code": "INVENTORY_IMBALANCE",
+      "depends_on": [
+        "state.orientation"
+      ],
+      "scientific_operator_id": "coupled_cooperative_trap_release",
+      "replay_method": "Reconstruct binary material, calibrated processing, chemical balances, sparse residuals, cooperative obstructions, and nominal kinetics as applicable to the isolated claim",
+      "rejects_identity_transform": true
+    },
+    {
+      "id": "state.budget",
+      "title": "Processing resource conservation",
+      "layer": "L3_CRITICAL_INTERMEDIATE",
+      "category": "process",
+      "points": 3,
+      "scoreability": "SCOREABLE",
+      "evidence_basis": "Task-defined synthetic cooperative trapping constitutive model; no experimental equivalence claimed",
+      "source_anchor": "paper/paper.md synthetic model record; resources/model.md constitutive equations",
+      "contract_anchor": "instruction.md Output contract: design.json anneal_temperature_K, dwell_hours, quench_K_per_s",
+      "artifact": "design.json",
+      "consumes": [
+        "design.json"
+      ],
+      "method": "Independent native-state reconstruction and analytical Arrhenius/memory replay from registered coefficients",
+      "expected": "zero normalized processing column sums",
+      "tolerance_rationale": "Dimensionless yield and constitutive-residual scales; broad numerical tolerance independent of Gold decimal values",
+      "failure_code": "PROCESS_BUDGET_IMBALANCE",
+      "depends_on": [
+        "state.processing"
+      ],
+      "scientific_operator_id": "coupled_cooperative_trap_release",
+      "replay_method": "Reconstruct binary material, calibrated processing, chemical balances, sparse residuals, cooperative obstructions, and nominal kinetics as applicable to the isolated claim",
+      "rejects_identity_transform": true
+    },
+    {
+      "id": "state.compatibility",
+      "title": "Loop and processing compatibility",
+      "layer": "L3_CRITICAL_INTERMEDIATE",
+      "category": "process",
+      "points": 7,
+      "scoreability": "SCOREABLE",
+      "evidence_basis": "Task-defined synthetic cooperative trapping constitutive model; no experimental equivalence claimed",
+      "source_anchor": "paper/paper.md synthetic model record; resources/model.md constitutive equations",
+      "contract_anchor": "instruction.md Output contract: design.json all four native arrays",
+      "artifact": "design.json",
+      "consumes": [
+        "design.json"
+      ],
+      "method": "Independent native-state reconstruction and analytical Arrhenius/memory replay from registered coefficients",
+      "expected": "low loop obstruction and processing residual",
+      "tolerance_rationale": "Dimensionless yield and constitutive-residual scales; broad numerical tolerance independent of Gold decimal values",
+      "failure_code": "COMPATIBILITY_DEFECT",
+      "depends_on": [
+        "state.orientation",
+        "state.processing"
+      ],
+      "scientific_operator_id": "coupled_cooperative_trap_release",
+      "replay_method": "Reconstruct binary material, calibrated processing, chemical balances, sparse residuals, cooperative obstructions, and nominal kinetics as applicable to the isolated claim",
+      "rejects_identity_transform": true
+    },
+    {
+      "id": "physics.nominal_replay",
+      "title": "Nominal bottleneck replay",
+      "layer": "L3_CRITICAL_INTERMEDIATE",
+      "category": "process",
+      "points": 2,
+      "scoreability": "SCOREABLE",
+      "evidence_basis": "Task-defined synthetic cooperative trapping constitutive model; no experimental equivalence claimed",
+      "source_anchor": "paper/paper.md synthetic model record; resources/model.md constitutive equations",
+      "contract_anchor": "instruction.md Output contract: design.json all four native arrays",
+      "artifact": "design.json",
+      "consumes": [
+        "design.json"
+      ],
+      "method": "Independent native-state reconstruction and analytical Arrhenius/memory replay from registered coefficients",
+      "expected": "nominal weakest selective yield",
+      "tolerance_rationale": "Dimensionless yield and constitutive-residual scales; broad numerical tolerance independent of Gold decimal values",
+      "failure_code": "NOMINAL_BOTTLENECK_LOSS",
+      "depends_on": [
+        "state.orientation",
+        "state.processing"
+      ],
+      "scientific_operator_id": "coupled_cooperative_trap_release",
+      "replay_method": "Reconstruct binary material, calibrated processing, chemical balances, sparse residuals, cooperative obstructions, and nominal kinetics as applicable to the isolated claim",
+      "rejects_identity_transform": true
+    },
+    {
+      "id": "physics.nominal_yield",
+      "title": "Nominal bulk selective fidelity",
+      "layer": "L2_PAPER_RELATION",
+      "category": "quantitative_result",
+      "points": 16,
+      "scoreability": "SCOREABLE",
+      "evidence_basis": "Task-defined synthetic cooperative trapping constitutive model; no experimental equivalence claimed",
+      "source_anchor": "paper/paper.md synthetic model record; resources/model.md constitutive equations",
+      "contract_anchor": "instruction.md Output contract: design.json all four native arrays",
+      "artifact": "design.json",
+      "consumes": [
+        "design.json"
+      ],
+      "method": "Independent native-state reconstruction and analytical Arrhenius/memory replay from registered coefficients",
+      "expected": "nominal mean selective yield",
+      "tolerance_rationale": "Dimensionless yield and constitutive-residual scales; broad numerical tolerance independent of Gold decimal values",
+      "failure_code": "NOMINAL_FIDELITY_LOSS",
+      "depends_on": [
+        "state.orientation",
+        "state.processing"
+      ]
+    },
+    {
+      "id": "mechanism.joint",
+      "title": "Joint robust two-history weakest link",
+      "layer": "L2_PAPER_RELATION",
+      "category": "relational_result",
+      "points": 64,
+      "scoreability": "SCOREABLE",
+      "evidence_basis": "Task-defined synthetic cooperative trapping constitutive model; no experimental equivalence claimed",
+      "source_anchor": "paper/paper.md synthetic model record; resources/model.md constitutive equations",
+      "contract_anchor": "instruction.md Output contract: design.json all four native arrays",
+      "artifact": "design.json",
+      "consumes": [
+        "design.json"
+      ],
+      "method": "Independent native-state reconstruction and analytical Arrhenius/memory replay from registered coefficients",
+      "expected": "worst node, family, draw, and history selective yield",
+      "tolerance_rationale": "Dimensionless yield and constitutive-residual scales; broad numerical tolerance independent of Gold decimal values",
+      "failure_code": "JOINT_RELEASE_CLOSURE_LOSS",
+      "depends_on": [
+        "state.orientation",
+        "state.processing"
+      ]
+    }
+  ],
+  "dependency_graph": [
+    {
+      "producer": "state.orientation",
+      "consumers": [
+        "state.inventory",
+        "state.compatibility",
+        "physics.nominal_replay",
+        "physics.nominal_yield",
+        "mechanism.joint"
+      ]
+    },
+    {
+      "producer": "state.processing",
+      "consumers": [
+        "state.budget",
+        "state.compatibility",
+        "physics.nominal_replay",
+        "physics.nominal_yield",
+        "mechanism.joint"
+      ]
+    }
+  ],
+  "scientific_core": {
+    "execution_class": "NATIVE_EXECUTION",
+    "operator_id": "coupled_cooperative_trap_release",
+    "source_anchor": "paper/paper.md synthetic constitutive-model source record",
+    "public_contract_anchor": "instruction.md Reproduction target and Output contract; resources/model.md",
+    "physical_inputs": [
+      "registered signed interaction graph and kinetic coefficients",
+      "submitted native orientation and processing state"
+    ],
+    "stateful_native_input": true,
+    "output_observable": "Mean and weakest selective A-release/B-retention yield under shared processing memory",
+    "independent_replay": "Evaluator-only Replay implementation uses ragged factor reduction, independently assembled processing matrix, and batched two-history Arrhenius integration",
+    "nontriviality_policy": "No reported observable is accepted; copied public coefficient data have no valid native design arrays. Binary, inventory, calibrated processing, and actual cooperative kinetics are replayed.",
+    "producer_artifacts": [
+      "design.json"
+    ],
+    "process_check_ids": [
+      "state.orientation",
+      "state.processing",
+      "state.inventory",
+      "state.budget",
+      "state.compatibility",
+      "physics.nominal_replay"
+    ],
+    "shared_artifact_policy": [
+      {
+        "artifact": "design.json",
+        "process_check_ids": [
+          "state.orientation",
+          "state.processing",
+          "state.inventory",
+          "state.budget",
+          "state.compatibility",
+          "physics.nominal_replay"
+        ],
+        "terminal_check_ids": [
+          "physics.nominal_yield",
+          "mechanism.joint"
+        ],
+        "separation_basis": "One native design carries distinct orientation validity, control domain, mass conservation, resource budgets, compatibility, nominal bottleneck, nominal mean response, and joint intervention robustness claims; no final scalar is submitted or trusted.",
+        "independent_replay_enforced": true
+      }
+    ]
+  },
+  "semantic_impostor_fixtures": [
+    "identity_arithmetic",
+    "copied_source_number",
+    "spoofed_evidence_type",
+    "empty_causal_join",
+    "self_authored_pass",
+    "generic_cross_task_producer",
+    "task_specific_near_valid"
+  ],
+  "intermediate_artifact_policy": {
+    "applicability": "REQUIRED",
+    "contract_artifacts": [
+      "design.json"
+    ],
+    "authenticity_checks": [
+      "native array types, dimensions, identities and physical domain"
+    ],
+    "causal_checks": [
+      "full independent cooperative trapping and processing replay"
+    ],
+    "qa_fixtures": [
+      "all seven canonical semantic impostors",
+      "all seven wrong basins",
+      "forged observables on a wrong native design"
+    ],
+    "not_applicable_rationale": null
+  },
+  "required_artifacts": [
+    "design.json"
+  ],
+  "curves": {
+    "definition": "C(d,a)=1/(1+(max(0,d)/a)^2)",
+    "inventory": "C(RMS(counts-84),4)",
+    "bounds": "mean C(max(abs(normalized_control)-1-1e-9,0),0.1)",
+    "budget": "C(max(RMS(column_means)-1e-9,0),0.03)",
+    "compatibility": "C(hypot(loop_blocked_fraction/0.035,process_residual_RMS/0.12),1)",
+    "nominal_bottleneck": "C(0.985-nominal_weakest_yield,0.24)",
+    "nominal_bulk": "C(0.985-nominal_mean_yield,0.30)",
+    "joint": "C(0.960-min_all_families_nodes_histories_draws_yield,0.18)"
+  },
+  "dependency_locality": {
+    "orientation_missing": [
+      "state.orientation",
+      "state.inventory",
+      "state.compatibility",
+      "physics.nominal_replay",
+      "physics.nominal_yield",
+      "mechanism.joint"
+    ],
+    "processing_missing": [
+      "state.processing",
+      "state.budget",
+      "state.compatibility",
+      "physics.nominal_replay",
+      "physics.nominal_yield",
+      "mechanism.joint"
+    ],
+    "processing_out_of_domain": "Bounds and budget retain interpretable local partial credit; only compatibility and rate consumers become unavailable",
+    "extras": "Unrequested files and observable fields are ignored; no deduction and no credit"
+  },
+  "scenario_policy": {
+    "fixed": true,
+    "draws_per_family": 48,
+    "law": "declared independent uniform four-coordinate family; balanced stratification",
+    "Gold_envelope_validation": "Analytical conservative rate bounds over the full closed envelope, not hidden-seed tuning"
+  }
+}

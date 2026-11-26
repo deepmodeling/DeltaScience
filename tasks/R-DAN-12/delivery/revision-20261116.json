@@ -1,0 +1,13 @@
+{
+  "revision": "author-1.0.17-role-proxy-v1",
+  "parent_snapshot": "wenyon://teams/evalwheel-benchmarks/pkscience-task-repairs@sha256:53ff895ac20398ddb8d84fc5be402d9ab0fc95764487e6ac215f23681785ff11#R-DAN-12",
+  "source_archive_sha256": "e56edb638bed07e7c42cff7f9c5776d2ab96a628385d014afa0d0cd535d671f3",
+  "storage_mb": 102400,
+  "agent_timeout_sec": 28800.0,
+  "verifier_timeout_sec": 28800.0,
+  "immutable_author_files_verified": 105,
+  "scientific_e2e": "not_run",
+  "requires_runtime_module": "pkscience_retro_v17_env:RevisionNestedLBG",
+  "historical_results_unchanged": true,
+  "source_transport_sha256": "3f4ab82672749d3927d5e41859864cee81e5ed04bbb8192da2d3d6b148cd843d"
+}

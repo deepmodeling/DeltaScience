@@ -1,0 +1,15 @@
+{
+  "schema": "retro-task-pass-threshold/1",
+  "task": "R-DAN-12",
+  "version": "1.0.6",
+  "source_version": "1.0.4",
+  "pass_threshold": 55,
+  "comparison": ">=",
+  "score_scale": 100,
+  "score_scope": "per_route_program_recomputed",
+  "scientific_kernel_changed": false,
+  "additional_rounding": false,
+  "runtime_revalidated": false,
+  "historical_only": true,
+  "superseded_by": "reward-policy-1.0.7.json"
+}

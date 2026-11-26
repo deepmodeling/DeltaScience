@@ -1,0 +1,92 @@
+{
+  "schema": "retro-native-reference/2",
+  "task_id": "12_DAN_DAN_US2019_EX395",
+  "task_slug": "r-dan-12",
+  "family": "Danicopan",
+  "target_id": "DAN-US2019-EX395",
+  "target_full_inchikey": "CHGQWMNQJHOKGI-IDISGSTGSA-N",
+  "variants": [
+    "open"
+  ],
+  "reference_kind": "checkpoint_aligned_gold_native_replay",
+  "primary_reference": "solution/checkpoint_aligned_reference.json",
+  "artifact": {
+    "path": "solution/checkpoint_aligned_reference.json",
+    "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+    "bytes": 15524
+  },
+  "target_identity_verified": true,
+  "frozen_rubric_gold_source_sha256": "56047aff8af27916babbd0ea0eba7dc5fa4d91f3335ab10c7738de91561fe120",
+  "frozen_rubric_gold_version_match": false,
+  "version_status": "CHECKPOINT_ALIGNED_ACTIVE_REFERENCE_WITH_RECOVERED_COLLECTION_SOURCE",
+  "gold_route_status": "gold_ready",
+  "route_record_status": "canonical_gold",
+  "variant_references": {
+    "open": {
+      "path": "solution/checkpoint_aligned_reference.json",
+      "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+      "bytes": 15524
+    }
+  },
+  "constraint_conformance": "NOT_APPLICABLE",
+  "live_replay_implemented": true,
+  "oracle_validation": "NOT_RUN",
+  "reference_export_command": "bash /solution/solve.sh --export-only",
+  "solver_entry_default_status": "NATIVE_TOOL_REPLAY",
+  "scoring_changed": true,
+  "reward_policy": {
+    "schema": "retro-route-reward-policy/3",
+    "scope": "per_route",
+    "score_source": "independent_route_program_recomputation",
+    "threshold_source": "current_gold_same_evaluation",
+    "gold_reference_sha256": "136563ca6a750e8114530e5171171abb8802960ab6a2229aff6d3ac21191475e",
+    "gold_scoring_program": "evaluate.score_answer",
+    "comparison": ">=",
+    "additional_rounding": false,
+    "trace_affects_reward": false,
+    "rule": "At least one of the submitted top five routes has its unrounded six-item chemical score plus quality-filtered Q-MULTI greater than or equal to the designated gold score in the same evaluation; gold Q-MULTI is zero and no gold score bonus is applied.",
+    "canonical_answer_and_ranking_preserved": true,
+    "ranking_section": "Q-MULTI retains canonical preferred route and complete collection",
+    "gold_scoring_failure": "NO_NORMAL_REWARD",
+    "unresolved_without_pass": "NO_NORMAL_REWARD",
+    "empty_submission_after_successful_gold": "REWARD_0",
+    "historical_score_fallback": false,
+    "gold_chemical_score_bonus": 0,
+    "gold_adjusted_score_cap": null,
+    "gold_bonus_reason": "Single reference route: Q-MULTI is zero; no score bonus.",
+    "gold_bonus_application": "none",
+    "submitted_route_bonus": 0,
+    "top_ranked_limit": 5,
+    "multi_quality_ratio": 0.9,
+    "multi_requires_q_close": 10,
+    "median_bandwidth": 10,
+    "median_samples": 3,
+    "judge_model": "deepseek-v4.1-flash-1017",
+    "identical_route_judgments": "run_local_llm_subitems_only",
+    "gold_stock": "live_original_pservice_frozen_local_policy",
+    "missing_checkpoint_policy": "proven_absent_program_zero_unresolved_pending",
+    "judge_input_mode": "inline_evidence_no_tools",
+    "judge_format_repair": "one_clean_retry_if_no_valid_rows"
+  },
+  "reward_revision": "1.0.17",
+  "replay_plan_sha256": "fdba0021f11bde67a7f0f0be286a6efa3746bb9f1fe2e5d500b7bb28c63ef22c",
+  "collection_gold": {
+    "path": "solution/gold_route.json",
+    "sha256": "56047aff8af27916babbd0ea0eba7dc5fa4d91f3335ab10c7738de91561fe120"
+  },
+  "frozen_checkpoint_structural_alignment": "EXACT_RECORDED_FULL_INCHIKEY_MULTISET_ALL_RPF_STEPS",
+  "historical_frozen_gold_blob_recovered": true,
+  "collection_provenance": {
+    "source_collection": "Danicopan_new_gold18_rubrics2_20261112",
+    "source_member": "golden_routes/DAN-US2019-EX395.gold_route.json",
+    "source_manifest_sha256": "0a76c6ce3cd0ff706afb5b4491d8bc3c85b69ec95e26e8779d7e708fe82147ca",
+    "source_manifest_verified": true,
+    "source_member_sha256": "56047aff8af27916babbd0ea0eba7dc5fa4d91f3335ab10c7738de91561fe120",
+    "scope": "Non-active collection source restored; actual active reference and scoring input unchanged."
+  },
+  "active_reference_provenance": {
+    "kind": "frozen_checkpoint_exact_structures",
+    "manifest": "authoring/reference-source-alignment.json",
+    "scientific_validation": "NOT_RUN"
+  }
+}

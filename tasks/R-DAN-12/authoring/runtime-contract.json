@@ -1,0 +1,49 @@
+{
+  "contract": "retro-native-isolated-grader/1",
+  "revision": "1.0.14",
+  "harbor_version": "0.24.0",
+  "platform_install_required": false,
+  "platform_source_changed": false,
+  "trial_id_source": "Compose native project name",
+  "harbor_verifier_entry_mode": "shared",
+  "actual_grading": "clean isolated original verifier image",
+  "original_pservice_preserved": true,
+  "whole_task_gpu_requirement": 1,
+  "grader_gpus": 0,
+  "image_digests_unchanged": true,
+  "reference_and_reward_unchanged": false,
+  "order": [
+    "agent",
+    "artifact_collection",
+    "root_relay_retires_uid1000",
+    "isolated_grader_scores_gold_then_submission_against_original_service",
+    "atomic_reward_handoff",
+    "native_cleanup"
+  ],
+  "native_handoff_sha256": "9771362862370bc9eb4c9759eeee7be485e36897077bfd6d2b5bb13cb7825dd6",
+  "actual_target_platform_validation": "NOT_RUN_FOR_1.0.14",
+  "real_scientific_e2e": "NOT_RUN",
+  "grader_cap_drop": [
+    "ALL"
+  ],
+  "grader_cap_add": [
+    "DAC_OVERRIDE"
+  ],
+  "grading_science_bytes_unchanged": false,
+  "judge_transport_contract": "retro-judge-http/1",
+  "judge_transport_sha256": "395d12de74bb65a759b536cca351405ac935266785590feee1b3d0183218a6bf",
+  "grading_launcher_sha256": "e83d7810bbe0e8d2ad19506cdba87dffbe18b76785e7ba32596b0e998813a94f",
+  "frozen_evaluator_sha256": "1793276e402fae9faa806109ec94f16abde19430221c017af6e7e239952842f2",
+  "grading_protocol_sha256": "76b139b9f97ded3bddb1e594c611181cdd46d3cfee26f9742511a4b880524785",
+  "reference_unchanged": true,
+  "gold_chemical_score_bonus": 10,
+  "raw_chemical_formula_and_rubric_unchanged": true,
+  "reward_overlay_files": [
+    "evaluate.py",
+    "lib/gold_baseline.py",
+    "lib/route_reward.py",
+    "reward-policy.json",
+    "task.json"
+  ],
+  "task_binding_bytes_synchronized_across_main_pservice_grader": true
+}

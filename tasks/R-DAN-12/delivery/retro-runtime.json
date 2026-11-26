@@ -1,0 +1,208 @@
+{
+  "schema": "pkscience-retro-three-lbg-v1",
+  "task_id": "R-DAN-12",
+  "images": {
+    "p-service": {
+      "source_image": "registry.dp.tech/public/pkscience-retro-p-service@sha256:f5b8a643ec1f74368e86b3f957738cb624d0f1c3bf0ccd77a3c9b82daa557c1b",
+      "tag": "registry.dp.tech/public/pkscience-retro-p-service:original-20261111-v1",
+      "status": "published",
+      "image": "registry.dp.tech/public/pkscience-retro-p-service@sha256:f5b8a643ec1f74368e86b3f957738cb624d0f1c3bf0ccd77a3c9b82daa557c1b",
+      "config": {
+        "User": "1001:1001",
+        "ExposedPorts": {
+          "20765/tcp": {}
+        },
+        "Env": [
+          "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "LANG=C.UTF-8",
+          "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+          "PYTHON_VERSION=3.10.22",
+          "PYTHON_SHA256=c61fe9b1a1a7ec2a0b0388e664187c378a5325a89e3606d220abf5bdfccb2543",
+          "PYTHONPATH=/opt/retro/app:/opt/retro/app/outputs/pureagent_p_v0_benchmark/runtime",
+          "PYTHONUNBUFFERED=1",
+          "PYTHONDONTWRITEBYTECODE=1",
+          "USE_TF=0",
+          "USE_FLAX=0",
+          "PUREAGENT_MODE=service",
+          "RETRO_TASK_ROOT=/workspace/task",
+          "RETRO_STATE_ROOT=/state",
+          "HOME=/state/home",
+          "HF_HOME=/state/home/.cache/huggingface",
+          "XDG_CACHE_HOME=/state/home/.cache",
+          "TORCH_HOME=/state/home/.cache/torch",
+          "MPLCONFIGDIR=/state/home/.cache/matplotlib"
+        ],
+        "Entrypoint": [
+          "/usr/local/bin/python",
+          "-I",
+          "-B",
+          "/opt/retro/pservice/supervisor.py"
+        ],
+        "Cmd": [
+          "serve"
+        ],
+        "WorkingDir": "/opt/retro",
+        "Labels": {
+          "org.opencontainers.image.title": "retro-pservice",
+          "org.opencontainers.image.version": "0.2.0-constrained",
+          "tech.dp.retro.runtime-abi": "retro-constrained-v1",
+          "tech.dp.retro.source-task-version": "12.0.8"
+        },
+        "ArgsEscaped": true
+      },
+      "architecture": "amd64",
+      "anonymous_pull_verified": true
+    },
+    "grader": {
+      "source_image": "registry.dp.tech/public/pkscience-r-dan-12-isolated-grader@sha256:f9839329213698276dc72b76f1340efdc8b3d7cfcf49b403e3ebdf10ad9d2929",
+      "tag": "registry.dp.tech/public/pkscience-r-dan-12-isolated-grader:original-20261111-v1",
+      "status": "published",
+      "image": "registry.dp.tech/public/pkscience-r-dan-12-isolated-grader@sha256:f9839329213698276dc72b76f1340efdc8b3d7cfcf49b403e3ebdf10ad9d2929",
+      "config": {
+        "User": "0:0",
+        "Env": [
+          "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "LANG=C.UTF-8",
+          "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+          "PYTHON_VERSION=3.10.22",
+          "PYTHON_SHA256=c61fe9b1a1a7ec2a0b0388e664187c378a5325a89e3606d220abf5bdfccb2543",
+          "PYTHONUNBUFFERED=1",
+          "PYTHONDONTWRITEBYTECODE=1",
+          "USE_TF=0",
+          "USE_FLAX=0",
+          "PYTHONPATH=/opt/retro/main:/opt/retro/app:/opt/retro/app/outputs/pureagent_p_v0_benchmark/runtime",
+          "RETRO_P_ENDPOINT=http://p-service:20765",
+          "RETRO_TASK_ROOT=/workspace/task",
+          "RETRO_OUTPUT_ROOT=/workspace/outputs",
+          "RETRO_BINDING_FILE=/run/retro-client/service.json",
+          "RETRO_ROLE=verifier",
+          "HOME=/home/retro",
+          "RETRO_SERVICE_BINDING_SOURCE=/run/retro-platform/service.json"
+        ],
+        "Entrypoint": [
+          "/usr/local/bin/python",
+          "-I",
+          "-B",
+          "/opt/retro/main/entrypoint.py",
+          "container-start"
+        ],
+        "Cmd": [
+          "sleep",
+          "infinity"
+        ],
+        "WorkingDir": "/workspace",
+        "Labels": {
+          "org.opencontainers.image.title": "retro-main",
+          "org.opencontainers.image.version": "0.2.0-constrained",
+          "tech.dp.retro.runtime-abi": "retro-constrained-v1",
+          "tech.dp.retro.source-task-version": "12.0.8"
+        },
+        "ArgsEscaped": true
+      },
+      "architecture": "amd64",
+      "anonymous_pull_verified": true
+    }
+  },
+  "gpu_sku": "c16_m64_1 * NVIDIA L20",
+  "known_platform_deviations": [
+    "LBG SKU rounding",
+    "no tmpfs size enforcement",
+    "no read-only rootfs configuration",
+    "no container capability configuration",
+    "public egress instead of internal-only p-service network"
+  ],
+  "runtime_revision": "author-1.0.17-role-proxy-v1",
+  "status": "offline_prepared_runtime_validation_pending",
+  "source_archive_sha256": "e56edb638bed07e7c42cff7f9c5776d2ab96a628385d014afa0d0cd535d671f3",
+  "judge_configuration": {
+    "schema": "pkscience-retro-judge-config/2",
+    "version": "r-dan-12-author-1.0.17-judge1017-user-v1",
+    "model": "deepseek-v4.1-flash-1017",
+    "expected_model_id": "deepseek-v4.1-flash-1017",
+    "expected_fingerprint": null,
+    "parameters": {},
+    "policy": "User-pinned 1017; internal scorer, request and policy all agree; no fallback to 0731",
+    "accepted_response_model_ids": [
+      "deepseek-v4.1-flash-1017",
+      "deepseek-v4-1-flash-261017",
+      "deepseek-v4-1-flash"
+    ],
+    "author_judge_model": "deepseek-v4-flash-0731",
+    "author_version": "1.0.17",
+    "identity_policy": "Request must be 1017; retain raw response model and fingerprint; reject 0731/unknown labels and same-run identity changes. Labels are routing compatibility, not weights attestation.",
+    "parameter_policy": "Author sampling parameters, output limits and time budgets unchanged; this revision changes model selection and response-label compatibility only"
+  },
+  "files": {
+    "environment/.dockerignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "environment/Dockerfile": "5b75260852c98d29ebd365408ac181404cbc0594f59c8a1cb108329cc2fa7e98",
+    "environment/docker-compose.yaml": "ae83dc66a73fe43ad015ca6b2e9b9f29916216bf1f10694753bde550a763ec30",
+    "environment/materialize_task.py": "03988386cc02343a4e26d89082f66f141fb54761dceefa2e24c759521b93c142",
+    "environment/retro-native/binding.py": "3907df10398090fe87424fe8afbd4922871450f2e9086ab576aedd87597bb70f",
+    "environment/retro-native/cleanup_agent_view_v16.py": "a1e8822ee33c723c959a074b21c631c13996b32752d3119c3c2adbc646569278",
+    "environment/retro-native/cleanup_agent_view_v17.py": "32fa1a14b3566d73a9d95cabaf94233249190161cd4504c4b57f7c5011730be4",
+    "environment/retro-native/collection_policy_v16.py": "6320a36bc9fdaffc8a756509f681231b2ce5a21f0ab5909ebf7ed059067553f3",
+    "environment/retro-native/grader-test.sh": "4db15dbce1ee948429ef45cf80b15419882c3334daa16afe7b4ad63b5b77850b",
+    "environment/retro-native/grading_launcher.py": "076b43abd72f819519c3601653456097133f4ee4afb59fe3be1d51202962a405",
+    "environment/retro-native/grading_protocol.py": "f11ed42ba7d0b4b2902e8fd45465c0b82924f0c58a91fe4668d0c2cb8f067ed0",
+    "environment/retro-native/http_service.py": "088a97ca1db137b13d55eee2f63912addf3c0496cf0a6430fb5d58e1395bcf2b",
+    "environment/retro-native/judge_transport.py": "395d12de74bb65a759b536cca351405ac935266785590feee1b3d0183218a6bf",
+    "environment/retro-native/llm_stability_v16.py": "eaef29e960ba2fda02f82b9c3e81cce83670427cf9628c35c53c2e0582521f42",
+    "environment/retro-native/native_bridge.py": "1df7356447a85ac14ef8178caa1ab37198e5c6ca2d1ffc459fc062a814496907",
+    "environment/retro-native/native_gold_stock_v16.py": "62c0e702b365deda35a458fa74c013a99da60de569177b75a22057f8a56d8738",
+    "environment/retro-native/open_contract.py": "070094683fbcfd21cc14e33c09432a4133b9f00eef62fc20350639307880f1a5",
+    "environment/retro-native/origin_evidence.py": "30677e3cdbc4728435f4e7455bf54eba4c79073ab3e0141b2788539d2b916acd",
+    "environment/retro-native/origin_schema.py": "35db298fbf2b140225d6e6016dd294df975a4d42310329ce1717c63c0d50c431",
+    "environment/retro-native/public_stock_view_v17.py": "586824d23e67dc8b54087126d74fda5662260ae9ff09bf25ddf6fe3437b1fbff",
+    "environment/retro-native/scoring_policy_v16.py": "3619ff444e65f756597fff7305f42d289405e1d49be488e28704bc14fef79e47",
+    "environment/retro-native/section5_policy_v17.py": "7cb98c956174c1db7d88f26b04bee532a443df1fc77c457e2a4f955a3bb8dd22",
+    "environment/retro-native/transport-contract.json": "f6cc013857475acc3783984469251c5ed4f844c49c8f91561ea0125274305742",
+    "environment/reward-overlay/evaluate.py": "890010267729e50d5656884551bfd76eebec58e08dc5eb260a79987b1e2a4c56",
+    "environment/reward-overlay/gold_reference.json": "136563ca6a750e8114530e5171171abb8802960ab6a2229aff6d3ac21191475e",
+    "environment/reward-overlay/lib/gold_baseline.py": "46aca97bae49e2034daf082067e0aee22955728b64b83e691e607833ff766051",
+    "environment/reward-overlay/lib/route_reward.py": "86dd386c0e14bce5275a4614176489777c8836449fab032f45648bc69ef2de70",
+    "environment/reward-overlay/release/MANIFEST.json": "baa7482cd247414269a606a12d937bea7aae2e5db4bf84e86558ba296e5d9d7b",
+    "environment/reward-overlay/release/rubrics/Danicopan/DAN-US2019-EX395/RUBRIC.md": "30f8672bb3d142038f823d4d47eeb36e8f4ac4bbe71d168973c6035f5f1d2f1a",
+    "environment/reward-overlay/release/rubrics/Danicopan/DAN-US2019-EX395/TARGET_CHECKPOINT_PACKET.json": "e79577226a31150c6870785487341bdea60547ef238ec1299a99d0884bbb5cdc",
+    "environment/reward-overlay/reward-policy.json": "cd64d47a2ba980d4990411fb607ba35912392bf83ce29126ae9ce5b46f149ec7",
+    "environment/reward-overlay/rubrics.md": "30f8672bb3d142038f823d4d47eeb36e8f4ac4bbe71d168973c6035f5f1d2f1a",
+    "environment/reward-overlay/task.json": "d927956074a1497dfafb5a41ae70fcb400d7a1fc9278a5ab2d495e71e297a7d4",
+    "environment/service-resources/assets/stock/common_reagents.json": "d10282aa363284dd76e79c7b6498c8adaef1988763211246490666753e801256",
+    "environment/service-view/task.json": "d927956074a1497dfafb5a41ae70fcb400d7a1fc9278a5ab2d495e71e297a7d4",
+    "environment/task/schemas/scientific_trace_p_v2.schema.json": "056f9a20409d83a4e9a3785390e7441fb7f8f812c0b7d61dcdac7ad2d93761af",
+    "environment/task/task.json": "d927956074a1497dfafb5a41ae70fcb400d7a1fc9278a5ab2d495e71e297a7d4",
+    "environment/task/variants/open/data/reference_inputs.json": "e7fffe69d595932be6346fa41eef0729364dae7d6d2ca437c9cf55fe18d2aef8",
+    "environment/task/variants/open/data/scientific_config.toml": "02fd230d5f9f76ea03bb71403eeebb2667bf371360d2c3a9872c3f8900b903e6",
+    "environment/task/variants/open/data/target.json": "1488aae316e05b2800ce26f1f926d591633da08184b9e5bdc69678ed14d7e203",
+    "environment/task/variants/open/data/tool_definitions.json": "ec430b6880d72d1cacc6299c336f8d0c7eff74fb33350233c7192d511d0a985c",
+    "environment/task/variants/open/instruction.md": "adab683d79676b6747516b823cba39d9504997d5f4aded7c0317f1e648e41c10",
+    "environment/views/open/schemas/scientific_trace_p_v2.schema.json": "056f9a20409d83a4e9a3785390e7441fb7f8f812c0b7d61dcdac7ad2d93761af",
+    "environment/views/open/task.json": "d927956074a1497dfafb5a41ae70fcb400d7a1fc9278a5ab2d495e71e297a7d4",
+    "environment/views/open/variants/open/data/reference_inputs.json": "e7fffe69d595932be6346fa41eef0729364dae7d6d2ca437c9cf55fe18d2aef8",
+    "environment/views/open/variants/open/data/scientific_config.toml": "02fd230d5f9f76ea03bb71403eeebb2667bf371360d2c3a9872c3f8900b903e6",
+    "environment/views/open/variants/open/data/target.json": "1488aae316e05b2800ce26f1f926d591633da08184b9e5bdc69678ed14d7e203",
+    "environment/views/open/variants/open/data/tool_definitions.json": "ec430b6880d72d1cacc6299c336f8d0c7eff74fb33350233c7192d511d0a985c",
+    "environment/views/open/variants/open/instruction.md": "adab683d79676b6747516b823cba39d9504997d5f4aded7c0317f1e648e41c10",
+    "http_service_loopback.py": "7f2996154fe9dd40632ad367a86dffa6295f26eace00b66a53cd35d7f43168e8",
+    "judge_transport_session.py": "08fcf71c3b5c919695f1abdfb59629c763cf5a10acb79edd1d55bcbefa1c55ca",
+    "retro_transport_v17.py": "06049bcd176cdb7b78cf39d68ff87b029042749616e11f805b6054dfc64f3f77"
+  },
+  "pservice_modules": [
+    "public_stock_view_v17.py",
+    "native_gold_stock_v16.py"
+  ],
+  "declared_transport_override": {
+    "original_path": "environment/retro-native/http_service.py",
+    "original_sha256": "088a97ca1db137b13d55eee2f63912addf3c0496cf0a6430fb5d58e1395bcf2b",
+    "override_path": "http_service_loopback.py",
+    "override_sha256": "7f2996154fe9dd40632ad367a86dffa6295f26eace00b66a53cd35d7f43168e8",
+    "change": "Loopback only; distinct authenticated roles preserve native grader peer checks"
+  },
+  "declared_judge_transport_override": {
+    "original_path": "environment/retro-native/judge_transport.py",
+    "original_sha256": "395d12de74bb65a759b536cca351405ac935266785590feee1b3d0183218a6bf",
+    "override_path": "judge_transport_session.py",
+    "override_sha256": "08fcf71c3b5c919695f1abdfb59629c763cf5a10acb79edd1d55bcbefa1c55ca",
+    "change": "Only add stable trial session header"
+  },
+  "pkscience_judge_revision": "author-1.0.17-judge1017-user-v1"
+}

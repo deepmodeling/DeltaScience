@@ -1,0 +1,111 @@
+{
+  "purpose": "literature controls and molecular identity provenance, not generated candidates or precomputed task solutions",
+  "date": "2026-10-30",
+  "common_computational_reference": "navitoclax",
+  "controls": [
+    {
+      "name": "venetoclax",
+      "synonym": "ABT-199",
+      "role_C03": "literature_target_selective_control",
+      "role_C04": "literature_counter_target_selective_control",
+      "formula": "C45H50ClN7O7S",
+      "pdb_entry": "6O0K",
+      "ccd": "LBM",
+      "inchi_key": "LQBVNQSMGBZMKD-UHFFFAOYSA-N",
+      "smiles": "CC1(CCC(=C(C1)c2ccc(cc2)Cl)CN3CCN(CC3)c4ccc(c(c4)Oc5cc6cc[nH]c6nc5)C(=O)NS(=O)(=O)c7ccc(c(c7)[N+](=O)[O-])NCC8CCOCC8)C",
+      "smiles_source": "https://www.rcsb.org/ligand/LBM",
+      "smiles_source_program": "OpenEye OEToolkits 2.0.7 canonical SMILES",
+      "identity_primary_structure_source": true,
+      "experimental_panel": {
+        "assay": "TR-FRET binding Ki",
+        "unit": "nM",
+        "BCL2": {
+          "relation": "<",
+          "value": 0.01
+        },
+        "BCLXL": {
+          "relation": "=",
+          "value": 48
+        },
+        "source_doi": "10.1038/nm.3048",
+        "source_location": "Supplementary Table 2"
+      },
+      "task_scorer_pass_claim": false,
+      "warning": "4MAN is an analogue, not this molecule; 6O0K construct details must be disclosed."
+    },
+    {
+      "name": "navitoclax",
+      "synonym": "ABT-263",
+      "role_C03": "common_dual_target_reference",
+      "role_C04": "common_dual_target_reference",
+      "formula": "C47H55ClF3N5O6S3",
+      "pdb_entry": "4LVT",
+      "ccd": "1XJ",
+      "inchi_key": "JLYAXFNOILIKPP-KXQOOQHDSA-N",
+      "smiles": "CC1(CCC(=C(C1)CN2CCN(CC2)c3ccc(cc3)C(=O)NS(=O)(=O)c4ccc(c(c4)S(=O)(=O)C(F)(F)F)N[C@H](CCN5CCOCC5)CSc6ccccc6)c7ccc(cc7)Cl)C",
+      "smiles_source": "https://www.rcsb.org/ligand/1XJ",
+      "smiles_source_program": "OpenEye OEToolkits 1.7.6 canonical isomeric SMILES",
+      "identity_primary_structure_source": true,
+      "experimental_panel": {
+        "assay": "TR-FRET binding Ki",
+        "unit": "nM",
+        "BCL2": {
+          "relation": "=",
+          "value": 0.044
+        },
+        "BCLXL": {
+          "relation": "=",
+          "value": 0.055
+        },
+        "source_doi": "10.1038/nm.3048",
+        "source_location": "Supplementary Table 2"
+      },
+      "task_scorer_pass_claim": false,
+      "warning": "Preserve the specified R stereocenter; non-isomeric CCD descriptors are not substitutes for this string."
+    },
+    {
+      "name": "A-1331852",
+      "original_publication_compound": "13",
+      "role_C03": "literature_counter_target_selective_control",
+      "role_C04": "literature_target_selective_control",
+      "formula": "C38H38N6O3S",
+      "pdb_entry": null,
+      "ccd": null,
+      "inchi_key": "QCQQONWEDCOTBV-UHFFFAOYSA-N",
+      "smiles": "Cc1c(cnn1CC23CC4CC(CC(C4)C2)C3)c5ccc(nc5C(=O)O)N6CCc7cccc(C(=O)Nc8nc9ccccc9s8)c7C6",
+      "smiles_source": "https://discover.nci.nih.gov/drugs/cellminercdb/A-1331852_cellminercdb.html",
+      "official_registry_identifiers": {
+        "NCI_NSC": "797172",
+        "PubChem_CID": "71565985"
+      },
+      "inchi_key_source": "https://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=11102&tab=structure",
+      "identity_primary_structure_source": false,
+      "identity_provenance_note": "Original discovery Figure 1 identifies compound 13 as A-1331852. Machine-readable SMILES here is from official NCI, cross-referenced with IUPHAR; no claim of direct author SI molfile extraction or an exact PDB complex.",
+      "experimental_panel": {
+        "assay": "TR-FRET binding Ki",
+        "unit": "nM",
+        "BCL2": {
+          "relation": "=",
+          "value": 6.1
+        },
+        "BCLXL": {
+          "relation": "<",
+          "value": 0.01
+        },
+        "source_doi": "10.1021/acsmedchemlett.9b00568",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7549103/",
+        "source_location": "Figure 1 compound 13; Table 5"
+      },
+      "task_scorer_pass_claim": false,
+      "warning": "6VWC/RQ7 is a pyridylmethyl analogue, not A-1331852. Formula and full InChIKey of the supplied cleaned graph are checked against the official source identity."
+    }
+  ],
+  "shared_initial_objectives": {
+    "reference": "navitoclax",
+    "D_on_max": 0.5,
+    "D_off_min": 1.0,
+    "I_min": 1.5,
+    "definition": "D_on=E_on(m)-E_on(r); D_off=E_off(m)-E_off(r); I=D_off-D_on",
+    "unit": "Vina-reported kcal/mol"
+  }
+}

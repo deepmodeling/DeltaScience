@@ -1,0 +1,13 @@
+{
+  "id": "LH-1",
+  "source_sha256": "79ecff23b8a903b9627219826ea43ebf13d09b34352c9bc75fb37d8a391ad6be",
+  "raw_artifact": "result.json",
+  "raw_field": "continuous_score",
+  "raw_scale": "0–1",
+  "reward_divisor": 1,
+  "version": "pkscience-continuous-v1",
+  "reward_mode": "continuous",
+  "legacy_binary_rule": "全部基线 / 物理约束门槛同时通过",
+  "limitations": "物理计算失败或提交错误可能只写二值 0 和错误信息，未产生连续分；不应自动把缺失值当有效连续 0。",
+  "validation": "scoring boundary tests and archive integrity; not a full scientific/container run"
+}

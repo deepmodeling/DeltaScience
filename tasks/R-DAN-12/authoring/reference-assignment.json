@@ -1,0 +1,22 @@
+{
+  "schema": "retro-reference-assignment/1",
+  "task_id": "12_DAN_DAN_US2019_EX395",
+  "previous_task_version": "1.0.0",
+  "task_version": "1.0.7",
+  "reference": {
+    "path": "solution/checkpoint_aligned_reference.json",
+    "sha256": "d09e7197bdae7c3d422b9de857e783ee73eca202f783386014e37960d5e499b0",
+    "bytes": 15524
+  },
+  "baseline_scoring_bytes_preserved": false,
+  "private_solution_isolation": "Gold structures are copied only into private verifier tests/gold_reference.json; no gold structures in environment or Agent mounts",
+  "gold_version_match_to_rubric": false,
+  "oracle_passed": false,
+  "gold_assignment_task_version": "1.0.1",
+  "scoring_change": "Explicit user request: score designated active gold first in each evaluation and require at least one submitted route score >= current gold score",
+  "live_replay_implemented": true,
+  "primary_reference_kind": "checkpoint_aligned_gold_native_replay",
+  "checkpoint_alignment_manifest": "authoring/reference-source-alignment.json",
+  "gold_baseline_input": "tests/gold_reference.json",
+  "fixed_threshold_removed": true
+}

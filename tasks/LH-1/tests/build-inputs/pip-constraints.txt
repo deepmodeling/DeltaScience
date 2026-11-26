@@ -1,0 +1,12 @@
+# Transitive pins observed in the 2026-11-02 r8 runtime (pip freeze); direct pins live in install_pip.sh.
+Deprecated==3.0.1
+ml_dtypes==0.6.0
+monty==2026.10.21
+mpmath==1.3.0
+opt_einsum==3.4.0
+pyevtk==1.7.0
+pyproject-metadata==0.12.1
+ruamel.yaml==0.19.1
+sympy==1.14.0
+setuptools==84.2.1
+wheel==0.48.0

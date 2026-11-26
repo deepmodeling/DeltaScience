@@ -1,0 +1,12 @@
+{
+  "oracle": {
+    "trial": {
+      "reward": 1.0
+    }
+  },
+  "nop": {
+    "trial": {
+      "reward": 0.0
+    }
+  }
+}
