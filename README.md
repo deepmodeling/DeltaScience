@@ -12,6 +12,7 @@
 
 <p>
   <a href="https://deltascience.bohrium.com/"><img src="https://img.shields.io/badge/Platform%20%26%20Leaderboard-deltascience.bohrium.com-111F2B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Official Platform" /></a>
+  <a href="https://deltascience.bohrium.com/report"><img src="https://img.shields.io/badge/Technical%20Report-DeltaScience%20v1.0-7C3AED?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Technical Report" /></a>
   <a href="https://play.bohrium.com/competition/science-pilot"><img src="https://img.shields.io/badge/Submit%20Tasks-Playground%20Competition-0F766E?style=for-the-badge&logo=rocket&logoColor=white" alt="Submit Tasks" /></a>
   <a href="./tasks/README.md"><img src="https://img.shields.io/badge/Open--Source%20Tasks-7%20Representative%20Tasks-2563EB?style=for-the-badge&logo=github&logoColor=white" alt="Open-Source Tasks" /></a>
   <a href="mailto:deltascience@aisi.ac.cn"><img src="https://img.shields.io/badge/Contact-deltascience%40aisi.ac.cn-475569?style=for-the-badge&logo=gmail&logoColor=white" alt="Contact" /></a>
@@ -47,6 +48,7 @@ The symbol **$\delta$** in DeltaScience carries a dual meaning: it represents a 
 | Resource | Link | Description |
 | :--- | :--- | :--- |
 | **Official Platform & Leaderboard** | [https://deltascience.bohrium.com/](https://deltascience.bohrium.com/) | Live v1.0 leaderboard, per-discipline breakdowns, public exemplar tasks, and evaluation registration |
+| **Technical Report (v1.0)** | [https://deltascience.bohrium.com/report](https://deltascience.bohrium.com/report) | Full DeltaScience v1.0 Technical Report, interactive reader, methodology, and empirical findings |
 | **Year-Round Task Authoring Competition** | [https://play.bohrium.com/competition/science-pilot](https://play.bohrium.com/competition/science-pilot) | Submit real scientific problems for batch domain-expert review, CSTR attribution, collective authorship, and community incentives |
 | **Open-Source Task Repository** | [https://github.com/deepmodeling/DeltaScience](https://github.com/deepmodeling/DeltaScience) | Open-source representative Harbor task packages, specifications, and verification contracts |
 | **Official Contact** | [deltascience@aisi.ac.cn](mailto:deltascience@aisi.ac.cn) | Evaluation onboarding for Model + Harness teams, institutional collaboration, and community inquiries |
@@ -75,19 +77,19 @@ See [`tasks/README.md`](./tasks/README.md) for the standard Harbor task director
 
 All 11 versioned **Model + Harness** configurations were evaluated across all **65 private tasks × 5 independent trials** (**3,575 runs**). Task scores are averaged over the 5 trials and then macro-averaged equally across all 65 tasks, with 95% confidence intervals computed via 5,000 paired task-level bootstrap resamples. Timeouts, refusals, and harness errors are scored as 0.
 
-| Rank | Model + Harness | Mean Score | 95% CI | pass@5 | pass⁵ | Median Time |
-| :---: | :--- | :---: | :---: | :---: | :---: | :---: |
-| 1 | **GPT-6.2 Astra + Codex** | **61.2** | [51.2, 70.6] | 44.6% | 30.8% | 42m |
-| 2 | **GPT-6.2 Sol + Codex** | **56.1** | [46.8, 65.1] | 36.9% | 21.5% | 35m |
-| 3 | **Qwen4-Max + Qoder** | **44.0** | [35.2, 52.9] | 38.5% | 13.8% | 176m |
-| 4 | **Kimi K3.1 Pro + Kimi Code** | **40.8** | [32.4, 49.3] | 34.4% | 12.5% | 150m |
-| 5 | **HY4 + DSH** | **38.6** | [30.2, 47.2] | 36.9% | 4.6% | 148m |
-| 6 | DeepSeek V4.1 Flash 1017 + DSH | 32.3 | [25.1, 39.9] | 32.3% | 3.1% | 191m |
-| 7 | HY4 + CodeBuddy | 27.3 | [20.5, 34.8] | 26.2% | 4.6% | 172m |
-| 8 | GLM 5.3 + ZCode | 23.8 | [17.4, 30.4] | 24.6% | 3.1% | 300m |
-| 9 | HY4 Flash + CodeBuddy | 22.2 | [16.5, 28.4] | 18.5% | 1.5% | 114m |
-| 10 | MiMo V2.6 Pro + MiMo Code | 20.5 | [14.3, 27.1] | 13.8% | 3.1% | 159m |
-| 11 | Doubao Seed 2.1 Pro + TRAE | 19.8 | [14.0, 26.1] | 18.5% | 1.5% | 300m |
+| Rank | Model + Harness | Mean Score | 95% CI | pass@1 | pass@5 | pass⁵ | Median Time |
+| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| 1 | **GPT-6.2 Astra + Codex** | **61.3** | [51.3, 70.6] | 55.7% | 60.0% | 49.2% | 42m |
+| 2 | **GPT-6.2 Sol + Codex** | **56.0** | [46.8, 65.1] | 46.2% | 53.8% | 36.9% | 35m |
+| 3 | **Qwen4-Max + Qoder** | **44.0** | [35.1, 52.8] | 33.2% | 49.2% | 20.0% | 176m |
+| 4 | **Kimi K3.1 Pro + Kimi Code** | **40.5** | [32.1, 48.8] | 29.5% | 50.8% | 15.4% | 150m |
+| 5 | **HY4 + DSH** | **38.3** | [30.0, 46.9] | 24.3% | 44.6% | 10.8% | 148m |
+| 6 | DeepSeek V4.1 Flash 1017 + DSH | 32.3 | [25.1, 39.9] | 17.8% | 40.0% | 4.6% | 191m |
+| 7 | HY4 + CodeBuddy | 27.3 | [20.5, 34.8] | 15.1% | 29.2% | 4.6% | 172m |
+| 8 | GLM 5.3 + ZCode | 23.9 | [17.5, 30.5] | 15.4% | 36.9% | 3.1% | 300m |
+| 9 | HY4 Flash + CodeBuddy | 22.2 | [16.5, 28.4] | 9.8% | 21.5% | 1.5% | 114m |
+| 10 | MiMo V2.6 Pro + MiMo Code | 20.5 | [14.2, 27.1] | 9.2% | 16.9% | 4.6% | 159m |
+| 11 | Doubao Seed 2.1 Pro + TRAE | 19.8 | [14.1, 26.1] | 10.8% | 24.6% | 1.5% | 300m |
 
 <p align="center">
   <img src="./assets/leaderboard-v1.0.png" alt="DeltaScience v1.0 Leaderboard" width="90%" />
@@ -95,11 +97,11 @@ All 11 versioned **Model + Harness** configurations were evaluated across all **
 
 ### Empirical Takeaways
 
-1. **Significant Headroom Remains**: Even the #1 system (`GPT-6.2 Astra + Codex`, 61.2) leaves nearly 40% headroom before reliably passing scientific acceptance across all 65 tasks, and **6 frontier tasks remain universally unsolved (0 across all 11 systems)**.
-2. **Harness Engineering Matters as Much as the Base Model**: In controlled same-model comparisons, swapping the harness on `HY4` from `CodeBuddy` to `DSH` yields **+11.3 points** (95% CI `[+6.8, +15.9]`, 42/10 win-loss)—larger than swapping base models within a fixed harness.
-3. **Reliability Gap (`pass@5` vs. `pass⁵`)**: Across all task × system cells, **70.4%** never achieve a full score in 5 trials and only **9.1%** pass all 5 trials consistently.
-4. **Domain & Task-Type Specialization**: `Qwen4-Max + Qoder` leads **Tool-Use & Planning** (41.8 vs. 34.1–36.4 for GPT-6.2), while the Best-of-11 Oracle reaches **69.6** (+8.4 over #1).
-5. **Code Execution ≠ Scientific Validity**: Among all zero-score trajectories, **61.4%** executed code cleanly without runtime errors yet failed physical, numerical, or domain acceptance criteria; longer runtimes correlate negatively with score (Spearman $\rho = -0.56$).
+1. **Significant Headroom Remains**: Even the #1 system (`GPT-6.2 Astra + Codex`, 61.3) leaves nearly 40% headroom across all 65 tasks (`pass⁵` = 49.2%), and **6 frontier tasks remain universally unsolved (0 across all 11 systems)**.
+2. **Harness Engineering Is Critical**: In controlled same-model comparisons on `HY4`, switching the harness from `CodeBuddy` to `DSH` yields **+11.0 points** (95% CI `[+6.7, +15.4]`, 42/10 win-loss)—exceeding the paired deltas observed when swapping base models within a fixed harness (`+6.0` on `DSH`, `+5.1` on `CodeBuddy`).
+3. **Reliability Gap (`pass@5` vs. `pass⁵`)**: Under the per-task scientific acceptance criterion (0/1), **61.1%** of all task × system cells never pass in 5 trials and only **13.8%** pass all 5 trials consistently.
+4. **Domain & Task-Type Specialization**: `Qwen4-Max + Qoder` leads **Tool-Use & Planning** (41.8 vs. 34.5–36.4 for GPT-6.2), while the Best-of-11 Oracle reaches **69.6** (+8.4 over #1).
+5. **Code Execution ≠ Scientific Validity**: Among all zero-score trajectories, **68.4%** executed code cleanly without runtime errors yet failed physical, numerical, or domain acceptance criteria; top-tier systems converge within 35–42 minutes median runtime, whereas long-running trial-and-error loops lead to high timeout rates (32.3%–37.5%).
 
 <p align="center">
   <img src="./assets/discipline-network.png" alt="DeltaScience v1.0 Interdisciplinary Graph" width="44%" />
@@ -171,6 +173,6 @@ If you reference DeltaScience, its leaderboard, or any open-source tasks in your
   institution = {AI for Science Institute, Beijing},
   year        = {2026},
   month       = {November},
-  url         = {https://deltascience.bohrium.com/}
+  url         = {https://deltascience.bohrium.com/report}
 }
 ```

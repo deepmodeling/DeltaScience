@@ -12,6 +12,7 @@
 
 <p>
   <a href="https://deltascience.bohrium.com/"><img src="https://img.shields.io/badge/官方平台与榜单-deltascience.bohrium.com-111F2B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="官方平台" /></a>
+  <a href="https://deltascience.bohrium.com/report"><img src="https://img.shields.io/badge/技术报告-DeltaScience%20v1.0-7C3AED?style=for-the-badge&logo=readthedocs&logoColor=white" alt="技术报告" /></a>
   <a href="https://play.bohrium.com/competition/science-pilot"><img src="https://img.shields.io/badge/常年征题与竞赛-Playground%20投稿入口-0F766E?style=for-the-badge&logo=rocket&logoColor=white" alt="常年征题" /></a>
   <a href="./tasks/README_zh.md"><img src="https://img.shields.io/badge/开源代表题集-7%20道高质量真题-2563EB?style=for-the-badge&logo=github&logoColor=white" alt="开源题目" /></a>
   <a href="mailto:deltascience@aisi.ac.cn"><img src="https://img.shields.io/badge/官方邮箱-deltascience%40aisi.ac.cn-475569?style=for-the-badge&logo=gmail&logoColor=white" alt="联系邮箱" /></a>
@@ -47,6 +48,7 @@
 | 资源项 | 链接 | 说明 |
 | :--- | :--- | :--- |
 | **官方平台与公开榜单** | [https://deltascience.bohrium.com/](https://deltascience.bohrium.com/) | 查看 v1.0 首期总榜、分学科画像、公开例题及申请接入评测 |
+| **技术报告（v1.0）** | [https://deltascience.bohrium.com/report](https://deltascience.bohrium.com/report) | DeltaScience v1.0 完整技术报告、在线章节导读与实证分析 |
 | **Playground 出题竞赛与常年征题** | [https://play.bohrium.com/competition/science-pilot](https://play.bohrium.com/competition/science-pilot) | 提交真实科研与产业难题，入选获 CSTR 标识、集体署名与竞赛激励 |
 | **开源题目仓库** | [https://github.com/deepmodeling/DeltaScience](https://github.com/deepmodeling/DeltaScience) | 首批开源代表题包（Harbor 格式）、题目说明与验收规范 |
 | **官方联系邮箱** | [deltascience@aisi.ac.cn](mailto:deltascience@aisi.ac.cn) | 模型与 Harness 评测对接、科研机构共建与社区合作 |
@@ -75,19 +77,19 @@
 
 全部 11 个锁定版本的 **Model + Harness** 组合在 65 道非公开任务上独立完成 5 轮隔离评测（共 3,575 次）。单题取五轮均值后对 65 题等权平均，采用 5,000 次按题配对重采样计算 95% 置信区间；超时、拒答与 Harness 异常均记 0 分。
 
-| 排名 | Model + Harness | 均分 | 95% 区间 | pass@5 | pass⁵ | 中位用时 |
-| :-: | :--- | :-: | :-: | :-: | :-: | :-: |
-| 1 | **GPT-6.2 Astra + Codex** | **61.2** | [51.2, 70.6] | 44.6% | 30.8% | 42m |
-| 2 | **GPT-6.2 Sol + Codex** | **56.1** | [46.8, 65.1] | 36.9% | 21.5% | 35m |
-| 3 | **Qwen4-Max + Qoder** | **44.0** | [35.2, 52.9] | 38.5% | 13.8% | 176m |
-| 4 | **Kimi K3.1 Pro + Kimi Code** | **40.8** | [32.4, 49.3] | 34.4% | 12.5% | 150m |
-| 5 | **HY4 + DSH** | **38.6** | [30.2, 47.2] | 36.9% | 4.6% | 148m |
-| 6 | DeepSeek V4.1 Flash 1017 + DSH | 32.3 | [25.1, 39.9] | 32.3% | 3.1% | 191m |
-| 7 | HY4 + CodeBuddy | 27.3 | [20.5, 34.8] | 26.2% | 4.6% | 172m |
-| 8 | GLM 5.3 + ZCode | 23.8 | [17.4, 30.4] | 24.6% | 3.1% | 300m |
-| 9 | HY4 Flash + CodeBuddy | 22.2 | [16.5, 28.4] | 18.5% | 1.5% | 114m |
-| 10 | MiMo V2.6 Pro + MiMo Code | 20.5 | [14.3, 27.1] | 13.8% | 3.1% | 159m |
-| 11 | Doubao Seed 2.1 Pro + TRAE | 19.8 | [14.0, 26.1] | 18.5% | 1.5% | 300m |
+| 排名 | Model + Harness | 均分 | 95% 区间 | pass@1 | pass@5 | pass⁵ | 中位用时 |
+| :-: | :--- | :-: | :-: | :-: | :-: | :-: | :-: |
+| 1 | **GPT-6.2 Astra + Codex** | **61.3** | [51.3, 70.6] | 55.7% | 60.0% | 49.2% | 42m |
+| 2 | **GPT-6.2 Sol + Codex** | **56.0** | [46.8, 65.1] | 46.2% | 53.8% | 36.9% | 35m |
+| 3 | **Qwen4-Max + Qoder** | **44.0** | [35.1, 52.8] | 33.2% | 49.2% | 20.0% | 176m |
+| 4 | **Kimi K3.1 Pro + Kimi Code** | **40.5** | [32.1, 48.8] | 29.5% | 50.8% | 15.4% | 150m |
+| 5 | **HY4 + DSH** | **38.3** | [30.0, 46.9] | 24.3% | 44.6% | 10.8% | 148m |
+| 6 | DeepSeek V4.1 Flash 1017 + DSH | 32.3 | [25.1, 39.9] | 17.8% | 40.0% | 4.6% | 191m |
+| 7 | HY4 + CodeBuddy | 27.3 | [20.5, 34.8] | 15.1% | 29.2% | 4.6% | 172m |
+| 8 | GLM 5.3 + ZCode | 23.9 | [17.5, 30.5] | 15.4% | 36.9% | 3.1% | 300m |
+| 9 | HY4 Flash + CodeBuddy | 22.2 | [16.5, 28.4] | 9.8% | 21.5% | 1.5% | 114m |
+| 10 | MiMo V2.6 Pro + MiMo Code | 20.5 | [14.2, 27.1] | 9.2% | 16.9% | 4.6% | 159m |
+| 11 | Doubao Seed 2.1 Pro + TRAE | 19.8 | [14.1, 26.1] | 10.8% | 24.6% | 1.5% | 300m |
 
 <p align="center">
   <img src="./assets/leaderboard-v1.0.png" alt="DeltaScience v1.0 首期总榜" width="90%" />
