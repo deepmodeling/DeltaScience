@@ -4,7 +4,7 @@ import json
 import math
 from pathlib import Path
 
-VERSION = 'pkscience-retro-continuous-1.0.17'
+VERSION = 'deltascience-retro-continuous-1.0.17'
 
 
 def number(value):

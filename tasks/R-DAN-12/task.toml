@@ -39,7 +39,7 @@ judge_transport = "stream_first_bounded_retry_same_frozen_judge"
 judge_protocol_contract = "quality_stability_absence_and_inline_policy_1.0.17"
 scoring_repair_revision = "1.0.17"
 agent_view_cleanup = "trusted_startup_and_public_native_receipt_projection"
-pkscience_revision = "author-1.0.17-role-proxy-v1"
+deltascience_revision = "author-1.0.17-role-proxy-v1"
 
 [agent]
 user = "retro"

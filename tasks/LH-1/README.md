@@ -24,7 +24,7 @@ Full physics definitions, normalization conventions (effective minor radius $1.7
 
 ## Self-Contained Containerized Build & Local Usage
 
-Both `environment/Dockerfile` (Agent image) and `tests/Dockerfile` (independent Verifier image) share an identical pinned scientific stack built from `python:3.12-slim-bookworm` plus bundled source archives in `build-inputs/` (`STELLOPT` / `VMEC2000` / `NEO`, `SIMPLE`, `libneo`, `simsopt`, `jax`/`jaxlib`, `booz_xform`, `OpenMPI`, `gfortran`, `HDF5`, `netCDF-Fortran`). See [`UPSTREAM.md`](./UPSTREAM.md) and `environment/build-inputs/SOURCES.md` for SHA-256 checksums and upstream citations (Landreman & Paul, *Phys. Rev. Lett.* 128, 035001, 2022).
+Both `environment/Dockerfile` (Agent image) and `tests/Dockerfile` (independent Verifier image) share an identical pinned scientific stack built from `python:3.12-slim-bookworm` plus bundled source archives in `tests/build-inputs/` (`STELLOPT` / `VMEC2000` / `NEO`, `SIMPLE`, `libneo`, `simsopt`, `jax`/`jaxlib`, `booz_xform`, `OpenMPI`, `gfortran`, `HDF5`, `netCDF-Fortran`). Reference physics background: Landreman & Paul, *Phys. Rev. Lett.* 128, 035001, 2022.
 
 ```bash
 bash build.sh                               # Build agent & verifier images (verifier reuses runtime cache)

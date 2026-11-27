@@ -24,7 +24,7 @@
 
 ## 镜像构建与本地运行
 
-`environment/Dockerfile`（Agent 镜像）与 `tests/Dockerfile`（独立评分镜像）共享完全一致的底层科研运行时（基于 `python:3.12-slim-bookworm` 与 `build-inputs/` 随包源码，含 `STELLOPT` / `VMEC2000` / `NEO`、`SIMPLE`、`libneo`、`simsopt`、`jax`/`jaxlib`、`booz_xform` 等，构建前逐项校验 SHA-256）。参考文献与上游来源见 [`UPSTREAM.md`](./UPSTREAM.md)（Landreman & Paul, *Phys. Rev. Lett.* 128, 035001, 2022）。
+`environment/Dockerfile`（Agent 镜像）与 `tests/Dockerfile`（独立评分镜像）共享完全一致的底层科研运行时（基于 `python:3.12-slim-bookworm` 与 `tests/build-inputs/` 随包源码，含 `STELLOPT` / `VMEC2000` / `NEO`、`SIMPLE`、`libneo`、`simsopt`、`jax`/`jaxlib`、`booz_xform` 等，构建前逐项校验 SHA-256）。参考物理背景：Landreman & Paul, *Phys. Rev. Lett.* 128, 035001, 2022。
 
 ```bash
 bash build.sh                               # 构建 Agent 与独立 Verifier 镜像（共享缓存）

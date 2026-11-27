@@ -20,7 +20,7 @@
 
 Design a single deterministic **encoder + recovery circuit pair** under strict gate-count constraints ($\le 256$ `CX` gates and $\le 256$ single-qubit rotation gates combined, no measurements/reset/feedback/postselection) that maximizes the certified **gate-error tolerance** $t$ while strictly outperforming the bare qubit ($F_s(p) - B_s > 10^{-10}$) across all **7 thermal relaxation/dephasing storage stress conditions** ($4\ \mu\text{s}$ storage).
 
-Full physical model, noise stress table, and JSON schema are specified in [`instruction_en.md`](./instruction_en.md) (Chinese: [`instruction_ch.md`](./instruction_ch.md)).
+Full physical model, noise stress table, and JSON schema are specified in [`instruction.md`](./instruction.md).
 
 ## Scoring & Verification
 
@@ -31,7 +31,7 @@ Full physical model, noise stress table, and JSON schema are specified in [`inst
 ## Environment & Provenance
 
 - **Runtime**: Linux, 4 CPU, 8 GiB RAM, no GPU; pinned Python 3.12 (`NumPy 2.2.6`, `SciPy 1.15.3`) at `/opt/quantum/legacy/bin/python`.
-- **Reference Literature**: Shao et al., *Variational Graphical Quantum Error Correction Codes (VGQEC)*, `arXiv:2410.02608v2` (see [`BASELINE_REPRODUCTION.md`](./BASELINE_REPRODUCTION.md) and [`SCORING_INTERFACE.md`](./SCORING_INTERFACE.md)).
+- **Reference Literature**: Shao et al., *Variational Graphical Quantum Error Correction Codes (VGQEC)*, `arXiv:2410.02608v2`.
 
 ## Anti-Contamination & Usage Policy
 

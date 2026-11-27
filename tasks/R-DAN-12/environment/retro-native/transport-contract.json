@@ -77,7 +77,7 @@
   "private_export": "authenticated_original_native_export_for_verifier",
   "missing_checkpoint_policy": "proven_absent_program_zero_unresolved_pending",
   "judge_input_mode": "inline_evidence_no_tools",
-  "pkscience_judge_revision": "author-1.0.17-judge1017-user-v1",
+  "deltascience_judge_revision": "author-1.0.17-judge1017-user-v1",
   "accepted_response_model_ids": [
     "deepseek-v4.1-flash-1017",
     "deepseek-v4-1-flash-261017",

@@ -20,7 +20,7 @@
 
 Improve a static axisymmetric **free-boundary Grad–Shafranov equilibrium solver** under fixed physical inputs for all **212 time slices** of MAST-U conventional-divertor discharge **45425**, minimizing core plasma-boundary discrepancies against the EFIT++ reference branch while strictly preserving machine geometry, active/passive conductor currents, plasma current $I_p$, and Lao profile parameters.
 
-Full physical constraints and input schemas are specified in [`instruction_en.md`](./instruction_en.md) (Chinese: [`instruction_ch.md`](./instruction_ch.md)).
+Full physical constraints and input schemas are specified in [`instruction.md`](./instruction.md).
 
 ## Deliverables & Acceptance Criteria
 

@@ -6,4 +6,4 @@ set +e
 /usr/local/bin/python -I -B /opt/retro-native/native_bridge.py relay
 relay_exit=$?
 set -e
-exec /usr/local/bin/python -I -B /tests/pkscience_continuous.py --relay-exit "$relay_exit"
+exec /usr/local/bin/python -I -B /tests/continuous_scoring.py --relay-exit "$relay_exit"

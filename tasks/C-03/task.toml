@@ -7,7 +7,7 @@ description = "Design a diverse three-molecule portfolio that retains BCL2 bindi
 keywords = [ "drug-design", "bcl2", "bclxl", "selectivity", "docking", "pose-design", "scaffold-diversity",]
 [[task.authors]]
 name = "Task authors"
-email = "see authoring/provenance/README.md"
+email = "deltascience@bohrium.com"
 
 [metadata]
 completion_policy = "verified_continuous_portfolio_v1"
@@ -15,7 +15,7 @@ completion_check = "/app/completion/check.py"
 repair_revision = "C-03.15"
 repair_date = "2026-11-08"
 author_name = "Task authors"
-author_email = "see authoring/provenance/README.md"
+author_email = "deltascience@bohrium.com"
 author_organization = "PureAgent P benchmark"
 author_profile = ""
 research_advisor = ""

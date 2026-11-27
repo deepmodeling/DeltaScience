@@ -20,7 +20,7 @@
 
 在门数受限（编码与恢复合计不超过 256 个 `CX` 门与 256 个旋转门，禁止测量、重置、经典反馈与后选择）且不按工况切换电路的约束下，设计一对确定性**编码与恢复电路**，使编码方案在全部 **7 种存储噪声工况**（$4\ \mu\text{s}$ 热弛豫/退相位）下持续优于同条件裸比特（$F_s(p) - B_s > 10^{-10}$），并最大化可认证的**门误差容忍度** $t$。
 
-完整物理模型、七工况噪声表与输出格式详见 [`instruction_ch.md`](./instruction_ch.md)（英文版：[`instruction_en.md`](./instruction_en.md)）。
+完整物理模型、七工况噪声表与输出格式详见 [`instruction.md`](./instruction.md)。
 
 ## 评分与独立认证
 
@@ -31,7 +31,7 @@
 ## 运行环境与来源
 
 - **环境**：Linux，4 CPU、8 GiB 内存、无 GPU；推荐与评分一致的 `/opt/quantum/legacy/bin/python`（Python 3.12、`NumPy 2.2.6`、`SciPy 1.15.3`）。
-- **参考文献**：Shao et al., *Variational Graphical Quantum Error Correction Codes (VGQEC)*, `arXiv:2410.02608v2`（详见 [`BASELINE_REPRODUCTION.md`](./BASELINE_REPRODUCTION.md) 与 [`SCORING_INTERFACE.md`](./SCORING_INTERFACE.md)）。
+- **参考文献**：Shao et al., *Variational Graphical Quantum Error Correction Codes (VGQEC)*, `arXiv:2410.02608v2`。
 
 ## 合规与防污染声明
 

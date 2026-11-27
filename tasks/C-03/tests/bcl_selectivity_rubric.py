@@ -855,7 +855,7 @@ def _pk_best_portfolio(entries, similarity, tolerance=0.0):
 def _pk_apply(report, task_id, parse, fingerprint, similarity, tolerance=0.0):
     report['legacy_reward'] = int(bool(report.get('format_ok')) and bool(report.get('portfolio_pass')))
     report['completed'] = True
-    report['scoring_version'] = 'pkscience-molecular-continuous-v1'
+    report['scoring_version'] = 'deltascience-molecular-continuous-v1'
     entries = []
     if report.get('format_ok'):
         for row in report['candidates']:

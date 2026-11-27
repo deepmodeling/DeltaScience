@@ -20,7 +20,7 @@
 
 在英国 MAST-U 托卡马克常规偏滤器放电 **45425** 的全部 **212 个固定时刻**下，严格保持机器几何、主动线圈与被动结构电流、等离子体电流 $I_p$ 与 Lao 剖面参数不变，改进静态轴对称**自由边界 Grad–Shafranov 平衡数值求解方法**，缩小计算所得等离子体核心边界与 EFIT++ 参考分支之间的几何差异。
 
-完整物理约束与数据格式详见 [`instruction_ch.md`](./instruction_ch.md)（英文版：[`instruction_en.md`](./instruction_en.md)）。
+完整物理约束与数据格式详见 [`instruction.md`](./instruction.md)。
 
 ## 交付物与科学验收规则
 

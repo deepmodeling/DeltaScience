@@ -26,7 +26,6 @@ Full problem rules, computational score definitions, and required output files a
 
 - **Independent Verification**: The verifier under [`tests/`](./tests/) reads only the declared molecular data artifacts and independently recomputes all docking, selectivity, and portfolio metrics. Public completion reports are solver-side feedback only and are never trusted as final reward.
 - **Reference Solution Status**: No executable `solution/` oracle portfolio is bundled in this release; solvers must optimize candidate portfolios from the public structural inputs and completion checker.
-- **Asset Integrity**: [`ASSET_HASHES.json`](./ASSET_HASHES.json) records task-root-relative hashes for files under `environment/`, `tests/`, and `authoring/`.
 
 ## Runtime & Environment
 
