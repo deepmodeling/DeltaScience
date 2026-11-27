@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "comparison_direction": "case_minus_reference",
+  "single_cell": {
+    "qc": {
+      "duplicate_gene_symbol_rule": "sum_raw_counts_within_sample",
+      "mitochondrial_gene_prefix": "MT-",
+      "min_genes_by_counts": 200,
+      "min_total_counts": 500,
+      "max_pct_counts_mt": 20,
+      "scrublet_min_cells": 500,
+      "scrublet_expected_doublet_rate": 0.06,
+      "scrublet_use_approx_neighbors": false,
+      "scrublet_random_state": 20261028,
+      "post_merge_gene_min_cells": 3
+    },
+    "graph": {
+      "normalization_target_sum": 10000,
+      "log1p": true,
+      "scale_before_hvg_pca": false,
+      "primary_hvg": 3000,
+      "hvg_flavor": "seurat",
+      "hvg_batch_key": "sample_id",
+      "pca_max_components": 40,
+      "pca_solver": "arpack",
+      "harmony_key": "patient_id",
+      "harmony_max_iter": 20,
+      "neighbors": 20,
+      "neighbors_n_pcs": 30,
+      "neighbors_seed": 0,
+      "primary_leiden_resolution": 0.6,
+      "secondary_leiden_resolution": 0.5,
+      "leiden_flavor": "igraph",
+      "leiden_iterations": 2,
+      "primary_seed": 0,
+      "stability_seeds": [0, 17, 29]
+    },
+    "primary_lineages": [
+      "fibroblast",
+      "endothelial",
+      "pericyte",
+      "smooth_muscle",
+      "keratinocyte",
+      "lymphoid",
+      "myeloid",
+      "mast",
+      "eccrine_adnexal",
+      "nerve_schwann",
+      "melanocyte",
+      "ambiguous"
+    ],
+    "coverage": {
+      "state_cells_per_sample_primary": 10,
+      "state_cells_per_sample_sensitivity": [5, 20],
+      "paired_state_rule": "both_conditions_meet_primary_threshold",
+      "liana_cells_per_node_per_sample": 30,
+      "insufficient_coverage_value": "NA"
+    }
+  },
+  "required_tools": {
+    "pathway": {
+      "software": "gseapy",
+      "method": "prerank",
+      "libraries": [
+        "resources/MSigDB_Hallmark_2020.gmt",
+        "resources/Reactome_2022.gmt",
+        "resources/GO_Biological_Process_2023.gmt"
+      ]
+    },
+    "tf": {
+      "software": "decoupler",
+      "resource": "resources/collectri_human_source_target_weight.tsv.gz",
+      "primary_method": "ULM",
+      "sensitivity_method": "MLM",
+      "minimum_observed_targets": 5
+    },
+    "communication": {
+      "software": "liana",
+      "version": "1.7.1",
+      "resource": "resources/liana_consensus_resource.tsv",
+      "method": "consensus",
+      "run_unit": "eligible_sample",
+      "annotation_levels": ["primary_lineage", "secondary_state"]
+    }
+  }
+}

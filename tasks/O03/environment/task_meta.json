@@ -1,0 +1,70 @@
+{
+  "comparison_direction": "case_minus_reference",
+  "materials": {
+    "A": {
+      "format": "10x_mtx_gz",
+      "matrix_semantics": "raw_integer_counts",
+      "metadata_file": "/app/inputs/A/sample_metadata.csv",
+      "case": "L",
+      "reference": "NL",
+      "paired": true,
+      "pairing_key": "patient_id",
+      "secondary_scopes": ["fibroblast"]
+    },
+    "B": {
+      "format": "10x_h5",
+      "matrix_semantics": "raw_integer_counts",
+      "metadata_file": "/app/inputs/B/sample_metadata.csv",
+      "case": "L",
+      "reference": "NL",
+      "paired": true,
+      "pairing_key": "patient_id",
+      "secondary_scopes": ["fibroblast"]
+    },
+    "C": {
+      "format": "10x_mtx_gz",
+      "matrix_semantics": "raw_integer_counts",
+      "metadata_file": "/app/inputs/C/sample_metadata.csv",
+      "case": "PN",
+      "reference": "AD",
+      "paired": false,
+      "secondary_scopes": ["fibroblast", "endothelial", "mural"],
+      "mural_source_lineages": ["pericyte", "smooth_muscle"]
+    },
+    "R": {
+      "resource_file": "/app/resources/stage_response_reference.tsv",
+      "resource_semantics": "signed_response_reference_weights",
+      "analysis_unit": "patient",
+      "candidate_scope": "all_observable_resource_columns"
+    },
+    "D": {
+      "format": "tsv_gz",
+      "matrix_file": "/app/inputs/D/expression_log2.tsv.gz",
+      "metadata_file": "/app/inputs/D/sample_metadata.csv",
+      "condition_key_file": "/app/inputs/D_key/condition_key.csv",
+      "matrix_semantics": "log2_normalized_expression",
+      "time_unit": "hour",
+      "independent_unit": "cell_line_id"
+    },
+    "E": {
+      "format": "tsv_gz",
+      "matrix_file": "/app/inputs/E/protein_group_matrix.tsv.gz",
+      "metadata_file": "/app/inputs/E/sample_metadata.csv",
+      "matrix_semantics": "protein_group_quantitative_intensity_with_missing_values",
+      "independent_unit": "patient_id",
+      "primary_contrast": "PN_minus_AD",
+      "secondary_contrasts": ["PN_minus_control", "AD_minus_control"],
+      "technical_fields": ["acquisition_order", "batch_id"]
+    },
+    "V": {
+      "format": "tsv_gz",
+      "matrix_file": "/app/inputs/V/expression_probe_matrix.tsv.gz",
+      "probe_annotation_file": "/app/inputs/V/probe_annotation.tsv.gz",
+      "metadata_file": "/app/inputs/V/sample_metadata.csv",
+      "matrix_semantics": "processed_nanostring_probe_expression",
+      "primary_contrast": "PN_L_minus_PN_NL",
+      "pairing_key": "patient_id",
+      "secondary_scope": "other_disease_and_healthy_samples"
+    }
+  }
+}

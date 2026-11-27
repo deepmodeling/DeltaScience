@@ -1,0 +1,73 @@
+{
+  "pathway_libraries": [
+    {
+      "file": "resources/MSigDB_Hallmark_2020.gmt",
+      "name": "MSigDB Hallmark 2020"
+    },
+    {
+      "file": "resources/Reactome_2022.gmt",
+      "name": "Reactome 2022"
+    },
+    {
+      "file": "resources/GO_Biological_Process_2023.gmt",
+      "name": "GO Biological Process 2023"
+    }
+  ],
+  "collectri": {
+    "file": "resources/collectri_human_source_target_weight.tsv.gz",
+    "software": "decoupler",
+    "primary_method": "ULM",
+    "sensitivity_method": "MLM",
+    "columns": [
+      "source",
+      "target",
+      "weight"
+    ],
+    "minimum_observed_targets": 5,
+    "minimum_state_scopes": {
+      "A": ["fibroblast_aggregate", "eligible_native_fibroblast_states"],
+      "B": ["fibroblast_aggregate", "eligible_native_fibroblast_states"],
+      "C": ["fibroblast_endothelial_mural_aggregates", "eligible_native_states"]
+    }
+  },
+  "liana": {
+    "file": "resources/liana_consensus_resource.tsv",
+    "software": "liana",
+    "package_version": "1.7.1",
+    "resource": "consensus",
+    "minimum_execution_scope": "each_eligible_sample_independently",
+    "minimum_cells_per_node_per_sample": 30,
+    "annotation_levels": [
+      "primary_lineage",
+      "secondary_state"
+    ],
+    "secondary_state_scope": {
+      "A": [
+        "fibroblast"
+      ],
+      "B": [
+        "fibroblast"
+      ],
+      "C": [
+        "fibroblast",
+        "endothelial",
+        "mural"
+      ]
+    },
+    "secondary_node_rule": "expand_required_lineages_to_de_novo_states_and_retain_other_primary_lineages"
+  },
+  "pathway_execution": {
+    "software": "gseapy",
+    "minimum_method": "prerank",
+    "full_library_results_required": true,
+    "minimum_state_scopes": {
+      "A": ["fibroblast_aggregate", "eligible_native_fibroblast_states"],
+      "B": ["fibroblast_aggregate", "eligible_native_fibroblast_states"],
+      "C": ["fibroblast_endothelial_mural_aggregates", "eligible_native_states"]
+    }
+  },
+  "stage_response_reference": {
+    "file": "resources/stage_response_reference.tsv",
+    "metadata_file": "resources/stage_response_resource.md"
+  }
+}

@@ -1,0 +1,521 @@
+{
+  "schema_version": 1,
+  "scope": "files copied from environment/inputs and environment/resources into the Agent image",
+  "files": [
+    {
+      "relative_path": "environment/inputs/A/A_S01_barcodes.tsv.gz",
+      "size_bytes": 14237,
+      "sha256": "A4073C0D5840AE2739BD4DBEE1357A7CDDCD8BE97F8A0DC980436EF18C308083"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S01_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "766DBCC5A6F8AFFAAA22967CE8101DEE7DE7C2EFBC95EFA58A01F65F92914237"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S01_matrix.mtx.gz",
+      "size_bytes": 15812446,
+      "sha256": "8D92D1CD2871F8ADBCB2C91DA165081803584737BDD99B4E4D61B2514B9460DC"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S02_barcodes.tsv.gz",
+      "size_bytes": 4252,
+      "sha256": "88025527581030B662757E5307456FD791680485B1B46869D090E1CBC549132D"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S02_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "9745EBA8D2B04B181D4185754F762F8F79DB2CFEDB7F82BE0A00F422FB78B4F3"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S02_matrix.mtx.gz",
+      "size_bytes": 4655378,
+      "sha256": "615805B7438BB11896962BC1AEA8559183F2D0F1C277FAFBB8E6A5937E70D72B"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S03_barcodes.tsv.gz",
+      "size_bytes": 25015,
+      "sha256": "55EFD4281EBDCD6D481FD8C02461DB15E2B2A7ED6DFE456A1CC857DD4B11FEBE"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S03_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "5D7769EB4ABDCE1555F91D2461AA183CA56DF169B4B3C7CDD6A877C0467AB315"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S03_matrix.mtx.gz",
+      "size_bytes": 39092897,
+      "sha256": "2781836D27895F3688464FA8A4BF438E7E69E4FD64292CDF025627C1AF8EB58E"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S04_barcodes.tsv.gz",
+      "size_bytes": 21913,
+      "sha256": "7698F45162F0666711DB4BEDF1AC148923E5571E1E12EF98322B6081F680DD2F"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S04_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "47A23B1E553FB2C8FD4D3FFA19C851A8E5E56753A4B903FFAE365072010ABBB3"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S04_matrix.mtx.gz",
+      "size_bytes": 28529281,
+      "sha256": "E30FA5AE26729C33867BA0F657FB36B7E1A7F17E6CE4A35EF2A6E35B36E5407A"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S05_barcodes.tsv.gz",
+      "size_bytes": 48248,
+      "sha256": "C6BB819E38DF18194C0CF17F9D0D8D94C02B451D8EC035228F330C0F9257190F"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S05_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "7407591EBCA5DC98BE0C15580B9E06577CD13CB599DEF2C362A3385BA1BC3859"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S05_matrix.mtx.gz",
+      "size_bytes": 78412986,
+      "sha256": "2E3534C2CD74D21BCD461366DBFED8EB7A3D1A547E6504027783324CFC8C9372"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S06_barcodes.tsv.gz",
+      "size_bytes": 2527,
+      "sha256": "1AC7FE0BC2115F8474A86A7442A890F7D95DC22B8823B001921E9225C645B6E4"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S06_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "76B994132DE0A29CA0B1E0DA24CC7FE0E2C67B797E825725F1EF0A011ED9813A"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S06_matrix.mtx.gz",
+      "size_bytes": 2439427,
+      "sha256": "B33D1606C6E78130EEFED197F2EF5E36FB0B21FB3F508A3431780E3EBD2DB721"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S07_barcodes.tsv.gz",
+      "size_bytes": 17447,
+      "sha256": "4233600683F85F0295FA6EC9E593AC03C24344F779DFCCA1B7665FAADFF41664"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S07_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "BF444347B5836D41AAC8B4DC05F9B0FD68A5245B3009ADBB0A7ADA19EB7EBB6B"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S07_matrix.mtx.gz",
+      "size_bytes": 16878455,
+      "sha256": "0FE471DB0E33E215BE795CE93C5A478920ED005FBAAF6ADE1FAAAB122F4E014F"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S08_barcodes.tsv.gz",
+      "size_bytes": 7748,
+      "sha256": "D0AA6AECC0D3A558DA1BD05E708CF155B753C8EB94C1D0DAE757EC453242D476"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S08_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "D0443C3C6E33CDF25AADB4CB3DC7892ABDA9BD89CE4E54F1347CFF9B8DD69D82"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S08_matrix.mtx.gz",
+      "size_bytes": 6070449,
+      "sha256": "D731ACAE8415B1DD0CEB16B7C3BADD43A1D7B22DC754D032F618E93FA6E129BD"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S09_barcodes.tsv.gz",
+      "size_bytes": 19549,
+      "sha256": "860D0E9093251ACA115AE540CB1776F57D68E66948CF6C5889D064345904F10E"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S09_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "255EEBB75BA4132DF8C2770D810A4DF41C63B7C7E00CE7BC5F8F64C960A3572B"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S09_matrix.mtx.gz",
+      "size_bytes": 27443003,
+      "sha256": "5AEC7819A56CA1894168E33AA1A622046CC3ECF58AA84FE9AC5D65AC337C37FA"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S10_barcodes.tsv.gz",
+      "size_bytes": 17204,
+      "sha256": "501EF0FEF24E3221090433E1B78D05E52323ED3B60668DF3E1DFA454317368E4"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S10_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "7307C333AE8AD72F2108C2E5CE5E9FE947D04A82217FAE2B80B3107E90D9C6BD"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S10_matrix.mtx.gz",
+      "size_bytes": 23676295,
+      "sha256": "1EF0DE3945E2E3B40037671C37C3931E02BD2CA83CDFAABD602292AE37F7CC80"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S11_barcodes.tsv.gz",
+      "size_bytes": 43867,
+      "sha256": "6C0083C8004E3AF2F6F59D6A9D517FE74C8CDECC6C2391869A0682761405902D"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S11_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "27B2FEF450BEE7BEB5685FEE71A1F94C1AC2F656E684FC6FEF521957A2DDD572"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S11_matrix.mtx.gz",
+      "size_bytes": 62798216,
+      "sha256": "DCE5695E0F156915E2D90E3A86CAA088DB0BA99286A88254177DF37022738158"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S12_barcodes.tsv.gz",
+      "size_bytes": 41701,
+      "sha256": "56D2D774D590540ECD4E5B34F6B09BE82002ED7BFA0D20B3DAD0A1A69C19A829"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S12_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "6871C6D1B6A9411692DB54B8137DE17ED645DFABA622CE2365A0D0976FEBBE15"
+    },
+    {
+      "relative_path": "environment/inputs/A/A_S12_matrix.mtx.gz",
+      "size_bytes": 66496022,
+      "sha256": "9D818B952F2D02C072AC77EEEB12619CAECEFD631EC16864A53532ADDCFF2615"
+    },
+    {
+      "relative_path": "environment/inputs/A/sample_metadata.csv",
+      "size_bytes": 1527,
+      "sha256": "6478BBB9209A171650335FCB8D4525902EE4F9524F89593A847E43706EE3DF5D"
+    },
+    {
+      "relative_path": "environment/inputs/B/B_S01_filtered_feature_bc_matrix.h5",
+      "size_bytes": 18834506,
+      "sha256": "86D31B3C392676DD8E7362376DA6A816BC4AF90755F88A05FF48761FDD96A72F"
+    },
+    {
+      "relative_path": "environment/inputs/B/B_S02_filtered_feature_bc_matrix.h5",
+      "size_bytes": 361961,
+      "sha256": "0EBDA51BC086432749A8C27FB2C4659342B0AEC014901349E3EEFD9ECCAFA43D"
+    },
+    {
+      "relative_path": "environment/inputs/B/B_S03_filtered_feature_bc_matrix.h5",
+      "size_bytes": 12178103,
+      "sha256": "A0E1B39AEE00A076C63BD8B3BA63B6526EF3BBF48C478BACB90202611F506D77"
+    },
+    {
+      "relative_path": "environment/inputs/B/B_S04_filtered_feature_bc_matrix.h5",
+      "size_bytes": 367503,
+      "sha256": "3FD76E3CBBFFA3F99587B288F547703F571E210CAE4F821B4D49641E30DD5630"
+    },
+    {
+      "relative_path": "environment/inputs/B/B_S05_filtered_feature_bc_matrix.h5",
+      "size_bytes": 15204260,
+      "sha256": "835FCC9B824320C7C2BD7961688DB96E207643DFE6D392175D6F097A06C80CAE"
+    },
+    {
+      "relative_path": "environment/inputs/B/B_S06_filtered_feature_bc_matrix.h5",
+      "size_bytes": 14831762,
+      "sha256": "57CC68DF5C7452D1EE6C9EBD8FD829A818A892379300D8DAC5145857E1C12F9C"
+    },
+    {
+      "relative_path": "environment/inputs/B/B_S07_filtered_feature_bc_matrix.h5",
+      "size_bytes": 13141336,
+      "sha256": "AF85A021A2F977EF568842EC4FB0A853266C2D8350A3BD9EF8DDF3C150740F1C"
+    },
+    {
+      "relative_path": "environment/inputs/B/B_S08_filtered_feature_bc_matrix.h5",
+      "size_bytes": 13569907,
+      "sha256": "2A7550F93560354619A09A9FF9DFC1DD533F1DEFB2BAFE42C5B3472952699FAC"
+    },
+    {
+      "relative_path": "environment/inputs/B/B_S09_filtered_feature_bc_matrix.h5",
+      "size_bytes": 19430494,
+      "sha256": "DE3F3CD2119C3566C6520864F08039DD8449C1C4CD42560F8839C9101E4FB2C1"
+    },
+    {
+      "relative_path": "environment/inputs/B/B_S10_filtered_feature_bc_matrix.h5",
+      "size_bytes": 24645967,
+      "sha256": "1375DB1393B4F16DDE4BFA5839E76C0B9F05B15867188C1D04A968FDAB2725D4"
+    },
+    {
+      "relative_path": "environment/inputs/B/B_S11_filtered_feature_bc_matrix.h5",
+      "size_bytes": 18198030,
+      "sha256": "7265D597E42986BA1BAB174B2A96A64F09328D5F509E95636838EF5A1240898F"
+    },
+    {
+      "relative_path": "environment/inputs/B/B_S12_filtered_feature_bc_matrix.h5",
+      "size_bytes": 18326836,
+      "sha256": "3BDAB31D576D6D2F1995599072896EEE4F09E33B09BA9941EB57DF1698BAF55D"
+    },
+    {
+      "relative_path": "environment/inputs/B/sample_metadata.csv",
+      "size_bytes": 947,
+      "sha256": "F229236E90BCB8D2889F82F106644A486DD781DF8A7F45E34B3414AF36D6E793"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S01_barcodes.tsv.gz",
+      "size_bytes": 53012,
+      "sha256": "CBA9B0BF29509648C65220BA03970AD663B2762C0398E859FFD13017C3402A2F"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S01_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "DE24FE5464AA196660989C63EEE9A5B6FEBBF2EF44E99E5FBD0D7853F2B74F14"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S01_matrix.mtx.gz",
+      "size_bytes": 73398643,
+      "sha256": "9BA0D0784CBCB9EBDCA29B55C53B881B1617724BAAA4A4D251F630F01A367979"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S02_barcodes.tsv.gz",
+      "size_bytes": 72572,
+      "sha256": "45910472F654EF9858E82C6D79E3AA2838CA682CF2AD1937AB96582D6156B8DD"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S02_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "E21FD971C433425A02FD966F0B1EFB14BD8C772BBB5C1440746C6D375B5DFB65"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S02_matrix.mtx.gz",
+      "size_bytes": 79408359,
+      "sha256": "094EB96B051F27AB17DC50BEC89EE76E702627AC09C3E8B623EABFE8C9B47576"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S03_barcodes.tsv.gz",
+      "size_bytes": 160451,
+      "sha256": "BD40A46FBF66C3A5FDDD2C93BC9DD043BA84F5A83F06DF9CE77BB3A21FC9B137"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S03_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "DD54102ABD3241AF962257E73C8F130ACFAB3FAD0EEFBC2407216627203ECCD7"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S03_matrix.mtx.gz",
+      "size_bytes": 104581202,
+      "sha256": "100B68629AFBD43B82FE197E9A3B8143227222CF6F9A07E67A239DE6E4D4B78D"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S04_barcodes.tsv.gz",
+      "size_bytes": 74703,
+      "sha256": "D78109684EAB23D1174BD0657AE1E64B9234C5F93A4E650598144B54BCE4BFD4"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S04_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "48B8C3E090160B9D58EF8C50D68C84AAF540F613976EA84370E49D0BBEDF0376"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S04_matrix.mtx.gz",
+      "size_bytes": 96815584,
+      "sha256": "FD0F2C4BDE6A24E4D24D3D673B89D6921C6C22C0C7F2DCBD2759513910639E75"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S05_barcodes.tsv.gz",
+      "size_bytes": 85520,
+      "sha256": "1092B026FE3BFF4CC2710B034E0979B4D3E0975C5282AF3EDEFFA17DA51E4D81"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S05_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "F9C5DAE21ECE5CC965FEECB8230927EC790291B7B9E4BFC67D2C6AD72DCF4CF3"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S05_matrix.mtx.gz",
+      "size_bytes": 67110229,
+      "sha256": "58AF520810023AEE5F5316E3F00AB46102632653B5606B2EF4B1B70FC63C7FB2"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S06_barcodes.tsv.gz",
+      "size_bytes": 15246,
+      "sha256": "E0A1E69FDDFF8D8CFC8C4DF6C1C8B9B847416DDA0956BEB2FB02B49FFA793EAD"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S06_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "9F7F3B9E2EFEB7853A26F475F0FC28A1DC268EE1953492DB0AA5B3F73CCA7EB5"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S06_matrix.mtx.gz",
+      "size_bytes": 28729751,
+      "sha256": "F0A4E9B5C0B9BD02308B95B94CEA8F9FE8B41DA3602FD908C283FEBCA07129A5"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S07_barcodes.tsv.gz",
+      "size_bytes": 75155,
+      "sha256": "B272931F9DDA1A37F41B8698BBB889876D8EAE01EC24CFBC81D8F66F4E694516"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S07_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "69EDE4AC6DBD344912BD4749716D55F3C631C58C1B04311F2567247574408001"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S07_matrix.mtx.gz",
+      "size_bytes": 74470826,
+      "sha256": "46AF533FA52C87ED5F8C464AED83A94D8364EE1C79031917B9C9C918DE41CDAD"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S08_barcodes.tsv.gz",
+      "size_bytes": 97065,
+      "sha256": "F2DFC4019AB2D821E22A1D86D205D62B5AD0C62B2D5493163F6377B2D330C1F9"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S08_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "501320304B1381BF2EDEB1090A7E0BDB2B94849BB2B1566CE8CE34525E024BFF"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S08_matrix.mtx.gz",
+      "size_bytes": 97323882,
+      "sha256": "03EE94267FE974DE8AD9458F7D9AB6AAEC047A0BF30855A8C347057620548C5F"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S09_barcodes.tsv.gz",
+      "size_bytes": 41512,
+      "sha256": "8A10B169C3DAA2A60998EC7D9A97B62A5D07D951B09AFBD778A794739D2997BE"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S09_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "FF1B5F428BCA8ED38BDF80A26B65E37A941171A5974C1BF9B018A540F268A5FB"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S09_matrix.mtx.gz",
+      "size_bytes": 44775428,
+      "sha256": "421DD58754B2D5EE764250205F5E9C407C3DA64247C6940A2D148946CC9B61B5"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S10_barcodes.tsv.gz",
+      "size_bytes": 54381,
+      "sha256": "6E4E1270D1C7E0D7C1A773132F84AFA2FD5445C6D72492A3B2FA177DBB5557EA"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S10_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "1E59A723B2DA1BF40A3BD85DFC25B8D5C51CCE71FD789B8B8AA5006790B77A08"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S10_matrix.mtx.gz",
+      "size_bytes": 60591427,
+      "sha256": "FF93E019C054C79A76F928A50D87E1A56CD547C3822FB15C50F08BCDFB19C2EE"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S11_barcodes.tsv.gz",
+      "size_bytes": 122910,
+      "sha256": "C5536EB6EC751411EF028B1AB25EFB8E5D263A3B6AB9E69E9D4D589DEADE2120"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S11_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "3CF50BC2FDC48ED6935AF7A590871DB404B6920ABB73D4CBBE4A295C95A5E98C"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S11_matrix.mtx.gz",
+      "size_bytes": 118681934,
+      "sha256": "58E619D6CEACC1E242672A668173BA71C53A4CC0D33F4F2F89968386AB31A3F4"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S12_barcodes.tsv.gz",
+      "size_bytes": 53587,
+      "sha256": "28CB1352974A96CB596917A0EB7F5EEF01C53EE6D56499E8C809CFB186D27F8E"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S12_features.tsv.gz",
+      "size_bytes": 333437,
+      "sha256": "47330CBA4328C80417B7F07A8427A33F514BE375CD53B2309DD0C2172A3BBDBE"
+    },
+    {
+      "relative_path": "environment/inputs/C/C_S12_matrix.mtx.gz",
+      "size_bytes": 57869688,
+      "sha256": "8CB5CED95A4ED6043E4495CEFDE5733CF6CD6195E8FAD5665764F981B6A81A2F"
+    },
+    {
+      "relative_path": "environment/inputs/C/sample_metadata.csv",
+      "size_bytes": 1540,
+      "sha256": "6FE9942E85CB8B7916A52F6C83B230D8905139A71FAFD4D474C50F316E8B0D09"
+    },
+    {
+      "relative_path": "environment/inputs/D/expression_log2.tsv.gz",
+      "size_bytes": 3961439,
+      "sha256": "B164F95A1D617EC7FEA30D2F3D863C9D184FDCE5E5BC701B2C6936CEBE3291C3"
+    },
+    {
+      "relative_path": "environment/inputs/D/sample_metadata.csv",
+      "size_bytes": 2100,
+      "sha256": "114ED88F1C9458B358B4BB179580FE8C691EBB8A2FF25B9DAFBDF7B604A4EF0E"
+    },
+    {
+      "relative_path": "environment/inputs/D_key/condition_key.csv",
+      "size_bytes": 327,
+      "sha256": "38FF20726B0F999F4F754CC6914D1F159DE68CB6E7E52D0C747DC9D36031E67A"
+    },
+    {
+      "relative_path": "environment/inputs/E/protein_group_matrix.tsv.gz",
+      "size_bytes": 489381,
+      "sha256": "F79DB80AD774D8E9CE4A59CCBD7153BA9E59536AAAB64ABD97053849C92244A6"
+    },
+    {
+      "relative_path": "environment/inputs/E/sample_metadata.csv",
+      "size_bytes": 877,
+      "sha256": "020FC1370ED377B952E77CA81CF9C8137100C96CD7EA58717D5F121383DEC2DE"
+    },
+    {
+      "relative_path": "environment/inputs/V/expression_probe_matrix.tsv.gz",
+      "size_bytes": 274554,
+      "sha256": "7778AA1913B7C108E2C77829777AD16218F5D102E5EDF60886E0ED0005C41754"
+    },
+    {
+      "relative_path": "environment/inputs/V/probe_annotation.tsv.gz",
+      "size_bytes": 4291,
+      "sha256": "E712E5C6E5F9FF34E1A1F617190AB4CD41246259A7641AF2957D36600BBB9EF8"
+    },
+    {
+      "relative_path": "environment/inputs/V/sample_metadata.csv",
+      "size_bytes": 3400,
+      "sha256": "731A78A66319560ACC66F20B48A1E8E417CF7923694FA342DD95F2422DC2A178"
+    },
+    {
+      "relative_path": "environment/resources/GO_Biological_Process_2023.gmt",
+      "size_bytes": 1520870,
+      "sha256": "3C95E66C12E4419C8E7CC2BAB8585DCE100B4119780265773E49BA6DD5FB2D13"
+    },
+    {
+      "relative_path": "environment/resources/MSigDB_Hallmark_2020.gmt",
+      "size_bytes": 45286,
+      "sha256": "0ACE211A547468E8A5A381D532935647F50FEBC2F372B64529DF586340562EDC"
+    },
+    {
+      "relative_path": "environment/resources/Reactome_2022.gmt",
+      "size_bytes": 804366,
+      "sha256": "2F34C577162CE255CF9F9F5680FB19174AF58491794F27F6D42F2B59DC6F3E4A"
+    },
+    {
+      "relative_path": "environment/resources/collectri_human_source_target_weight.tsv.gz",
+      "size_bytes": 197270,
+      "sha256": "B8DF31AAEBBD9EBDFF6D5BA7DE5E14DB0F64D27A469B0CB08BAC37EC2A4C225D"
+    },
+    {
+      "relative_path": "environment/resources/liana_consensus_resource.tsv",
+      "size_bytes": 64634,
+      "sha256": "B3ECF9DD1327E00E0428B125570D2612512090C6255168BE812DE95ABA710DC7"
+    },
+    {
+      "relative_path": "environment/resources/resource_manifest.json",
+      "size_bytes": 2177,
+      "sha256": "7BC06D539D5A1E166934475ADDF0DBF8089179D19CB35635F017974B9DF9C729"
+    },
+    {
+      "relative_path": "environment/resources/stage_response_reference.tsv",
+      "size_bytes": 4341405,
+      "sha256": "60A3152AFE429A7DBB41FA0597AB9730141CE858AF16A35F7063E64BFC239BDE"
+    },
+    {
+      "relative_path": "environment/resources/stage_response_resource.md",
+      "size_bytes": 498,
+      "sha256": "4380E62F68E37EAB97C5C6A7316525532FC585D29636010FD0C95B5C6E6752FF"
+    }
+  ]
+}

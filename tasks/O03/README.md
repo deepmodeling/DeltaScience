@@ -12,13 +12,16 @@
 | **Subfield(s)** | Omics, Immunology & Inflammation |
 | **Task Type** | Multi-Stage Analysis |
 | **Evaluation Time Limit** | 8 hours |
+| **Resources** | 4 CPUs · 16 GB RAM |
 | **Contributing Institutions** | AI for Science Institute, Beijing; Zhejiang University |
 
 ---
 
-## Harbor Package & Public Container Images
+## Harbor Package & Data Layout
 
-This directory contains the complete 9-stage Harbor task package (`task.toml`, `environment/Dockerfile`, `steps/` with per-stage instructions and setup scripts, and `steps/v_validation/tests/` with the full `o03_scorer_v2` automated verification suite). Multi-cohort single-cell and proteomics data matrices are pre-packaged inside the public scientific runtime images (`registry.dp.tech/public/pkscience-o03-agent` and `registry.dp.tech/public/pkscience-o03-verifier`).
+This directory contains the standardized Harbor `v1.1.0` task package (`instruction.md`, `task.toml`, `environment/Dockerfile` based on public `python:3.13.5-slim`, public pathway/regulon/ligand-receptor resources under `environment/resources/`, the complete independent verification suite under `tests/` including `o03_scorer_v2` and `o03_atomwise`, and the reference harness under `solution/`).
+
+Because the raw single-cell matrices under `environment/inputs/` total **~1.46 GB** (with individual `.mtx.gz` files exceeding GitHub's 100 MB limit), `environment/inputs/` is documented via [`environment/inputs/README.md`](./environment/inputs/README.md) with the complete file manifest and original public GEO/ProteomeXchange accessions.
 
 ---
 
@@ -26,17 +29,23 @@ This directory contains the complete 9-stage Harbor task package (`task.toml`, `
 
 Prurigo Nodularis (PN) is a chronic inflammatory skin disease characterized by severe pruritus and fibrotic skin nodules. While single-cell transcriptomics can reveal disease-associated cellular states and transcriptional programs, differences observed in a single cohort do not necessarily reflect reproducible disease mechanisms—they may be confounded by inter-patient heterogeneity, cell-type composition shifts, tissue compartment sampling, or technical batch effects.
 
-Task `O03` challenges AI agents to execute a **9-stage, end-to-end multi-omics disease mechanism investigation** across independent patient cohorts, disease controls, blinded perturbation experiments, tissue proteomics, and external patient expression cohorts:
+Task `O03` challenges AI agents to execute an **integrative, 9-stage patient-level multi-omics investigation** under `/workspace/output` (see [`instruction.md`](./instruction.md)):
 
-1. **Stage A — Independent Discovery**: Quality control, lineage annotation, fibroblast sub-state identification, patient-level compositional and intra-state expression comparisons, pathway & CollecTRI transcription factor analysis, and LIANA cell-cell communication on paired lesional/non-lesional PN skin scRNA-seq (`GSE233280`).
-2. **Stage B — Independent Cohort Discovery**: Strict blind replication on an independent paired PN scRNA-seq cohort (`GSE273559`) without accessing Stage A data or outputs.
-3. **Stage AB — Cross-Cohort Reproducibility**: Systematic cross-cohort comparison using structured Stage A & B records (`record_id`) to classify shared, cohort-specific, discordant, and underpowered findings.
-4. **Stage C — Disease Context & Tissue Compartments**: Multi-compartment analysis (fibroblast, endothelial, mural) comparing PN against atopic dermatitis (AD) and healthy controls (`GSE222840`).
-5. **Stage R — Upstream Candidate Response Analysis**: Systematic evaluation of candidate upstream regulators and disease programs across observable reference matrices.
-6. **Stage D (Blinded) — Perturbation Response Analysis**: Blinded analysis of human dermal fibroblast log2 expression under encoded treatments and genetic backgrounds (`GSE137108`).
-7. **Stage D (Decoded) — Experimental Condition Interpretation**: Integration of decoded treatment/background metadata with frozen Stage D outputs and patient-level evidence from Stages A–C.
-8. **Stage E — Patient Tissue Proteomics Validation**: Independent differential proteomics and cross-omics reconciliation (`PXD072618` / `IPX0014987001`), explicitly distinguishing concordant, discordant, and coverage-limited signals.
-9. **Stage V — External Patient Validation & Synthesis**: External paired lesional/non-lesional expression validation (`GSE261704`) and final evidence synthesis, strictly separating `observation`, `association`, `experimental_response`, and `causal` claims via `record_id` provenance.
+1. **Stage `A` (`stages/a_discovery`)**: Independent discovery on paired lesional/non-lesional PN skin scRNA-seq (`GSE233280`)—QC, graph construction, lineage & fibroblast sub-state annotation, patient-level composition/expression, pathway, CollecTRI regulon, and LIANA cell communication.
+2. **Stage `B` (`stages/b_replication`)**: Independent replication on a separate paired PN scRNA-seq cohort (`GSE273559`).
+3. **Stage `AB` (`stages/b_compare`)**: Cross-cohort reproducibility analysis classifying replicated, cohort-specific, conflicting, and coverage-limited findings.
+4. **Stage `C` (`stages/c_context`)**: Disease-context and tissue-compartment analysis (fibroblast, endothelial, mural) across PN, atopic dermatitis (AD), and healthy skin (`GSE222840`).
+5. **Stage `R` (`stages/r_response`)**: Upstream candidate response ranking against the fixed response resource (`environment/resources/stage_response_reference.tsv`).
+6. **Stage `D_BLIND` (`stages/d_blind`)**: Blinded analysis of encoded human dermal fibroblast perturbation experiments (`GSE137108`).
+7. **Stage `D_DECODE` (`stages/d_decode`)**: Decoded experimental interpretation integrating `D_key/condition_key.csv` with patient-level evidence.
+8. **Stage `E` (`stages/e_proteome`)**: Patient-tissue proteomics validation (`PXD072618` / `IPX0014987001`), accounting for missingness and acquisition structure.
+9. **Stage `V` (`stages/v_validation`)**: External paired-patient expression validation (`GSE261704`) and integrated evidence synthesis strictly distinguishing `observation`, `association`, `experimental_response`, and `causal` inference.
+
+---
+
+## Independent Verification
+
+The separate verifier (`tests/Dockerfile` on `python:3.13.5-slim`) assembles all 9 stage directories without executing submitted code, validates schema compliance and `record_id` provenance, and evaluates **43 scoring atoms** across process evidence, biological results, and structured interpretations. The 100-point continuous scientific score is preserved in `score.json` and `run_report.json`, with binary acceptance at **$\ge 70 / 100$**.
 
 ---
 
@@ -53,4 +62,4 @@ Task `O03` challenges AI agents to execute a **9-stage, end-to-end multi-omics d
 
 ## Anti-Contamination & Usage Policy
 
-Per the DeltaScience usage policy, this task specification and its associated data/rubrics may **not** be used for model training, fine-tuning, distillation, or synthetic training data generation.
+Per the DeltaScience usage policy, this task package, its instructions, reference artifacts, and grading scripts may **not** be used for model training, fine-tuning, distillation, or synthetic training data generation.
