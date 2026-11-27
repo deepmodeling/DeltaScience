@@ -144,6 +144,7 @@ To safeguard academic neutrality while scaling task curation and compute executi
 
 - AI for Science Institute, Beijing
 - DP Technology
+- Peking University
 - Zhejiang University
 - University of Tokyo
 - University of Cambridge

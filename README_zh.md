@@ -113,6 +113,7 @@ DeltaScience 采用**标准制定、社区征题与算力执行三层解耦治�
 
 - 北京科学智能研究院（AI for Science Institute, Beijing）
 - 深势科技（DP Technology）
+- 北京大学（Peking University）
 - 浙江大学（Zhejiang University）
 - 东京大学（University of Tokyo）
 - 剑桥大学（University of Cambridge）
