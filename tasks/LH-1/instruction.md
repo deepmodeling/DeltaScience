@@ -1,30 +1,89 @@
-Design a compact quasi-axisymmetric (QA) stellarator plasma boundary with field-period number nfp = 2 starting from the circular-cross-section torus in `/app/seed.json`. Your goal is to reduce the aspect ratio A to at most 6.0 while simultaneously satisfying all magnetic-confinement and particle-transport constraints below.
+Compact Quasi-Axisymmetric Stellarator Boundary Optimization
 
-Environment and inputs:
-- `/app/seed.json`: initial circular torus boundary.
-- `/app/input.vmec`, `/app/case.json`, `/app/physics.py`, `/app/evaluate.py`: fixed-boundary zero-beta zero-net-current VMEC template, numerical configuration, physics routines, and local evaluator.
-- Available tools: `xvmec2000`, `simsopt`, `booz_xform`, `NEO`, and `SIMPLE`.
+Can a three-dimensional magnetic confinement cage be made more compact while still giving particles an approximately axisymmetric magnetic field strength profile? Starting from a simple circular-cross-section torus, optimize the outer plasma boundary to reduce the aspect ratio A as much as possible while preserving quasi-axisymmetry, magnetic well, rotational transform, effective ripple, and energetic-particle confinement.
 
-Physical conventions and target constraints:
-- Stellarator-symmetric boundary with nfp = 2; effective minor radius normalized to 1.70 m; on-axis Boozer field B00 normalized to 5.70 T for particle tracing.
-- Aspect ratio: A <= 6.0.
-- 41-surface quasi-axisymmetry residual Q (helicity (1, 0), s = 0, 0.025, ..., 1 with weight 10 at s = 0.25 and 1 elsewhere): Q <= 3.2e-6.
-- Mean rotational transform: within 1% relative deviation of 0.42.
-- Endpoint vacuum magnetic well (V'(0) - V'(1)) / V'(0): >= 0.0048.
-- Maximum effective ripple across the four surfaces closest to s = 0.2, 0.4, 0.6, 0.8: <= 0.0022%.
-- Collisionless 3.5 MeV alpha-particle losses plus unresolved orbits (4096 particles launched at s = 0.25, traced for 0.2 s): <= 1.
+Submit only `/app/boundary.json`. All physical metrics are independently recomputed by the evaluator.
 
-Deliverable:
-Write only `/app/boundary.json` (UTF-8 JSON) specifying the Fourier modes:
-  R(theta, phi) = sum rbc(m, n) cos(m*theta - n*nfp*phi)
-  Z(theta, phi) = sum zbs(m, n) sin(m*theta - n*nfp*phi)
-with integer m >= 0 (n >= 0 when m = 0), unique (m, n) pairs, finite real coefficients, rbc(0, 0) > 0, and zbs(0, 0) = 0. Format:
+1. Scientific Motivation
+
+The aspect ratio A is the ratio of the major radius to the minor radius of the torus. In this task, the effective minor radius is normalized to 1.70 m, so a smaller A corresponds to a tighter, more compact torus.
+
+Reducing the aspect ratio simultaneously perturbs the magnetic field strength spectrum, field-line twist, and particle drifts. Quasi-axisymmetry suppresses outward radial drift, but making the boundary more compact still requires verifying transport metrics and collisionless particle orbits. Your objective is to find a compact boundary that satisfies all confinement criteria below.
+
+2. Fixed Conditions and Performance Requirements
+
+The starting point `/app/seed.json` is a circular-cross-section torus. The environment also provides the VMEC template `/app/input.vmec`, physics routines, and the public evaluator. Starting from this initial geometry, adjust the 3D Fourier boundary modes, solve the equilibrium, and evaluate candidate designs.
+
+Fixed conditions:
+- Field periods: nfp = 2, stellarator-symmetric boundary
+- Equilibrium model: fixed-boundary, zero pressure, zero net enclosed toroidal current everywhere
+- Scale and particle-tracing field strength: effective minor radius 1.70 m, on-axis Boozer B00 = 5.70 T
+- Degrees of freedom: Fourier coefficients describing the plasma boundary; additional higher-order modes may be added
+
+Target constraints (aspect ratio A <= 6.0 and all five constraints below must be satisfied simultaneously):
+- 41-surface quasi-axisymmetry residual Q: <= 3.2e-6 (maintains small symmetry error from core to edge)
+- Mean rotational transform: within 1% relative deviation of 0.42 (maintains field-line twist)
+- Endpoint vacuum magnetic well: >= 0.0048 (maintains favorable volume-derivative profile)
+- Maximum effective ripple across four surfaces: <= 0.0022% (controls low-collisionality neoclassical transport)
+- Sum of alpha-particle losses and unresolved orbits: at most 1 out of 4096 trajectories over 0.2 s tracing
+
+3. Describing the Final Design in JSON
+
+Submit only `/app/boundary.json` as UTF-8 JSON. Example format (illustrative only; the complete starting geometry is in `/app/seed.json`):
+
 ```json
-{"nfp": 2, "modes": [{"m": 0, "n": 0, "rbc": 1.0, "zbs": 0.0}]}
+{"nfp": 2, "modes": [
+  {"m": 0, "n": 0, "rbc": 1.0, "zbs": 0.0},
+  {"m": 1, "n": 0, "rbc": 0.2, "zbs": 0.2}
+]}
 ```
 
-You may add higher-order Fourier modes and use any optimization method locally. To test a candidate boundary, run:
+Each mode specifies integers m, n and finite real numbers rbc, zbs representing:
+
+```text
+R(theta, phi) = sum rbc(m, n) cos(m*theta - n*nfp*phi)
+Z(theta, phi) = sum zbs(m, n) sin(m*theta - n*nfp*phi)
+```
+
+Requirements: m >= 0; when m = 0, use n >= 0. Unlisted modes are zero; mode ordering is arbitrary; zbs(0, 0) = 0. All length coefficients share the same unit, and the overall scale is normalized by the evaluator to an effective minor radius of 1.70 m. Each (m, n) pair may appear at most once, with rbc(0, 0) > 0.
+
+You may add higher-order modes and choose any optimization method. Do not submit optimization history, search scripts, or self-reported physical metrics.
+
+4. Evaluation and Thresholds
+
+Each metric is checked against the reference thresholds in `/app/case.json`:
+- Upper-bound metrics: value <= reference.
+- Lower-bound metrics: value >= reference.
+- Target-matching metrics: abs(value - reference) <= width (mean rotational transform target 0.42 with 1% relative tolerance).
+- Alpha-particle metric: confirmed losses plus unresolved orbits <= 1 (out of 4096 trajectories).
+
+All thresholds and inequalities are enforced strictly; only a 1e-12 relative floating-point rounding tolerance is allowed at boundaries. Missing submissions, malformed JSON, or failed physics evaluations receive 0 with a diagnostic reason; environment errors are reported separately.
+
+5. Getting Started and Resources
+
+The environment provides `/app/physics.py`, `/app/evaluate.py`, and numerical configuration `/app/case.json`. Copy the seed geometry and run the local evaluator:
+
 ```bash
+cp /app/seed.json /app/boundary.json
 python /app/evaluate.py --submission /app/boundary.json --output /work/evaluation
 ```
-Use a fresh output directory for each evaluation. Work offline with the installed physics tools; do not fetch pre-optimized boundaries or external solution scripts. Time limit: 24 hours (24 CPUs, 64 GiB RAM).
+
+`/work/evaluation/result.json` reports the primary objective, per-constraint pass status, and evaluation score. Use a fresh output directory for each evaluation. Official grading recomputes all quantities from `/app/boundary.json` using the exact same code and parameters.
+
+This task is solved offline. You may use the installed physics codes, optimization libraries, local documentation, and general examples. Do not access the internet to retrieve pre-optimized boundaries, coils, or task-specific optimization scripts.
+
+Resources: 24 CPU cores, 64 GiB RAM, no GPU; solving budget 24 hours; single evaluation limit 12 hours.
+
+To solve equilibria directly during search, invoke `xvmec2000` and inspect results via `simsopt.mhd.Vmec(wout_path)`. Lower-cost proxy calculations may be used during intermediate search stages.
+
+6. Physics Evaluation Pipeline
+
+Given a submitted boundary, the evaluator first rescales the effective minor radius to 1.70 m and solves the vacuum equilibrium with VMEC. Aspect ratio A is taken from VMEC `aspect`, and mean rotational transform is taken from `Vmec.mean_iota()` on the uniform half-flux grid.
+
+Quasi-axisymmetry is evaluated from the magnetic axis (s = 0) to the boundary (s = 1) using SIMSOPT `QuasisymmetryRatioResidual` with helicity `(helicity_m, helicity_n) = (1, 0)` across 41 flux surfaces s = 0, 0.025, ..., 1, weighted by 10 at s = 0.25 and 1 on all other surfaces.
+
+The vacuum magnetic well is defined from V' = dV/ds as `W = (V'(0) - V'(1)) / V'(0)` via `Vmec.vacuum_well()`. The equilibrium is then transformed to Boozer coordinates using `booz_xform`, and NEO computes the effective ripple `eps_eff = EPSTOT^(2/3)` on the four flux surfaces closest to s = 0.2, 0.4, 0.6, and 0.8, taking the maximum across the four surfaces.
+
+Finally, after normalizing the on-axis Boozer zero mode B00 to 5.70 T, SIMPLE launches 4096 collisionless 3.5 MeV alpha particles from a thin shell at s = 0.25 (volume-sampled in space, isotropic in velocity) and traces guiding-center orbits for 0.2 s. Any trajectory crossing s = 1 or failing numerical integration is counted as unconfinable.
+
+Grid resolutions, fixed sampling, and solver tolerances are documented in `/app/case.json`, `/app/input.vmec`, and `/app/physics.py`. When higher-order Fourier modes are submitted, the evaluator increases numerical resolution accordingly.
